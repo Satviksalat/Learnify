@@ -1,0 +1,1872 @@
+[
+    {
+        "id": "unit1-intro",
+        "title": "Introduction to Python",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Python is a high-level, interpreted language known for readability.",
+        "description": "Overview of Python history, features, and why it is popular.",
+        "syntax": "print('Hello, World!')",
+        "code_example": "# My First Python Program\nprint('Hello, World!')",
+        "explanation": "<h2>1. Concept Overview</h2><p><strong>Python</strong> is a high-level, interpreted, general-purpose programming language.</p><h2>2. Real-World Analogy</h2><p>Think of Python as <strong>English for Computers</strong>.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Readable code",
+            "Interpreted",
+            "Dynamically typed"
+        ]
+    },
+    {
+        "id": "unit1-syntax",
+        "title": "Python Syntax",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Rules that define the structure of the language.",
+        "description": "Indentation, comments, and line structure.",
+        "syntax": "if True:\n    print('Indented')",
+        "code_example": "if 5 > 2:\n    print('Five is greater than two!') # Correct indentation",
+        "explanation": "<h2>1. Concept Overview</h2><p><strong>Syntax</strong> refers to the grammatical rules. Python uses <strong>Indentation</strong>.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Indentation is mandatory",
+            "# for comments",
+            "Case sensitive"
+        ]
+    },
+    {
+        "id": "unit1-vars",
+        "title": "Variables & Data Types",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Containers for storing data values.",
+        "description": "Creating variables and understanding string, int, float, bool.",
+        "syntax": "x = 5\ny = 'John'",
+        "code_example": "x = 5\ny = 'Hello'\nprint(type(x))\nprint(type(y))",
+        "explanation": "<h2>1. Concept</h2><p>Variables are labels for data.</p><h2>2. Analogy</h2><p>Sticky Notes on objects.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "No type declaration",
+            "Case sensitive names",
+            "type() function"
+        ]
+    },
+    {
+        "id": "unit1-strings",
+        "title": "Strings & Input",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Text data handling and user interaction.",
+        "description": "String methods, slicing, and reading user input.",
+        "syntax": "s = 'text'\nval = input('Prompt: ')",
+        "code_example": "name = input('Enter name: ')\nprint(f'Hello {name}')",
+        "explanation": "<h2>1. Concept</h2><p>Immutable sequences of characters.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Strings are immutable",
+            "f-strings for formatting",
+            "input() blocks execution"
+        ]
+    },
+    {
+        "id": "unit1-operators",
+        "title": "Operators",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Symbols for performing operations.",
+        "description": "Arithmetic, Assignment, Comparison, Logical operators.",
+        "syntax": "a + b, a == b, a and b",
+        "code_example": "x = 10\ny = 3\nprint(x % y) # Modulus\nprint(x ** y) # Power",
+        "explanation": "<h2>1. Concept</h2><p>Symbols for logic/math.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "BEDMAS/PEMDAS applies",
+            "// is floor division",
+            "** is exponent"
+        ]
+    },
+    {
+        "id": "unit1-ifelse",
+        "title": "If-Else",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Conditional execution.",
+        "description": "Decision making using if, elif, and else.",
+        "syntax": "if a > b:\n  pass",
+        "code_example": "a = 33\nb = 200\nif b > a:\n  print('b is greater than a')",
+        "explanation": "<h2>1. Concept</h2><p>Branching logic.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Colon : required",
+            "Elif for multiple conditions",
+            "Indentation is key"
+        ]
+    },
+    {
+        "id": "unit1-loops",
+        "title": "Loops",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Repeating code blocks.",
+        "description": "For loops (sequences) and While loops (conditions).",
+        "syntax": "for i in range(5):\n  print(i)",
+        "code_example": "fruits = ['apple', 'banana']\nfor x in fruits:\n  print(x)",
+        "explanation": "<h2>1. Concept</h2><p>Repetition.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "break stops loop",
+            "continue skips iteration",
+            "range() generates numbers"
+        ]
+    },
+    {
+        "id": "unit1-functions",
+        "title": "Functions",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Reusable blocks of code.",
+        "description": "Defining functions, parameters, and return values.",
+        "syntax": "def my_func():\n  return True",
+        "code_example": "def greet(name):\n    return 'Hello ' + name\n\nprint(greet('Alice'))",
+        "explanation": "<h2>1. Concept</h2><p>Reusable blocks.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Arguments vs Parameters",
+            "Default arguments",
+            "Scope of variables"
+        ]
+    },
+    {
+        "id": "unit1-lists-tuples",
+        "title": "Lists & Tuples",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Ordered collections of items.",
+        "description": "Mutable Lists vs Immutable Tuples.",
+        "syntax": "lst = [1, 2]\ntpl = (1, 2)",
+        "code_example": "thislist = ['apple', 'banana', 'cherry']\nthislist[1] = 'blackcurrant'\nprint(thislist)",
+        "explanation": "<h2>1. Concept</h2><p>Sequences.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "0-indexed",
+            "Slicing [start:end]",
+            "Lists use []"
+        ]
+    },
+    {
+        "id": "unit1-dictionaries",
+        "title": "Dictionaries",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "Key-Value stores.",
+        "description": "Storing data values in key:value pairs.",
+        "syntax": "d = {'key': 'value'}",
+        "code_example": "car = {\n  'brand': 'Ford',\n  'model': 'Mustang',\n  'year': 1964\n}\nprint(car['model'])",
+        "explanation": "<h2>1. Concept</h2><p>Key-Value pairs.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Unordered (pre-3.7)",
+            "Keys are unique",
+            "Mutable values"
+        ]
+    },
+    {
+        "id": "unit1-files",
+        "title": "Files & Modules",
+        "technology": "Python Programming Course",
+        "unit": "Unit 1: Python Basics",
+        "definition": "File I/O and Code Organization.",
+        "description": "Reading/Writing files and importing modules.",
+        "syntax": "with open('f.txt', 'r') as f:\n  data = f.read()",
+        "code_example": "f = open('demofile.txt', 'w')\nf.write('Now the file has more content!')\nf.close()",
+        "explanation": "<h2>1. Concept</h2><p>Persistence.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Modes: r, w, a, x",
+            "Import standard modules",
+            "Create your own modules"
+        ]
+    },
+    {
+        "id": "unit2-oop-intro",
+        "title": "What is OOP?",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Programming paradigm based on 'objects'.",
+        "description": "Concept of objects containing data and code.",
+        "syntax": "class ClassName:",
+        "code_example": "# Discussion only\n# OOP organizes code around data, not logic.",
+        "explanation": "<h2>1. Concept</h2><p>OOP structure.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Encapsulation",
+            "Inheritance",
+            "Polymorphism"
+        ]
+    },
+    {
+        "id": "unit2-classes",
+        "title": "Classes & Objects",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Blueprints and Instances.",
+        "description": "Defining a class and creating object instances.",
+        "syntax": "class Person:\n  x = 5",
+        "code_example": "class Person:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\n\np1 = Person('John', 36)\nprint(p1.name)",
+        "explanation": "<h2>1. Concept</h2><p>The Blueprint.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "__init__ is constructor",
+            "self parameter",
+            "Dot notation"
+        ]
+    },
+    {
+        "id": "unit2-constructors",
+        "title": "Constructors",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Initializing objects.",
+        "description": "The __init__ method explained.",
+        "syntax": "def __init__(self):",
+        "code_example": "class Car:\n    def __init__(self):\n        self.wheels = 4\n        print('Engine started')",
+        "explanation": "<h2>1. Concept</h2><p>Initializer `__init__`.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Special method",
+            "Sets instance variables",
+            "Optional arguments"
+        ]
+    },
+    {
+        "id": "unit2-inheritance",
+        "title": "Inheritance",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Deriving new classes from existing ones.",
+        "description": "Parent and Child classes.",
+        "syntax": "class Child(Parent):",
+        "code_example": "class Animal:\n    def speak(self): print('Noise')\n\nclass Dog(Animal):\n    def speak(self): print('Woof')\n\nd = Dog()\nd.speak()",
+        "explanation": "<h2>1. Concept</h2><p>Parent-Child.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "super() function",
+            "Overriding methods",
+            "Code reuse"
+        ]
+    },
+    {
+        "id": "unit2-encapsulation",
+        "title": "Encapsulation",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Hiding internal details.",
+        "description": "Public, Protected, and Private members.",
+        "syntax": "self._protected, self.__private",
+        "code_example": "class Account:\n    def __init__(self):\n        self.__balance = 0 # Private\n    \n    def deposit(self, amount):\n        self.__balance += amount",
+        "explanation": "<h2>1. Concept</h2><p>Hiding data.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Public (default)",
+            "Protected (_)",
+            "Private (__)"
+        ]
+    },
+    {
+        "id": "unit2-polymorphism",
+        "title": "Polymorphism",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Many forms.",
+        "description": "Objects of different classes treated as the same common superclass.",
+        "syntax": "func(obj)",
+        "code_example": "print(len('hello'))\nprint(len([1, 2, 3]))\n# Same function, different behavior",
+        "explanation": "<h2>1. Concept</h2><p>Many forms.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Method Overriding",
+            "Operator Overloading",
+            "Duck Typing"
+        ]
+    },
+    {
+        "id": "unit2-exceptions",
+        "title": "Exception Handling",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Managing errors.",
+        "description": "Try, Except, Else, Finally blocks.",
+        "syntax": "try: ... except: ...",
+        "code_example": "try:\n  print(x)\nexcept NameError:\n  print('Variable x is not defined')\nfinally:\n  print('Done')",
+        "explanation": "<h2>1. Concept</h2><p>Error handling.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Specific exceptions",
+            "raise keyword",
+            "Clean up resources in finally"
+        ]
+    },
+    {
+        "id": "unit2-assertions",
+        "title": "Assertions",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Debugging checks.",
+        "description": "Using assert to sanity check assumptions.",
+        "syntax": "assert condition, 'Message'",
+        "code_example": "def avg(marks):\n    assert len(marks) != 0, 'List is empty'\n    return sum(marks)/len(marks)",
+        "explanation": "<h2>1. Concept</h2><p>Debugging.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Debugging tool",
+            "Can be disabled in production",
+            "Don't use for data validation"
+        ]
+    },
+    {
+        "id": "unit2-search",
+        "title": "Searching Algorithms",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Finding data.",
+        "description": "Linear Search vs Binary Search.",
+        "syntax": "if x in list:",
+        "code_example": "def binary_search(arr, x):\n    # Pseudo implementation\n    pass",
+        "explanation": "<h2>1. Concept</h2><p>Finding elements.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Performance matters",
+            "Sorted inputs",
+            "Index return"
+        ]
+    },
+    {
+        "id": "unit2-sort",
+        "title": "Sorting Algorithms",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Ordering data.",
+        "description": "Bubble Sort, Merge Sort, Quick Sort.",
+        "syntax": "lst.sort()",
+        "code_example": "list = [3, 1, 4, 2]\nlist.sort()\nprint(list)",
+        "explanation": "<h2>1. Concept</h2><p>Ordering elements.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Stability",
+            "In-place vs New list",
+            "Time complexity"
+        ]
+    },
+    {
+        "id": "unit2-hashing",
+        "title": "Hash Tables",
+        "technology": "Python Programming Course",
+        "unit": "Unit 2: OOP Using Python",
+        "definition": "Key-Value mapping with O(1) access.",
+        "description": "Underlying structure of Python Dictionaries.",
+        "syntax": "hash(obj)",
+        "code_example": "print(hash('apple'))\n# Dictionaries use this for fast lookups",
+        "explanation": "<h2>1. Concept</h2><p>Mapping keys.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Collisions",
+            "Hashable objects",
+            "Dict implementation"
+        ]
+    },
+    {
+        "id": "unit3-pylab",
+        "title": "Introduction to PyLab",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Matplotlib/NumPy integration.",
+        "description": "Environment for scientific computing and plotting.",
+        "syntax": "import matplotlib.pyplot as plt",
+        "code_example": "import matplotlib.pyplot as plt\nprint('Ready to plot')",
+        "explanation": "<h2>1. Concept</h2><p>PyLab module.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Visualization",
+            "Scientific Stack",
+            "Install matplotlib"
+        ]
+    },
+    {
+        "id": "unit3-lineplot",
+        "title": "Line Plot",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Basic graph type.",
+        "description": "Plotting X vs Y.",
+        "syntax": "plt.plot(x, y)",
+        "code_example": "import matplotlib.pyplot as plt\nx = [1, 2, 3]\ny = [2, 4, 1]\nplt.plot(x, y)\n# plt.show()",
+        "explanation": "<h2>1. Concept</h2><p>Line Plots.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Labels",
+            "Title",
+            "Grid"
+        ]
+    },
+    {
+        "id": "unit3-barchart",
+        "title": "Bar Chart",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Categorical comparison.",
+        "description": "Visualizing comparison between groups.",
+        "syntax": "plt.bar(x, height)",
+        "code_example": "import matplotlib.pyplot as plt\ncats = ['A', 'B']\nvals = [10, 20]\nplt.bar(cats, vals)",
+        "explanation": "<h2>1. Concept</h2><p>Bar Charts.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Bar width",
+            "Colors",
+            "Categorical data"
+        ]
+    },
+    {
+        "id": "unit3-mortgage",
+        "title": "Mortgage Example",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Real-world plotting.",
+        "description": "Visualizing interest vs principal over time.",
+        "syntax": "Logic Implementation",
+        "code_example": "# P * r * (1+r)^n / ((1+r)^n - 1)\nprint('Calculating formula...')",
+        "explanation": "<h2>1. Concept</h2><p>Amortization.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Compound interest",
+            "Loop simulation",
+            "Visualizing growth"
+        ]
+    },
+    {
+        "id": "unit3-fibonacci",
+        "title": "Fibonacci Sequence",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Recursion vs Iteration.",
+        "description": "Calculating the nth term.",
+        "syntax": "fib(n) = fib(n-1) + fib(n-2)",
+        "code_example": "def fib(n):\n    if n <= 1: return n\n    return fib(n-1) + fib(n-2)\nprint(fib(5))",
+        "explanation": "<h2>1. Concept</h2><p>Recursion demo.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Base case",
+            "Recursive step",
+            "Exponential growth"
+        ]
+    },
+    {
+        "id": "unit3-dp",
+        "title": "Dynamic Programming",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Optimization technique.",
+        "description": "Memoization and Tabulation.",
+        "syntax": "memo = {}",
+        "code_example": "memo = {0:0, 1:1}\ndef fib_dp(n):\n    if n not in memo:\n        memo[n] = fib_dp(n-1) + fib_dp(n-2)\n    return memo[n]",
+        "explanation": "<h2>1. Concept</h2><p>Dynamic Programming.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Overlap",
+            "Optimal Substructure",
+            "Space-Time tradeoff"
+        ]
+    },
+    {
+        "id": "unit3-knapsack",
+        "title": "0/1 Knapsack",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Optimization Problem.",
+        "description": "Maximizing value with limited weight.",
+        "syntax": "Logic Implementation",
+        "code_example": "# Maximize value W < capacity\nprint('Solving Knapsack...')",
+        "explanation": "<h2>1. Concept</h2><p>Optimization.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Combinatorial",
+            "NP-Complete (weakly)",
+            "Grid solution"
+        ]
+    },
+    {
+        "id": "unit3-divideconquer",
+        "title": "Divide & Conquer",
+        "technology": "Python Programming Course",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "definition": "Algorithm Paradeigm.",
+        "description": "Break problem, solve sub-problems, combine.",
+        "syntax": "Merge Sort Logic",
+        "code_example": "# Split list in half, sort each, merge\nprint('Divide and Conquer')",
+        "explanation": "<h2>1. Concept</h2><p>Divide and Conquer.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Divide",
+            "Conquer",
+            "Combine"
+        ]
+    },
+    {
+        "id": "unit4-networkbasics",
+        "title": "Network Basics",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "How computers connect.",
+        "description": "IP addresses, Ports, Protocols.",
+        "syntax": "Concept",
+        "code_example": "print('IP: 127.0.0.1 (Localhost)')",
+        "explanation": "<h2>1. Concept</h2><p>IP/Ports.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "IPv4 vs IPv6",
+            "TCP vs UDP",
+            "Ports"
+        ]
+    },
+    {
+        "id": "unit4-sockets",
+        "title": "Sockets",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Communication endpoints.",
+        "description": "Opening and closing sockets.",
+        "syntax": "s = socket.socket()",
+        "code_example": "import socket\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nprint('Socket created')",
+        "explanation": "<h2>1. Concept</h2><p>Endpoints.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Bind",
+            "Listen",
+            "Accept"
+        ]
+    },
+    {
+        "id": "unit4-tcp",
+        "title": "TCP Server & Client",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Reliable connection.",
+        "description": "3-way handshake and stream data.",
+        "syntax": "s.connect()",
+        "code_example": "# Client\n# s.connect(('localhost', 8080))\n# s.send(b'Hello')",
+        "explanation": "<h2>1. Concept</h2><p>Reliable stream.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Reliable",
+            "Slower than UDP",
+            "HTTP uses TCP"
+        ]
+    },
+    {
+        "id": "unit4-udp",
+        "title": "UDP Server & Client",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Datagrams.",
+        "description": "Fire and forget messaging.",
+        "syntax": "s.sendto()",
+        "code_example": "# s.sendto(b'Message', ('localhost', 8080))",
+        "explanation": "<h2>1. Concept</h2><p>Unreliable datagram.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Fast",
+            "Unreliable",
+            "DNS/Video"
+        ]
+    },
+    {
+        "id": "unit4-filetransfer",
+        "title": "File Transfer",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Sending bytes.",
+        "description": "Sending a file over a socket.",
+        "syntax": "f.read(1024)",
+        "code_example": "# Loop reading file chunks and sending\n# s.send(chunk)",
+        "explanation": "<h2>1. Concept</h2><p>Chunked sending.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Buffering",
+            "Encoding",
+            "End of file"
+        ]
+    },
+    {
+        "id": "unit4-email",
+        "title": "Email Program",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "SMTP Protocol.",
+        "description": "Sending emails using smtplib.",
+        "syntax": "smtplib.SMTP()",
+        "code_example": "import smtplib\n# s = smtplib.SMTP('smtp.gmail.com', 587)\n# s.starttls()",
+        "explanation": "<h2>1. Concept</h2><p>SMTP.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "MIME Types",
+            "Attachments",
+            "Security"
+        ]
+    },
+    {
+        "id": "unit4-guiintro",
+        "title": "GUI Introduction",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Graphical Interfaces.",
+        "description": "Introduction to Tkinter.",
+        "syntax": "import tkinter",
+        "code_example": "import tkinter as tk\nroot = tk.Tk()\nroot.title('My App')",
+        "explanation": "<h2>1. Concept</h2><p>Tkinter.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Window",
+            "Mainloop",
+            "Widgets"
+        ]
+    },
+    {
+        "id": "unit4-buttons",
+        "title": "Buttons & Labels",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Interactivity.",
+        "description": "Adding clickables and text.",
+        "syntax": "Button(command=func)",
+        "code_example": "b = tk.Button(root, text='Click Me')\nb.pack()",
+        "explanation": "<h2>1. Concept</h2><p>Actions.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "command argument",
+            "Active state",
+            "Styling"
+        ]
+    },
+    {
+        "id": "unit4-entry",
+        "title": "Entry Fields",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "User Input.",
+        "description": "Single line text input.",
+        "syntax": "e = Entry()",
+        "code_example": "e = tk.Entry(root)\ne.pack()\nval = e.get()",
+        "explanation": "<h2>1. Concept</h2><p>Inputs.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Text Variable",
+            "Password char",
+            "Validation"
+        ]
+    },
+    {
+        "id": "unit4-layouts",
+        "title": "Layouts",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Geometry Managers.",
+        "description": "Pack, Grid, and Place.",
+        "syntax": "widget.grid(row=0, column=1)",
+        "code_example": "lbl.grid(row=0, column=0)\nbtn.grid(row=0, column=1)",
+        "explanation": "<h2>1. Concept</h2><p>Geometry Managers.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Do not mix Pack/Grid",
+            "Responsive",
+            "Padding"
+        ]
+    },
+    {
+        "id": "unit4-treeview",
+        "title": "Treeview",
+        "technology": "Python Programming Course",
+        "unit": "Unit 4: Network & GUI",
+        "definition": "Tabular Data.",
+        "description": "Displaying hierarchies or tables.",
+        "syntax": "Treeview()",
+        "code_example": "from tkinter import ttk\nt = ttk.Treeview(root)\nt.pack()",
+        "explanation": "<h2>1. Concept</h2><p>Hierarchies.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Columns",
+            "Headings",
+            "Scrollbars"
+        ]
+    },
+    {
+        "id": "unit5-mysqlsetup",
+        "title": "MySQL Setup",
+        "technology": "Python Programming Course",
+        "unit": "Unit 5: Database Connectivity",
+        "definition": "Preparation.",
+        "description": "Installing MySQL server and Python connector.",
+        "syntax": "pip install mysql-connector-python",
+        "code_example": "# Command line\n# pip install mysql-connector-python",
+        "explanation": "<h2>1. Concept</h2><p>Driver install.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Driver",
+            "Server",
+            "Credentials"
+        ]
+    },
+    {
+        "id": "unit5-connect",
+        "title": "Connection",
+        "technology": "Python Programming Course",
+        "unit": "Unit 5: Database Connectivity",
+        "definition": "Handshake.",
+        "description": "Establishing connection object.",
+        "syntax": "connect()",
+        "code_example": "import mysql.connector\n# db = mysql.connector.connect(...)",
+        "explanation": "<h2>1. Concept</h2><p>Connection object.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Host",
+            "User/Pass",
+            "Database Name"
+        ]
+    },
+    {
+        "id": "unit5-insert",
+        "title": "Insert Data",
+        "technology": "Python Programming Course",
+        "unit": "Unit 5: Database Connectivity",
+        "definition": "Adding Rows.",
+        "description": "INSERT INTO statement.",
+        "syntax": "cursor.execute(sql, val)",
+        "code_example": "sql = 'INSERT INTO customers (name, address) VALUES (%s, %s)'\nval = ('John', 'Highway 21')",
+        "explanation": "<h2>1. Concept</h2><p>Insert data.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "SQL Injection protection",
+            "Last row id",
+            "Execute Many"
+        ]
+    },
+    {
+        "id": "unit5-select",
+        "title": "Retrieve Data",
+        "technology": "Python Programming Course",
+        "unit": "Unit 5: Database Connectivity",
+        "definition": "Getting Rows.",
+        "description": "SELECT statement and fetching.",
+        "syntax": "cursor.fetchall()",
+        "code_example": "cursor.execute('SELECT * FROM customers')\nres = cursor.fetchall()\nfor x in res: print(x)",
+        "explanation": "<h2>1. Concept</h2><p>Fetch data.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Where clause",
+            "Order By",
+            "Limit"
+        ]
+    },
+    {
+        "id": "unit5-update",
+        "title": "Update Data",
+        "technology": "Python Programming Course",
+        "unit": "Unit 5: Database Connectivity",
+        "definition": "Modifying Rows.",
+        "description": "UPDATE statement.",
+        "syntax": "UPDATE table SET col=val",
+        "code_example": "sql = 'UPDATE customers SET address = %s WHERE address = %s'\nval = ('Canyon 123', 'Valley 345')",
+        "explanation": "<h2>1. Concept</h2><p>Modify data.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "rowcount",
+            "Commit",
+            "Safety"
+        ]
+    },
+    {
+        "id": "unit5-delete",
+        "title": "Delete Data",
+        "technology": "Python Programming Course",
+        "unit": "Unit 5: Database Connectivity",
+        "definition": "Removing Rows.",
+        "description": "DELETE FROM statement.",
+        "syntax": "DELETE FROM table WHERE...",
+        "code_example": "sql = 'DELETE FROM customers WHERE address = %s'\nval = ('Mountain 21',)",
+        "explanation": "<h2>1. Concept</h2><p>Remove data.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "WHERE clause critical",
+            "rowcount",
+            "Commit"
+        ]
+    },
+    {
+        "id": "unit5-create",
+        "title": "Create Tables",
+        "technology": "Python Programming Course",
+        "unit": "Unit 5: Database Connectivity",
+        "definition": "Schema definition.",
+        "description": "CREATE TABLE statement.",
+        "syntax": "CREATE TABLE name (cols)",
+        "code_example": "cursor.execute('CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))')",
+        "explanation": "<h2>1. Concept</h2><p>DDL.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Primary Key",
+            "Data Types",
+            "If not exists"
+        ]
+    },
+    {
+        "id": "ml-unit1-intro",
+        "title": "1. What is Machine Learning?",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Formal Definitions & Analogies",
+        "description": "Tom Mitchell definition, Why ML?",
+        "syntax": "Theory",
+        "code_example": "# Traditional: Data + Rules = Answers\n# ML: Data + Answers = Rules",
+        "explanation": "<h2>1. Concept Overview</h2><p>Machine Learning definitions.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Tom Mitchell",
+            "Paradigm Shift",
+            "No Explicit Programming"
+        ]
+    },
+    {
+        "id": "ml-unit1-ai-vs-ml",
+        "title": "2. AI vs ML vs DL",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "The Hierarchy",
+        "description": "Understanding the Venn Diagram.",
+        "syntax": "Theory",
+        "code_example": "# AI > ML > DL",
+        "explanation": "<h2>1. Concept Overview</h2><p>AI > ML > DL.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Artificial Intelligence",
+            "Deep Learning",
+            "Data Science"
+        ]
+    },
+    {
+        "id": "ml-unit1-howlearn",
+        "title": "3. Learning from Data",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Pattern Recognition",
+        "description": "Training vs Testing concepts.",
+        "syntax": "Theory",
+        "code_example": "model.fit(train_data)\nmodel.predict(test_data)",
+        "explanation": "<h2>1. Concept Overview</h2><p>Pattern Recognition.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Generalization",
+            "Overfitting",
+            "Model Model"
+        ]
+    },
+    {
+        "id": "ml-unit1-steps",
+        "title": "4. The 7 Steps of ML",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "The Workflow",
+        "description": "From Data Collection to Prediction.",
+        "syntax": "Theory",
+        "code_example": "# 1. Gather\n# 2. Prepare\n# 3. Choose Model...",
+        "explanation": "<h2>1. Concept Overview</h2><p>7 Steps of ML.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Preprocessing",
+            "Training",
+            "Evaluation"
+        ]
+    },
+    {
+        "id": "ml-unit1-types",
+        "title": "5. Types of Learning (Overview)",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Broad Categories",
+        "description": "Supervised, Unsupervised, RL.",
+        "syntax": "Theory",
+        "code_example": "print('The Big Three')",
+        "explanation": "<h2>1. Concept Overview</h2><p>Sup/Unsup/RL.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Supervised",
+            "Unsupervised",
+            "Reinforcement"
+        ]
+    },
+    {
+        "id": "ml-unit1-supervised-theory",
+        "title": "6. Supervised Learning",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Labeled Data",
+        "description": "Classification vs Regression theory.",
+        "syntax": "Theory",
+        "code_example": "# Input (X) + Output (Y) -> Map",
+        "explanation": "<h2>1. Concept Overview</h2><p>Supervised Theory.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Labels",
+            "Regression",
+            "Classification"
+        ]
+    },
+    {
+        "id": "ml-unit1-unsupervised-theory",
+        "title": "7. Unsupervised Learning",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Unlabeled Data",
+        "description": "Clustering and Dimensionality Reduction.",
+        "syntax": "Theory",
+        "code_example": "# Input (X) -> Structure",
+        "explanation": "<h2>1. Concept Overview</h2><p>Unsupervised Theory.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Clustering",
+            "Hidden Patterns",
+            "No Teacher"
+        ]
+    },
+    {
+        "id": "ml-unit1-rl-theory",
+        "title": "8. Reinforcement Learning",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Trial and Error",
+        "description": "Agent, Environment, Rewards.",
+        "syntax": "Theory",
+        "code_example": "# Action -> Reward -> Update Policy",
+        "explanation": "<h2>1. Concept Overview</h2><p>RL Theory.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Agent",
+            "Reward Signal",
+            "Policy"
+        ]
+    },
+    {
+        "id": "ml-unit1-applications",
+        "title": "9. Real-World Applications",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Industry Use Cases",
+        "description": "Healthcare, Finance, Transport.",
+        "syntax": "Theory",
+        "code_example": "# Diagnosis, Fraud Detection, Self-Driving",
+        "explanation": "<h2>1. Concept Overview</h2><p>Real World Apps.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Healthcare",
+            "Finance",
+            "Social Media"
+        ]
+    },
+    {
+        "id": "ml-unit1-summary",
+        "title": "10. Unit Summary",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 1: Introduction to ML",
+        "definition": "Recap & Interview Prep",
+        "description": "Key takeaways and common questions.",
+        "syntax": "Theory",
+        "code_example": "# Ready for Unit 2!",
+        "explanation": "<h2>1. Concept Overview</h2><p>Summary.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Definitions",
+            "Differences",
+            "Examples"
+        ]
+    },
+    {
+        "id": "ml-unit2-intro",
+        "title": "1. Introduction to Supervised Learning",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Learning with Teacher",
+        "description": "Labeled data, Regression vs Classification.",
+        "syntax": "Theory",
+        "code_example": "# Input + Label -> Model",
+        "explanation": "<h2>1. What is Supervised Learning?</h2><p>Labeled Data.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Labeled Data",
+            "Regression",
+            "Classification"
+        ]
+    },
+    {
+        "id": "ml-unit2-pre-overview",
+        "title": "2. Data Preprocessing \u2013 Overview",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Cleaning Data",
+        "description": "Why preprocessing is important.",
+        "syntax": "Theory",
+        "code_example": "# Garbage In = Garbage Out",
+        "explanation": "\n<h2>1. Why Preprocessing is Important</h2>\n<p>Real-world data is often incomplete, inconsistent, and lacking in certain behaviors. <strong>\"Garbage In, Garbage Out\"</strong>: If you feed bad data to a model, you will get bad predictions.</p>\n<h2>2. Data Quality Issues</h2>\n<ul>\n    <li><strong>Missing Values:</strong> Nulls or NaNs.</li>\n    <li><strong>Outliers:</strong> Extreme values that skew analysis.</li>\n    <li><strong>Inconsistent Formatting:</strong> Dates (DD/MM vs MM/DD), Case sensitivity.</li>\n</ul>\n<h2>3. Feature Scaling and Transformation</h2>\n<p>Models like SVM and KNN use distance (Euclidean). If one feature has a range 0-1 and another 0-1000, the larger one will dominate. Scaling (0-1) or Standardization (Mean=0) fixes this.</p>\n<h2>4. Preparing Data for ML Models</h2>\n<p>The final dataset must be:</p>\n<ul>\n    <li><strong>Numeric:</strong> All text converted to numbers.</li>\n    <li><strong>Scaled:</strong> All features on similar scale.</li>\n    <li><strong>Split:</strong> Separated into X (Features) and y (Labels), and further into Train/Test sets.</li>\n</ul>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Quality Issues",
+            "Formatting",
+            "Cleaning"
+        ]
+    },
+    {
+        "id": "ml-unit2-mean-removal",
+        "title": "3. Mean Removal (Standardization)",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "StandardScaler",
+        "description": "Zero mean and unit variance.",
+        "syntax": "scaler.fit_transform(X)",
+        "code_example": "from sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)",
+        "explanation": "<h2>1. Mean Removal</h2><p>Standardization centers data at 0.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Zero Mean",
+            "Unit Variance",
+            "Standard Scaler"
+        ]
+    },
+    {
+        "id": "ml-unit2-scaling",
+        "title": "4. Scaling & Normalization",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "MinMax Scaling",
+        "description": "Scaling to a range [0, 1].",
+        "syntax": "scaler.fit_transform(X)",
+        "code_example": "from sklearn.preprocessing import MinMaxScaler\nscaler = MinMaxScaler()\nX_norm = scaler.fit_transform(X)",
+        "explanation": "<h2>1. Scaling</h2><p>Min-Max vs Z-Score.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "MinMaxScaler",
+            "Normalization",
+            "Range 0-1"
+        ]
+    },
+    {
+        "id": "ml-unit2-binarization",
+        "title": "5. Binarization & Label Encoding",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Categorical to Numerical",
+        "description": "Encoding text labels.",
+        "syntax": "LabelEncoder()",
+        "code_example": "from sklearn.preprocessing import LabelEncoder\nle = LabelEncoder()\ny_enc = le.fit_transform(['cat', 'dog'])",
+        "explanation": "<h2>1. Binarization</h2><p>Thresholding.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "LabelEncoder",
+            "OneHotEncoder",
+            "Binarizer"
+        ]
+    },
+    {
+        "id": "ml-unit2-linreg-basics",
+        "title": "6. Linear Regression \u2013 Basics",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Fitting a Line",
+        "description": "y = mx + b theory.",
+        "syntax": "Theory",
+        "code_example": "y = mx + c",
+        "explanation": "<h2>1. Regression</h2><p>y=mx+b.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Equation of Line",
+            "Coefficients",
+            "Intercept"
+        ]
+    },
+    {
+        "id": "ml-unit2-linreg-case",
+        "title": "7. Linear Regression \u2013 Case Study",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Practical Implementation",
+        "description": "Training and Predicting.",
+        "syntax": "model.predict(X)",
+        "code_example": "reg = LinearRegression()\nreg.fit(X_train, y_train)\npred = reg.predict(X_test)",
+        "explanation": "<h2>1. Workflow</h2><p>Load -> Split -> Fit -> Predict.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Train",
+            "Test",
+            "Predict"
+        ]
+    },
+    {
+        "id": "ml-unit2-cls-intro",
+        "title": "8. Introduction to Classification",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Discrete Predictions",
+        "description": "Binary vs Multi-class.",
+        "syntax": "Theory",
+        "code_example": "# Spam vs Not Spam",
+        "explanation": "<h2>1. Classification</h2><p>Categories.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Binary",
+            "Multi-Class",
+            "Labels"
+        ]
+    },
+    {
+        "id": "ml-unit2-simple-cls",
+        "title": "9. Building a Simple Classifier",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Workflow",
+        "description": "Steps to build a classifier.",
+        "syntax": "Workflow",
+        "code_example": "# Feature Selection -> Split -> Train",
+        "explanation": "<h2>1. Workflow</h2><p>Feature selection.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Features",
+            "Labels",
+            "Training"
+        ]
+    },
+    {
+        "id": "ml-unit2-logistic",
+        "title": "10. Logistic Regression Classifier",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Sigmoid Function",
+        "description": "Binary classification probability.",
+        "syntax": "LogisticRegression()",
+        "code_example": "from sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression()\nmodel.fit(X, y)",
+        "explanation": "<h2>1. Logistic</h2><p>Sigmoid.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Sigmoid",
+            "Probability",
+            "Binary"
+        ]
+    },
+    {
+        "id": "ml-unit2-naivebayes",
+        "title": "11. Na\u00efve Bayes Classifier",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Probabilistic Model",
+        "description": "Based on Bayes Theorem.",
+        "syntax": "GaussianNB()",
+        "code_example": "from sklearn.naive_bayes import GaussianNB\nnb = GaussianNB()",
+        "explanation": "<h2>1. Naive Bayes</h2><p>Independence.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Bayes Theorem",
+            "Independence",
+            "Prior/Posterior"
+        ]
+    },
+    {
+        "id": "ml-unit2-split",
+        "title": "12. Training & Testing Dataset",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Data Splitting",
+        "description": "Avoiding Overfitting.",
+        "syntax": "train_test_split()",
+        "code_example": "from sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X, y)",
+        "explanation": "<h2>1. Splitting</h2><p>Overfitting check.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Overfitting",
+            "Underfitting",
+            "Generalization"
+        ]
+    },
+    {
+        "id": "ml-unit2-accuracy",
+        "title": "13. Accuracy & Cross-Validation",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Evaluation Metrics",
+        "description": "Beyond simple accuracy.",
+        "syntax": "cross_val_score()",
+        "code_example": "from sklearn.model_selection import cross_val_score\nscores = cross_val_score(model, X, y, cv=5)",
+        "explanation": "<h2>1. Accuracy</h2><p>Cross-Validation.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "K-Fold",
+            "CV",
+            "Robustness"
+        ]
+    },
+    {
+        "id": "ml-unit2-conf-matrix",
+        "title": "14. Confusion Matrix Visualization",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Error Analysis",
+        "description": "TP, FP, TN, FN.",
+        "syntax": "confusion_matrix()",
+        "code_example": "from sklearn.metrics import confusion_matrix\nprint(confusion_matrix(y_true, y_pred))",
+        "explanation": "<h2>1. Confusion Matrix</h2><p>TP/FP/TN/FN.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "True Positive",
+            "False Positive",
+            "Heatmap"
+        ]
+    },
+    {
+        "id": "ml-unit2-cls-report",
+        "title": "15. Classification Performance Report",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Precision/Recall",
+        "description": "F1-Score and Support.",
+        "syntax": "classification_report()",
+        "code_example": "from sklearn.metrics import classification_report\nprint(classification_report(y_true, y_pred))",
+        "explanation": "<h2>1. Report</h2><p>Precision/Recall.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Precision",
+            "Recall",
+            "F1-Score"
+        ]
+    },
+    {
+        "id": "ml-unit2-predictive-intro",
+        "title": "16. Predictive Modeling \u2013 Introduction",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Advanced Modeling",
+        "description": "Linear vs Non-linear.",
+        "syntax": "Theory",
+        "code_example": "# Complex boundaries",
+        "explanation": "<h2>1. Predictive</h2><p>Modeling future.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Non-Linearity",
+            "Complexity",
+            "SVM Intro"
+        ]
+    },
+    {
+        "id": "ml-unit2-svm-theory",
+        "title": "17. Support Vector Machine (SVM) \u2013 Theory",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Max Margin",
+        "description": "Hyperplanes and Support Vectors.",
+        "syntax": "Theory",
+        "code_example": "# Finding the widest road",
+        "explanation": "<h2>1. SVM Theory</h2><p>Hyperplanes.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Hyperplane",
+            "Margin",
+            "Support Vectors"
+        ]
+    },
+    {
+        "id": "ml-unit2-svm-types",
+        "title": "18. SVM \u2013 Linear & Non-Linear Classifiers",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Kernels",
+        "description": "Handling non-linear data.",
+        "syntax": "SVC(kernel='rbf')",
+        "code_example": "from sklearn.svm import SVC\nmodel = SVC(kernel='rbf')",
+        "explanation": "<h2>1. SVM Kernels</h2><p>Line vs Curve.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Linear Kernel",
+            "RBF",
+            "Polynomial"
+        ]
+    },
+    {
+        "id": "ml-unit2-svm-confidence",
+        "title": "19. Confidence Measurements in SVM",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Decision Function",
+        "description": "Distance from hyperplane.",
+        "syntax": "decision_function()",
+        "code_example": "dist = model.decision_function(X_test)\nprint(dist)",
+        "explanation": "<h2>1. Confidence</h2><p>Distance from plane.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Distance",
+            "Probability",
+            "Confidence"
+        ]
+    },
+    {
+        "id": "ml-unit2-svm-case",
+        "title": "20. SVM Case Study",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "SVM in Action",
+        "description": "Full workflow with SVM.",
+        "syntax": "Implementation",
+        "code_example": "model = SVC().fit(X_train, y_train)\nprint(model.score(X_test, y_test))",
+        "explanation": "<h2>1. SVM Case</h2><p>Implementation.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Preprocessing",
+            "Training",
+            "Acccuracy"
+        ]
+    },
+    {
+        "id": "ml-unit2-summary",
+        "title": "21. Supervised Learning \u2013 Summary",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 2: Supervised Learning",
+        "definition": "Unit Recap",
+        "description": "Review and Practice.",
+        "syntax": "Review",
+        "code_example": "# Practice makes perfect",
+        "explanation": "<h2>1. Summary</h2><p>Recap.</p>",
+        "try_it_yourself": true,
+        "key_points": [
+            "Recap",
+            "Interview Qs",
+            "Projects"
+        ]
+    },
+    {
+        "id": "ml-unit3-intro",
+        "title": "1. Introduction to Unsupervised Learning",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Learning without Labels",
+        "description": "Clustering vs Dimensionality Reduction.",
+        "syntax": "Theory",
+        "code_example": "# No Labels (y)\n# Only Features (X)",
+        "explanation": "\n<h2>1. What is Unsupervised Learning?</h2>\n<p>Learning from <strong>Unlabeled Data</strong>. The system must discover information on its own.</p>\n<h2>2. Uses</h2>\n<p>Customer Segmentation, Anomaly Detection, Data Compression.</p>\n<h2>3. Types</h2>\n<ul>\n    <li>Clustering (Grouping).</li>\n    <li>Dimensionality Reduction (Simplifying).</li>\n</ul>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Unlabeled Data",
+            "Pattern Discovery",
+            "Clustering"
+        ]
+    },
+    {
+        "id": "ml-unit3-clustering-overview",
+        "title": "2. Clustering \u2013 Overview",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Grouping Data",
+        "description": "Distance measures and applications.",
+        "syntax": "Theory",
+        "code_example": "# Grouping similar items",
+        "explanation": "\n<h2>1. What is Clustering?</h2>\n<p>Grouping data points so that points in the same group are more similar to each other than to those in other groups.</p>\n<h2>2. Distance Measures</h2>\n<ul>\n    <li><strong>Euclidean:</strong> Straight line distance.</li>\n    <li><strong>Manhattan:</strong> Grid-based traversal.</li>\n</ul>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Euclidean Distance",
+            "Manhattan Distance",
+            "Similarity"
+        ]
+    },
+    {
+        "id": "ml-unit3-kmeans-theory",
+        "title": "3. K-Means Clustering \u2013 Theory",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Centroid-based",
+        "description": "Iterative grouping.",
+        "syntax": "KMeans(n_clusters=k)",
+        "code_example": "from sklearn.cluster import KMeans\nmodel = KMeans(n_clusters=3)",
+        "explanation": "\n<h2>1. What is K-Means?</h2>\n<p>A centroid-based algorithm.</p>\n<h2>2. The Algorithm</h2>\n<ol>\n    <li>Initialize K centroids randomly.</li>\n    <li>Assign points to nearest centroid.</li>\n    <li>Recalculate centroids (Mean).</li>\n    <li>Repeat until convergence.</li>\n</ol>\n<h2>3. Limitations</h2>\n<p>You must choose K manually. Sensitive to outliers.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Centroids",
+            "Elbow Method",
+            "K value"
+        ]
+    },
+    {
+        "id": "ml-unit3-kmeans-case",
+        "title": "4. K-Means Clustering \u2013 Case Study",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Python Implementation",
+        "description": "Clustering a dataset.",
+        "syntax": "model.fit(X)",
+        "code_example": "model.fit(X)\nlabels = model.predict(X)",
+        "explanation": "\n<h2>1. Workflow</h2>\n<ol>\n    <li><strong>Load Data:</strong> Mall Customers or Iris.</li>\n    <li><strong>Elbow Method:</strong> Plot WCSS to find best K.</li>\n    <li><strong>Fit:</strong> <code>kmeans = KMeans(n_clusters=5).fit(X)</code>.</li>\n    <li><strong>Visualize:</strong> Scatter plot with colors.</li>\n</ol>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Loading",
+            "Fitting",
+            "Visualizing"
+        ]
+    },
+    {
+        "id": "ml-unit3-img-compression",
+        "title": "5. Image Compression via Vector Quantization",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Color Reduction",
+        "description": "Using clustering to reduce colors.",
+        "syntax": "KMeans for Colors",
+        "code_example": "# 16 Million Colors -> 16 Colors",
+        "explanation": "\n<h2>1. Vector Quantization</h2>\n<p>Reducing the number of colors in an image.</p>\n<h2>2. How?</h2>\n<p>Use K-Means to find the top 16 dominant colors. Replace every pixel with the nearest dominant color.</p>\n<h2>3. Result</h2>\n<p>Drastically smaller file size with minimal visual loss.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Compression",
+            "Pixel Grouping",
+            "Optimization"
+        ]
+    },
+    {
+        "id": "ml-unit3-meanshift",
+        "title": "6. Mean Shift Clustering",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Sliding Window",
+        "description": "Kernel Density Estimation.",
+        "syntax": "MeanShift()",
+        "code_example": "from sklearn.cluster import MeanShift\nms = MeanShift()",
+        "explanation": "\n<h2>1. What is Mean Shift?</h2>\n<p>A centroid-based algorithm that works by updating candidates for centroids to be the mean of the points within a given region.</p>\n<h2>2. Kernel Density Concept</h2>\n<p>It uses <strong>Kernel Density Estimation (KDE)</strong> to find the highest density of data points (modes).</p>\n<h2>3. Pros & Cons</h2>\n<ul>\n    <li><strong>Pros:</strong> No need to select K (Clusters found automatically). Robust to outliers.</li>\n    <li><strong>Cons:</strong> Computationally expensive (Slow).</li>\n</ul>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "No K needed",
+            "Density Peaks",
+            "Slower"
+        ]
+    },
+    {
+        "id": "ml-unit3-agglomerative",
+        "title": "7. Agglomerative Clustering",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Hierarchical",
+        "description": "Bottom-up approach.",
+        "syntax": "AgglomerativeClustering()",
+        "code_example": "from sklearn.cluster import AgglomerativeClustering",
+        "explanation": "\n<h2>1. Hierarchical Clustering</h2>\n<p>Builds a hierarchy of clusters.</p>\n<h2>2. Agglomerative (Bottom-Up)</h2>\n<p>Start with N clusters (every point is a cluster). Merge nearest pair repeatedly until 1 giant cluster remains.</p>\n<h2>3. Dendrogram</h2>\n<p>A tree diagram that shows the order of merges.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Dendrogram",
+            "Linkage",
+            "Hierarchy"
+        ]
+    },
+    {
+        "id": "ml-unit3-comparison",
+        "title": "8. Clustering \u2013 Comparative Study",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Pros and Cons",
+        "description": "K-Means vs Mean Shift vs Agglomerative.",
+        "syntax": "Theory",
+        "code_example": "# Speed vs Accuracy trade-offs",
+        "explanation": "\n<h2>1. K-Means vs Mean Shift vs Agglomerative</h2>\n<ul>\n    <li><strong>K-Means:</strong> Fast, Simple. Use when you know K and data is spherical.</li>\n    <li><strong>Mean Shift:</strong> Slower. Use when you don't know K and clusters have irregular search.</li>\n    <li><strong>Agglomerative:</strong> Hiearchical. Use for smaller datasets where visual tree (Dendrogram) is needed.</li>\n</ul>\n<h2>2. When to Use Which?</h2>\n<p>Start with K-Means. If it fails on complex shapes, try Mean Shift (DBSCAN is also good). Use Hierarchical for taxonomy.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Scalability",
+            "Shape of clusters",
+            "Parameter tuning"
+        ]
+    },
+    {
+        "id": "ml-unit3-summary",
+        "title": "9. Unsupervised Learning \u2013 Summary",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Recap",
+        "description": "Review and Practice.",
+        "syntax": "Review",
+        "code_example": "# Summary",
+        "explanation": "\n<h2>1. Key Takeaways</h2>\n<p>Clustering is about similarity. K-Means is the workhorse.</p>\n<h2>2. Interview Questions</h2>\n<p><strong>Q:</strong> How to select K? <br><strong>A:</strong> Elbow Method or Silhouette Score.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Clustering Types",
+            "Use Cases",
+            "Interview Qs"
+        ]
+    },
+    {
+        "id": "ml-unit3-semisupervised",
+        "title": "10. Semi-Supervised Learning",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 3: Unsupervised Learning",
+        "definition": "Hybrid Approach",
+        "description": "Combining labeled and unlabeled data.",
+        "syntax": "Theory",
+        "code_example": "# Train on Labeled -> Predict Unlabeled -> Retrain",
+        "explanation": "\n<h2>1. What is Semi-Supervised Learning?</h2>\n<p>A hybrid approach that uses a <strong>small amount of labeled data</strong> and a <strong>large amount of unlabeled data</strong>.</p>\n<h2>2. The Analogy</h2>\n<p>Imagine a teacher solves 5 math problems (Labeled) and gives you 95 unsolved ones (Unlabeled). You use the logic from the 5 solved ones to try and solve the rest.</p>\n<h2>3. Why use it?</h2>\n<p>Labeling data is expensive (requires human experts, e.g., doctors for X-Rays). Unlabeled data is cheap. This method bridges the gap.</p>\n<h2>4. Techniques</h2>\n<p><strong>Self-Training:</strong> Train model on Labeled -> Predict Unlabeled -> Keep confident predictions as new Labeled data -> Retrain.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Small Labeled Data",
+            "Large Unlabeled Data",
+            "Label Propagation"
+        ]
+    },
+    {
+        "id": "ml-unit4-intro",
+        "title": "1. Introduction to NLP",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Text Analysis",
+        "description": "What is NLP?",
+        "syntax": "Theory",
+        "code_example": "# Text -> Meaning",
+        "explanation": "\n<h2>1. What is NLP?</h2>\n<p><strong>Natural Language Processing</strong>: Teaching computers to understand human language.</p>\n<h2>2. Applications</h2>\n<p>Google Translate, Siri/Alexa, Spam Filter, Sentiment Analysis.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Language Understanding",
+            "Chatbots",
+            "Translation"
+        ]
+    },
+    {
+        "id": "ml-unit4-pre-overview",
+        "title": "2. Text Preprocessing \u2013 Overview",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Cleaning Text",
+        "description": "Noise removal pipeline.",
+        "syntax": "Theory",
+        "code_example": "# Raw Text -> Clean Tokens",
+        "explanation": "\n<h2>1. Why Preprocess Text?</h2>\n<p>Text is unstructured and messy (slang, emojis, caps).</p>\n<h2>2. The Pipeline</h2>\n<p>Clean -> Tokenize -> Stem/Lemmatize -> Vectorize -> Model.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Noise",
+            "Pipeline",
+            "Standardization"
+        ]
+    },
+    {
+        "id": "ml-unit4-cleaning",
+        "title": "3. Text Cleaning & Tokenization",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Breaking down text",
+        "description": "Stopwords and punctuation.",
+        "syntax": "nltk.word_tokenize()",
+        "code_example": "import nltk\ntokens = nltk.word_tokenize('Hello World')",
+        "explanation": "\n<h2>1. Steps</h2>\n<ul>\n    <li><strong>Lowercasing:</strong> 'Hello' == 'hello'.</li>\n    <li><strong>Stopword Removal:</strong> Removing 'the', 'is', 'at'.</li>\n    <li><strong>Tokenization:</strong> Splitting sentences into words.</li>\n</ul>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Tokenization",
+            "Stopwords",
+            "Lowercasing"
+        ]
+    },
+    {
+        "id": "ml-unit4-stemming",
+        "title": "4. Stemming",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Root Form (Crude)",
+        "description": "Porter Stemmer.",
+        "syntax": "PorterStemmer()",
+        "code_example": "from nltk.stem import PorterStemmer\nps = PorterStemmer()\nprint(ps.stem('running'))",
+        "explanation": "\n<h2>1. What is Stemming?</h2>\n<p>Chopping off suffixes to find the root.</p>\n<h2>2. Example</h2>\n<p>Running, Ran, Runner -> <strong>Run</strong>.</p>\n<h2>3. Porter Stemmer</h2>\n<p>Fast but crude (Can produce 'Univers' instead of 'Universe').</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Chopping suffixes",
+            "Fast",
+            "Not always real words"
+        ]
+    },
+    {
+        "id": "ml-unit4-lemmatization",
+        "title": "5. Lemmatization",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Root Form (Linguistic)",
+        "description": "Dictionary based.",
+        "syntax": "WordNetLemmatizer()",
+        "code_example": "from nltk.stem import WordNetLemmatizer\nlem = WordNetLemmatizer()",
+        "explanation": "\n<h2>1. What is Lemmatization?</h2>\n<p>Using a dictionary and morphological analysis to find the root word (Lemma).</p>\n<h2>2. POS Tagging</h2>\n<p>It uses <strong>Part-of-Speech (POS)</strong> tagging to understand context (e.g., is 'meeting' a noun or a verb?) to lemmatize correctly.</p>\n<h2>3. Difference from Stemming</h2>\n<p>Lemmatization returns a real word. Stemming just chops the end.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Context aware",
+            "POS Tags",
+            "Slower than Stemming"
+        ]
+    },
+    {
+        "id": "ml-unit4-chunking",
+        "title": "6. Chunking",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Phrases",
+        "description": "Noun Phrase Chunking.",
+        "syntax": "RegexpParser()",
+        "code_example": "# Grouping (Adjective + Noun)",
+        "explanation": "\n<h2>1. What is Chunking?</h2>\n<p>Grouping tokens into meaningful phrases (Noun Phrases).</p>\n<h2>2. Why?</h2>\n<p>To extract entities like \"New York City\" as one unit, not three words.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "NP Chunking",
+            "Shallow Parsing",
+            "Structure"
+        ]
+    },
+    {
+        "id": "ml-unit4-vectorization",
+        "title": "7. Text Vectorization",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Text to Numbers",
+        "description": "BoW and TF-IDF.",
+        "syntax": "TfidfVectorizer()",
+        "code_example": "from sklearn.feature_extraction.text import TfidfVectorizer",
+        "explanation": "\n<h2>1. Converting Text to Numbers</h2>\n<p>Models only understand Math.</p>\n<h2>2. Bag of Words (BoW)</h2>\n<p>Counting word frequency. Simple but loses context.</p>\n<h2>3. TF-IDF</h2>\n<p><strong>Term Frequency - Inverse Document Frequency</strong>. Highlights unique/important words, ignores common ones.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Bag of Words",
+            "TF-IDF",
+            "Numeric Rep"
+        ]
+    },
+    {
+        "id": "ml-unit4-classifier",
+        "title": "8. Building a Text Classifier",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Modeling",
+        "description": "Pipeline for classification.",
+        "syntax": "Pipeline()",
+        "code_example": "# Vectorizer -> Classifier",
+        "explanation": "\n<h2>1. Workflow</h2>\n<ol>\n    <li><strong>Dataset:</strong> SMS Spam Collection.</li>\n    <li><strong>Feature Extraction:</strong> TF-IDF.</li>\n    <li><strong>Model:</strong> Naive Bayes (Standard for NLP).</li>\n</ol>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Features",
+            "Labels",
+            "Training"
+        ]
+    },
+    {
+        "id": "ml-unit4-case",
+        "title": "9. NLP Case Study",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Spam Detection",
+        "description": "Full Python example.",
+        "syntax": "Implementation",
+        "code_example": "# Load Spam Dataset -> Clean -> Train NaiveBayes",
+        "explanation": "\n<h2>1. Sentiment Analysis Python</h2>\n<p>Building a movie review classifier.</p>\n<h2>2. Steps</h2>\n<p>Load Reviews -> Clean -> Vectorize -> Fit Model -> Predict \"Positive/Negative\".</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Real World",
+            "Accuracy",
+            "Interpretation"
+        ]
+    },
+    {
+        "id": "ml-unit4-summary",
+        "title": "10. NLP \u2013 Summary",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 4: Natural Language Processing",
+        "definition": "Recap",
+        "description": "Review and Practice.",
+        "syntax": "Review",
+        "code_example": "# Summary",
+        "explanation": "\n<h2>1. Key Takeaways</h2>\n<p>Preprocessing is 80% of NLP. TF-IDF > CountVectorizer usually.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Preprocessing Steps",
+            "Vectorization",
+            "Modeling"
+        ]
+    },
+    {
+        "id": "ml-unit5-intro",
+        "title": "1. Introduction to Computer Vision",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Visual Perception",
+        "description": "Why OpenCV?",
+        "syntax": "Theory",
+        "code_example": "# Computers 'seeing'",
+        "explanation": "\n<h2>1. What is Computer Vision?</h2>\n<p>Enabling computers to \"see\" and interpret images.</p>\n<h2>2. Why OpenCV?</h2>\n<p>Open Source Computer Vision Library. The industry standard for real-time vision.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Pixels",
+            "Matrices",
+            "Applications"
+        ]
+    },
+    {
+        "id": "ml-unit5-opencv-basics",
+        "title": "2. Introduction to OpenCV",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Library Basics",
+        "description": "Reading images and videos.",
+        "syntax": "cv2.imread()",
+        "code_example": "import cv2\nimg = cv2.imread('image.jpg')",
+        "explanation": "\n<h2>1. Installation</h2>\n<p><code>pip install opencv-python</code></p>\n<h2>2. Reading Images</h2>\n<p>Images are numpy arrays of pixels (Height, Width, Channels).</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Installation",
+            "BGR format",
+            "WaitKey"
+        ]
+    },
+    {
+        "id": "ml-unit5-haar-theory",
+        "title": "3. Haar Cascades \u2013 Theory",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Feature Extraction",
+        "description": "Viola-Jones Algorithm.",
+        "syntax": "CascadeClassifier()",
+        "code_example": "face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')",
+        "explanation": "\n<h2>1. What is a Haar Cascade?</h2>\n<p>An ML-based approach where a cascade function is trained from a lot of positive and negative images.</p>\n<h2>2. Viola-Jones Algorithm</h2>\n<p>Fast feature extraction using rectangular regions (Haar features).</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Haar Features",
+            "Integral Image",
+            "Cascading"
+        ]
+    },
+    {
+        "id": "ml-unit5-face-detect",
+        "title": "4. Face Detection",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Finding Faces",
+        "description": "Using Haar Cascades.",
+        "syntax": "detectMultiScale()",
+        "code_example": "faces = face_cascade.detectMultiScale(gray, 1.1, 4)",
+        "explanation": "\n<h2>1. How it works</h2>\n<p>We load a pre-trained XML file (frontal face). We pass our image to the detector.</p>\n<h2>2. Bounding Box</h2>\n<p>The detector returns (x, y, w, h). We draw a rectangle using these coordinates.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Scale Factor",
+            "Min Neighbors",
+            "Bounding Box"
+        ]
+    },
+    {
+        "id": "ml-unit5-features",
+        "title": "5. Eye, Nose, Mouth Detection",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Facial Features",
+        "description": "Multi-cascade detection.",
+        "syntax": "detectMultiScale()",
+        "code_example": "# Detect face -> ROI -> Detect eyes",
+        "explanation": "\n<h2>1. ROI (Region of Interest)</h2>\n<p>Once a face is found, crop it. Search for Eyes/Nose ONLY inside that face box. This saves CPU.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "ROI (Region of Interest)",
+            "Nested Detection",
+            "Efficiency"
+        ]
+    },
+    {
+        "id": "ml-unit5-obj-img",
+        "title": "6. Object Detection in Images",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Static Detection",
+        "description": "Tuning parameters.",
+        "syntax": "Implementation",
+        "code_example": "# Tuning minSize and maxSize",
+        "explanation": "\n<h2>1. Tuning Parameters</h2>\n<ul>\n    <li><strong>scaleFactor:</strong> How much image size is reduced at each scale.</li>\n    <li><strong>minNeighbors:</strong> Quality check (higher = fewer detections but better quality).</li>\n</ul>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "False Positives",
+            "Parameter Tuning",
+            "Visualization"
+        ]
+    },
+    {
+        "id": "ml-unit5-obj-vid",
+        "title": "7. Object Detection in Videos",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Real-time Processing",
+        "description": "Webcam capture.",
+        "syntax": "VideoCapture(0)",
+        "code_example": "cap = cv2.VideoCapture(0)\nwhile True: ret, frame = cap.read()",
+        "explanation": "\n<h2>1. Webcam Access</h2>\n<p><code>cv2.VideoCapture(0)</code> accesses the default camera.</p>\n<h2>2. Real-Time Loop</h2>\n<p>Read Frame -> Process -> Display -> Wait for 'q' to quit.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Frame Loop",
+            "Latency",
+            "Release"
+        ]
+    },
+    {
+        "id": "ml-unit5-tracking",
+        "title": "8. Face Tracking in Real-Time",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Live Tracking",
+        "description": "Drawing boxes on live video.",
+        "syntax": "cv2.rectangle()",
+        "code_example": "cv2.rectangle(frame, (x,y), (x+w,y+h), (255,0,0), 2)",
+        "explanation": "\n<h2>1. Tracking Logic</h2>\n<p>Simply running detection on every frame works for fast CPUs. For slower ones, detect once every 30 frames and 'track' in between.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Continuous Detection",
+            "Drawing",
+            "User Interface"
+        ]
+    },
+    {
+        "id": "ml-unit5-pupil",
+        "title": "9. Pupil Detection (Advanced)",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Detailed Feature Extraction",
+        "description": "Thresholding and Contours.",
+        "syntax": "cv2.findContours()",
+        "code_example": "thresh = cv2.threshold(gray_eye, 50, 255, cv2.THRESH_BINARY)",
+        "explanation": "\n<h2>1. Advanced Detection</h2>\n<p>Haar Finds the eye. Then use <strong>Thresholding</strong> to find the darkest blob (pupil).</p>\n<h2>2. Contours</h2>\n<p><code>cv2.findContours</code> outlines the shape of the pupil.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Thresholding",
+            "Contours",
+            "Centroids"
+        ]
+    },
+    {
+        "id": "ml-unit5-case",
+        "title": "10. OpenCV Case Study",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Full App",
+        "description": "Face & Eye detection app.",
+        "syntax": "Application",
+        "code_example": "# Putting it all together",
+        "explanation": "\n<h2>1. The Application</h2>\n<p><strong>Drowsiness Detector:</strong></p>\n<p>Detect Eyes -> Check if closed for 3 seconds -> Sound Alarm.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Integration",
+            "Performance",
+            "Usability"
+        ]
+    },
+    {
+        "id": "ml-unit5-summary",
+        "title": "11. Computer Vision \u2013 Summary",
+        "technology": "Machine Learning with Python",
+        "unit": "Unit 5: Computer Vision with OpenCV",
+        "definition": "Recap",
+        "description": "Review and Practice.",
+        "syntax": "Review",
+        "code_example": "# Summary",
+        "explanation": "\n<h2>1. Summary</h2>\n<p>CV is powerful. Haar Cascades are old but fast. Deep Learning (YOLO) is modern but heavy.</p>\n",
+        "try_it_yourself": true,
+        "key_points": [
+            "Haar Cascades",
+            "Real-Time",
+            "Image Processing"
+        ]
+    }
+]

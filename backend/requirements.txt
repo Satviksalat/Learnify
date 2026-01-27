@@ -1,0 +1,8 @@
+flask
+cors
+pandas
+numpy
+matplotlib
+scikit-learn
+opencv-python
+nltk

@@ -1,0 +1,607 @@
+📌 PRACTICAL – 1
+Create a Pandas DataFrame using a Two-Dimensional List
+import pandas as pd
+
+data = [
+    [1, 'Amit', 85],
+    [2, 'Rina', 90],
+    [3, 'Karan', 78]
+]
+
+df = pd.DataFrame(data, columns=['ID', 'Name', 'Marks'])
+print(df)
+
+📌 PRACTICAL – 2
+Create a Pandas Column Using a for-loop
+import pandas as pd
+
+df = pd.DataFrame({'Numbers': [1, 2, 3, 4]})
+squares = []
+
+for n in df['Numbers']:
+    squares.append(n*n)
+
+df['Squares'] = squares
+print(df)
+
+📌 PRACTICAL – 3
+Change Column Names and Row Indexes in Pandas
+import pandas as pd
+
+df = pd.DataFrame({
+    'A': [10, 20, 30],
+    'B': [40, 50, 60]
+})
+
+df.columns = ['Col1', 'Col2']
+df.index = ['Row1', 'Row2', 'Row3']
+
+print(df)
+
+📌 PRACTICAL – 4
+Load Different Datasets Using scikit-learn
+from sklearn import datasets
+
+iris = datasets.load_iris()
+digits = datasets.load_digits()
+wine = datasets.load_wine()
+
+print(iris.data[:5])
+
+📌 PRACTICAL – 5
+Extract Specified Rows and Columns Using Pandas
+import pandas as pd
+
+df = pd.DataFrame({
+    'Name': ['A', 'B', 'C', 'D'],
+    'Age': [21, 22, 23, 24],
+    'Marks': [85, 78, 92, 88]
+})
+
+print(df.loc[1:3, ['Name', 'Marks']])
+
+📌 PRACTICAL – 6
+Handle Missing Values Using Imputer (Mean Strategy)
+import numpy as np
+import pandas as pd
+from sklearn.impute import SimpleImputer
+
+data = [[1, 2], [3, np.nan], [7, 6]]
+
+imp = SimpleImputer(strategy='mean')
+result = imp.fit_transform(data)
+
+print(result)
+
+📌 PRACTICAL – 7
+Label Encoding Categorical Data
+from sklearn.preprocessing import LabelEncoder
+
+data = ['red', 'green', 'blue', 'green']
+
+encoder = LabelEncoder()
+encoded = encoder.fit_transform(data)
+
+print(encoded)
+
+📌 PRACTICAL – 8
+One Hot Encoding Categorical Data
+import pandas as pd
+
+df = pd.DataFrame({'Color': ['Red', 'Blue', 'Green']})
+df_encoded = pd.get_dummies(df, columns=['Color'])
+
+print(df_encoded)
+
+📌 PRACTICAL – 9
+Split Dataset into Training and Test Set
+from sklearn.model_selection import train_test_split
+
+X = [[1], [2], [3], [4], [5]]
+y = [2, 4, 6, 8, 10]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=0)
+
+print(X_train, X_test)
+
+📌 PRACTICAL – 10
+Feature Scaling – Standardization
+from sklearn.preprocessing import StandardScaler
+import numpy as np
+
+data = np.array([[10], [20], [30], [40]])
+scaler = StandardScaler()
+scaled = scaler.fit_transform(data)
+
+print(scaled)
+
+📌 PRACTICAL – 11
+Feature Scaling – Normalization
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+
+data = np.array([[100], [200], [300]])
+scaler = MinMaxScaler()
+normalized = scaler.fit_transform(data)
+
+print(normalized)
+
+📌 PRACTICAL – 12
+Create a Matrix Using NumPy
+import numpy as np
+
+matrix = np.array([[1, 2], [3, 4]])
+print(matrix)
+
+📌 PRACTICAL – 13
+Mean Removal
+from sklearn.preprocessing import scale
+import numpy as np
+
+data = np.array([10, 20, 30, 40])
+result = scale(data)
+
+print(result)
+
+📌 PRACTICAL – 14
+Scaling Data into a Given Range
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+
+data = np.array([[10], [20], [30], [40]])
+scaler = MinMaxScaler(feature_range=(0, 1))
+print(scaler.fit_transform(data))
+
+📌 PRACTICAL – 15
+Create a Binary Vector Using Binarization
+from sklearn.preprocessing import Binarizer
+import numpy as np
+
+data = np.array([[1], [5], [10]])
+binarizer = Binarizer(threshold=4)
+print(binarizer.fit_transform(data))
+
+📌 PRACTICAL – 16
+Linear Regression in Python
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+X = np.array([[1], [2], [3], [4]])
+y = np.array([2, 4, 6, 8])
+
+model = LinearRegression()
+model.fit(X, y)
+
+print(model.predict([[5]]))
+
+📌 PRACTICAL – 17
+Evaluate Linear Regression (Metrics)
+from sklearn.metrics import mean_squared_error, r2_score
+import numpy as np
+
+y_true = [3, -0.5, 2]
+y_pred = [2.5, 0.0, 2]
+
+print("MSE:", mean_squared_error(y_true, y_pred))
+print("R2:", r2_score(y_true, y_pred))
+
+📌 PRACTICAL – 18
+Linear Regression on Advertisement Dataset
+
+(Uses dummy example)
+
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+
+df = pd.DataFrame({
+    'TV': [100, 200, 300],
+    'Sales': [10, 20, 30]
+})
+
+model = LinearRegression()
+model.fit(df[['TV']], df['Sales'])
+
+print(model.predict([[250]]))
+
+📌 PRACTICAL – 19
+Detect Null Values & Outliers
+import pandas as pd
+
+df = pd.DataFrame({
+    'A': [10, 20, None, 40, 1000]  # 1000 = outlier
+})
+
+print(df.isnull())
+print(df.describe())
+
+📌 PRACTICAL – 20
+Generate Visualizations
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame({'Marks': [60, 70, 80, 90]})
+
+df['Marks'].plot(kind='bar')
+plt.show()
+
+📌 PRACTICAL – 21
+Heatmap for Correlation
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = sns.load_dataset("iris")
+sns.heatmap(df.corr(), annot=True)
+plt.show()
+
+📌 PRACTICAL – 22
+Summary Operations
+import pandas as pd
+
+df = pd.DataFrame({'A': [1, 2, 3], 'B': [5, 6, 7]})
+print(df.describe())
+
+📌 PRACTICAL – 23
+Building Simple Classifier
+from sklearn.neighbors import KNeighborsClassifier
+
+X = [[1], [2], [3], [4]]
+y = [0, 0, 1, 1]
+
+model = KNeighborsClassifier(n_neighbors=1)
+model.fit(X, y)
+
+print(model.predict([[1.5]]))
+
+📌 PRACTICAL – 24
+Standard Normal Distribution using Classifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+import numpy as np
+
+X = np.array([[1], [2], [3], [4]])
+y = [0, 0, 1, 1]
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+model = KNeighborsClassifier()
+model.fit(X_scaled, y)
+
+print(model.predict(scaler.transform([[2]])))
+
+📌 PRACTICAL – 25
+Logistic Regression on Diabetes Dataset
+from sklearn.datasets import load_diabetes
+from sklearn.linear_model import LogisticRegression
+
+X, y = load_diabetes(return_X_y=True)
+model = LogisticRegression(max_iter=1000)
+model.fit(X, y)
+
+print(model.score(X, y))
+
+📌 PRACTICAL – 26
+Evaluate Logistic Regression
+from sklearn.metrics import accuracy_score
+y_true = [1, 0, 1]
+y_pred = [1, 1, 1]
+
+print("Accuracy:", accuracy_score(y_true, y_pred))
+
+📌 PRACTICAL – 27
+Confusion Matrix (Regression Evaluation)
+from sklearn.metrics import confusion_matrix
+
+y_true = [1, 0, 1, 1, 0]
+y_pred = [1, 0, 1, 0, 0]
+
+print(confusion_matrix(y_true, y_pred))
+
+📌 PRACTICAL – 28
+Naïve Bayes Classifier
+from sklearn.naive_bayes import GaussianNB
+
+X = [[1,20], [2,21], [3,22], [4,23]]
+y = [0,0,1,1]
+
+model = GaussianNB()
+model.fit(X, y)
+
+print(model.predict([[2,21]]))
+
+📌 PRACTICAL – 29
+Visualize Training & Test Results
+import matplotlib.pyplot as plt
+
+X_train = [1, 2, 3]
+y_train = [2, 4, 6]
+X_test = [4, 5]
+y_test = [8, 10]
+
+plt.scatter(X_train, y_train)
+plt.scatter(X_test, y_test)
+plt.show()
+
+📌 PRACTICAL – 30
+Predict Cancer Type Using SVM
+from sklearn import datasets
+from sklearn.svm import SVC
+
+cancer = datasets.load_breast_cancer()
+X, y = cancer.data, cancer.target
+
+model = SVC()
+model.fit(X, y)
+
+print(model.score(X, y))
+
+📌 PRACTICAL – 31
+K-Means Clustering
+from sklearn.cluster import KMeans
+
+X = [[1], [2], [8], [9]]
+
+model = KMeans(n_clusters=2)
+model.fit(X)
+
+print(model.labels_)
+
+📌 PRACTICAL – 32
+Elbow Method
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+X = [[1], [2], [3], [8], [9], [10]]
+
+inertia = []
+
+for k in range(1, 6):
+    model = KMeans(n_clusters=k)
+    model.fit(X)
+    inertia.append(model.inertia_)
+
+plt.plot(range(1, 6), inertia)
+plt.show()
+
+📌 PRACTICAL – 33
+Plot Cluster Centers
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+
+X = [[1], [2], [8], [9]]
+model = KMeans(n_clusters=2)
+model.fit(X)
+
+plt.scatter(X, [0,0,0,0])
+plt.scatter(model.cluster_centers_, [0,0], marker='x', s=200)
+plt.show()
+
+📌 PRACTICAL – 34
+Mean Shift Clustering
+from sklearn.cluster import MeanShift
+import numpy as np
+
+X = np.array([[1], [2], [8], [9]])
+
+ms = MeanShift()
+ms.fit(X)
+
+print(ms.labels_)
+
+📌 PRACTICAL – 35
+Mean Shift with Bandwidth & Bin Seeding
+from sklearn.cluster import MeanShift, estimate_bandwidth
+import numpy as np
+
+X = np.array([[1], [2], [8], [9]])
+bandwidth = estimate_bandwidth(X)
+
+ms = MeanShift(bandwidth=bandwidth, bin_seeding=True)
+ms.fit(X)
+
+print(ms.labels_)
+
+📌 PRACTICAL – 36
+Agglomerative Clustering
+from sklearn.cluster import AgglomerativeClustering
+
+X = [[1], [2], [8], [9]]
+
+model = AgglomerativeClustering(n_clusters=2)
+print(model.fit_predict(X))
+
+📌 PRACTICAL – 37
+Linkage Matrix for Agglomerative Clustering
+from scipy.cluster.hierarchy import dendrogram, linkage
+import matplotlib.pyplot as plt
+
+X = [[1], [2], [8], [9]]
+linked = linkage(X, 'single')
+
+dendrogram(linked)
+plt.show()
+
+📌 PRACTICAL – 38
+NLTK Setup
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+print("NLTK setup complete")
+
+📌 PRACTICAL – 39
+Stemming Using PorterStemmer
+from nltk.stem import PorterStemmer
+
+stemmer = PorterStemmer()
+words = ["running", "easily", "playing"]
+
+print([stemmer.stem(w) for w in words])
+
+📌 PRACTICAL – 40
+Lemmatization
+from nltk.stem import WordNetLemmatizer
+
+lemmatizer = WordNetLemmatizer()
+
+print(lemmatizer.lemmatize("running", pos='v'))
+
+📌 PRACTICAL – 41
+Chunk Parser
+import nltk
+
+sentence = "The quick brown fox jumps over the lazy dog"
+tokens = nltk.word_tokenize(sentence)
+tagged = nltk.pos_tag(tokens)
+
+grammar = "NP: {<DT>?<JJ>*<NN>}"
+cp = nltk.RegexpParser(grammar)
+
+result = cp.parse(tagged)
+print(result)
+
+📌 PRACTICAL – 42
+Sentence Structure
+import nltk
+text = nltk.word_tokenize("I love machine learning.")
+print(nltk.pos_tag(text))
+
+📌 PRACTICAL – 43
+Grammar Parsing
+import nltk
+
+grammar = """
+S -> NP VP
+NP -> DT NN
+VP -> VB NP
+"""
+
+sent = "the boy saw the dog"
+tokens = nltk.word_tokenize(sent)
+parser = nltk.ChartParser(nltk.CFG.fromstring(grammar))
+
+for tree in parser.parse(tokens):
+    print(tree)
+
+📌 PRACTICAL – 44
+Generate Grammar Tree
+import nltk
+
+grammar = nltk.CFG.fromstring("""
+S -> NP VP
+NP -> DT NN
+VP -> VB NP
+""")
+
+parser = nltk.ChartParser(grammar)
+sent = nltk.word_tokenize("the boy saw the dog")
+
+for tree in parser.parse(sent):
+    tree.pretty_print()
+
+📌 PRACTICAL – 45
+Basic OpenCV Program
+import cv2
+
+img = cv2.imread('image.jpg')
+cv2.imshow('Image', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+📌 PRACTICAL – 46
+Working with OpenCV Libraries
+import cv2
+print("OpenCV Version:", cv2.__version__)
+
+📌 PRACTICAL – 47
+imread(), imshow(), imwrite()
+import cv2
+
+img = cv2.imread("image.jpg")
+cv2.imshow("Image", img)
+
+cv2.imwrite("output.jpg", img)
+cv2.waitKey(0)
+
+📌 PRACTICAL – 48
+Face Detection Using Haar Cascade
+import cv2
+
+cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+img = cv2.imread("face.jpg")
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+faces = cascade.detectMultiScale(gray, 1.1, 4)
+
+for (x,y,w,h) in faces:
+    cv2.rectangle(img, (x,y), (x+w, y+h), (255,0,0), 2)
+
+cv2.imshow("Faces", img)
+cv2.waitKey(0)
+
+📌 PRACTICAL – 49
+Detect Face + Eyes
+import cv2
+
+face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+eye_cascade = cv2.CascadeClassifier("haarcascade_eye.xml")
+
+img = cv2.imread("face.jpg")
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+faces = face_cascade.detectMultiScale(gray)
+
+for (x,y,w,h) in faces:
+    cv2.rectangle(img, (x,y), (x+w, y+h), (255,0,0), 2)
+    roi = gray[y:y+h, x:x+w]
+
+    eyes = eye_cascade.detectMultiScale(roi)
+    for (ex,ey,ew,eh) in eyes:
+        cv2.rectangle(img, (x+ex, y+ey), (x+ex+ew, y+ey+eh), (0,255,0), 2)
+
+cv2.imshow("Face and Eyes", img)
+cv2.waitKey(0)
+
+📌 PRACTICAL – 50
+Detect Face in Recorded Video
+import cv2
+
+cap = cv2.VideoCapture("video.mp4")
+cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+    
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = cascade.detectMultiScale(gray, 1.1, 4)
+
+    for (x,y,w,h) in faces:
+        cv2.rectangle(frame, (x,y), (x+w,y+h), (255,0,0), 2)
+
+    cv2.imshow("Video", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+📌 PRACTICAL – 51
+Detect Face Using Live Streaming
+import cv2
+
+cap = cv2.VideoCapture(0)
+cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+
+while True:
+    ret, frame = cap.read()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    faces = cascade.detectMultiScale(gray, 1.1, 4)
+    for (x,y,w,h) in faces:
+        cv2.rectangle(frame, (x,y), (x+w,y+h), (255,0,0), 2)
+
+    cv2.imshow("Live Face Detection", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()

@@ -1,0 +1,280 @@
+import json
+import os
+
+# Quiz Data
+# 3 questions per unit for 10 units = 30 questions
+
+quizzes = [
+    # --- Python Programming Course ---
+    
+    # Unit 1: Python Basics
+    {
+        "id": 1,
+        "course": "Python",
+        "unit": "Unit 1: Python Basics",
+        "question": "What is the correct file extension for Python files?",
+        "options": [".pt", ".pyth", ".py", ".pyt"],
+        "correct_answer": ".py"
+    },
+    {
+        "id": 2,
+        "course": "Python",
+        "unit": "Unit 1: Python Basics",
+        "question": "Which method is used to remove whitespace from the beginning and end of a string?",
+        "options": ["strip()", "trim()", "len()", "ptrim()"],
+        "correct_answer": "strip()"
+    },
+    {
+        "id": 3,
+        "course": "Python",
+        "unit": "Unit 1: Python Basics",
+        "question": "Which collection is ordered, changeable, and allows duplicate members?",
+        "options": ["Tuple", "Set", "Dictionary", "List"],
+        "correct_answer": "List"
+    },
+
+    # Unit 2: OOP Using Python
+    {
+        "id": 4,
+        "course": "Python",
+        "unit": "Unit 2: OOP Using Python",
+        "question": "Which keyword is used to create a class in Python?",
+        "options": ["class", "struct", "object", "def"],
+        "correct_answer": "class"
+    },
+    {
+        "id": 5,
+        "course": "Python",
+        "unit": "Unit 2: OOP Using Python",
+        "question": "What is the name of the special method used to initialize objects?",
+        "options": ["__init__", "init", "__start__", "constructor"],
+        "correct_answer": "__init__"
+    },
+    {
+        "id": 6,
+        "course": "Python",
+        "unit": "Unit 2: OOP Using Python",
+        "question": "Which concept allows a child class to inherit methods from a parent class?",
+        "options": ["Polymorphism", "Inheritance", "Encapsulation", "Abstraction"],
+        "correct_answer": "Inheritance"
+    },
+
+    # Unit 3: Plotting & Algorithms
+    {
+        "id": 7,
+        "course": "Python",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "question": "Which library is commonly used for plotting in Python?",
+        "options": ["numpy", "pandas", "matplotlib", "sys"],
+        "correct_answer": "matplotlib"
+    },
+    {
+        "id": 8,
+        "course": "Python",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "question": "What is the time complexity of Binary Search?",
+        "options": ["O(n)", "O(n^2)", "O(log n)", "O(1)"],
+        "correct_answer": "O(log n)"
+    },
+    {
+        "id": 9,
+        "course": "Python",
+        "unit": "Unit 3: Plotting & Algorithms",
+        "question": "Dynamic Programming uses which technique to store results?",
+        "options": ["Recursion", "Memoization", "Looping", "Branching"],
+        "correct_answer": "Memoization"
+    },
+
+    # Unit 4: Network & GUI
+    {
+        "id": 10,
+        "course": "Python",
+        "unit": "Unit 4: Network & GUI",
+        "question": "Which module is used for network socket programming in Python?",
+        "options": ["net", "socket", "http", "wifi"],
+        "correct_answer": "socket"
+    },
+    {
+        "id": 11,
+        "course": "Python",
+        "unit": "Unit 4: Network & GUI",
+        "question": "Which protocol is connection-oriented and reliable?",
+        "options": ["UDP", "IP", "TCP", "HTTP"],
+        "correct_answer": "TCP"
+    },
+    {
+        "id": 12,
+        "course": "Python",
+        "unit": "Unit 4: Network & GUI",
+        "question": "Which library is standard for creating GUIs in Python?",
+        "options": ["PyQt", "Kivy", "Tkinter", "WxPython"],
+        "correct_answer": "Tkinter"
+    },
+
+    # Unit 5: Database Connectivity
+    {
+        "id": 13,
+        "course": "Python",
+        "unit": "Unit 5: Database Connectivity",
+        "question": "What does SQL stand for?",
+        "options": ["Structured Question Language", "Structured Query Language", "Simple Query Language", "System Query Language"],
+        "correct_answer": "Structured Query Language"
+    },
+    {
+        "id": 14,
+        "course": "Python",
+        "unit": "Unit 5: Database Connectivity",
+        "question": "Which method is used to send a query to the database?",
+        "options": ["send()", "query()", "execute()", "run()"],
+        "correct_answer": "execute()"
+    },
+    {
+        "id": 15,
+        "course": "Python",
+        "unit": "Unit 5: Database Connectivity",
+        "question": "What must be done after an INSERT operation to save changes?",
+        "options": ["close()", "commit()", "save()", "push()"],
+        "correct_answer": "commit()"
+    },
+
+    # --- Machine Learning with Python ---
+
+    # Unit 1: Introduction to ML
+    {
+        "id": 16,
+        "course": "Machine Learning",
+        "unit": "Unit 1: Introduction to ML",
+        "question": "What is the main goal of Machine Learning?",
+        "options": ["To store data", "To learn patterns from data", "To create websites", "To sort lists"],
+        "correct_answer": "To learn patterns from data"
+    },
+    {
+        "id": 17,
+        "course": "Machine Learning",
+        "unit": "Unit 1: Introduction to ML",
+        "question": "Which type of learning involves labeled data?",
+        "options": ["Unsupervised", "Supervised", "Reinforcement", "Clustering"],
+        "correct_answer": "Supervised"
+    },
+    {
+        "id": 18,
+        "course": "Machine Learning",
+        "unit": "Unit 1: Introduction to ML",
+        "question": "Which python library is essential for data manipulation (DataFrames)?",
+        "options": ["numpy", "matplotlib", "pandas", "scipy"],
+        "correct_answer": "pandas"
+    },
+
+    # Unit 2: Supervised Learning
+    {
+        "id": 19,
+        "course": "Machine Learning",
+        "unit": "Unit 2: Supervised Learning",
+        "question": "Which algorithm is used for solving regression problems?",
+        "options": ["Linear Regression", "K-Means", "Apriori", "PCA"],
+        "correct_answer": "Linear Regression"
+    },
+    {
+        "id": 20,
+        "course": "Machine Learning",
+        "unit": "Unit 2: Supervised Learning",
+        "question": "What does 'k' stand for in k-Nearest Neighbors?",
+        "options": ["Kernel", "Number of neighbors", "Kilobytes", "Knowledge"],
+        "correct_answer": "Number of neighbors"
+    },
+    {
+        "id": 21,
+        "course": "Machine Learning",
+        "unit": "Unit 2: Supervised Learning",
+        "question": "Which metric is used to evaluate classification models?",
+        "options": ["Mean Squared Error", "Accuracy", "R-Squared", "Absolute Error"],
+        "correct_answer": "Accuracy"
+    },
+
+    # Unit 3: Unsupervised Learning
+    {
+        "id": 22,
+        "course": "Machine Learning",
+        "unit": "Unit 3: Unsupervised Learning",
+        "question": "Which algorithm is a popular clustering method?",
+        "options": ["Linear Regression", "Decision Trees", "K-Means", "SVM"],
+        "correct_answer": "K-Means"
+    },
+    {
+        "id": 23,
+        "course": "Machine Learning",
+        "unit": "Unit 3: Unsupervised Learning",
+        "question": "What is the goal of dimensionality reduction?",
+        "options": ["Increase features", "Reduce features while preserving info", "Clean missing data", "Create labels"],
+        "correct_answer": "Reduce features while preserving info"
+    },
+    {
+        "id": 24,
+        "course": "Machine Learning",
+        "unit": "Unit 3: Unsupervised Learning",
+        "question": "Does Unsupervised Learning use labeled data?",
+        "options": ["Yes", "No", "Sometimes", "Only for validation"],
+        "correct_answer": "No"
+    },
+
+    # Unit 4: NLP
+    {
+        "id": 25,
+        "course": "Machine Learning",
+        "unit": "Unit 4: NLP",
+        "question": "What does NLP stand for?",
+        "options": ["Natural Language Processing", "Neural Language Programming", "Natural Linear Programming", "Network Language Protocol"],
+        "correct_answer": "Natural Language Processing"
+    },
+    {
+        "id": 26,
+        "course": "Machine Learning",
+        "unit": "Unit 4: NLP",
+        "question": "Process of reducing words to their root form is called?",
+        "options": ["Tokenization", "Stemming", "Vectorization", "Parsing"],
+        "correct_answer": "Stemming"
+    },
+    {
+        "id": 27,
+        "course": "Machine Learning",
+        "unit": "Unit 4: NLP",
+        "question": "Which library is famous for NLP tasks in Python?",
+        "options": ["OpenCV", "NLTK", "Flask", "Pandas"],
+        "correct_answer": "NLTK"
+    },
+
+    # Unit 5: Computer Vision
+    {
+        "id": 28,
+        "course": "Machine Learning",
+        "unit": "Unit 5: Computer Vision",
+        "question": "Which library is used for Computer Vision?",
+        "options": ["OpenCV", "NLTK", "BeautifulSoup", "Requests"],
+        "correct_answer": "OpenCV"
+    },
+    {
+        "id": 29,
+        "course": "Machine Learning",
+        "unit": "Unit 5: Computer Vision",
+        "question": "What does a pixel value of 0 usually represent in grayscale?",
+        "options": ["White", "Black", "Red", "Transparent"],
+        "correct_answer": "Black"
+    },
+    {
+        "id": 30,
+        "course": "Machine Learning",
+        "unit": "Unit 5: Computer Vision",
+        "question": "What file uses XML for object detection classifiers?",
+        "options": ["Haar Cascade", "YOLO", "CNN", "RNN"],
+        "correct_answer": "Haar Cascade"
+    }
+]
+
+json_path = r'd:/satvik/ANTGVTPROJECT/PYProj/TutorialPlatform/backend/data/quizzes.json'
+
+try:
+    with open(json_path, 'w') as f:
+        json.dump(quizzes, f, indent=4)
+    print(f"Successfully populated quizzes.json with {len(quizzes)} questions.")
+except Exception as e:
+    print(f"Error: {e}")
