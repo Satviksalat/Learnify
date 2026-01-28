@@ -66,10 +66,20 @@ const EditorPage = () => {
                 });
                 const data = await response.json();
 
+                const escapeHtml = (text) => {
+                    if (!text) return "";
+                    return text
+                        .replace(/&/g, "&amp;")
+                        .replace(/</g, "&lt;")
+                        .replace(/>/g, "&gt;")
+                        .replace(/"/g, "&quot;")
+                        .replace(/'/g, "&#039;");
+                };
+
                 let outputHtml = `
                     <html>
                     <body style="background:#282A35; color: white; font-family: monospace; white-space: pre-wrap; padding: 20px;">
-                        <div>${data.output}</div>
+                        <div>${escapeHtml(data.output)}</div>
                 `;
 
                 if (data.image) {
