@@ -7,7 +7,7 @@ const ExamplesPage = () => {
     const [activeTab, setActiveTab] = useState('Python'); // 'Python' or 'Machine Learning'
 
     useEffect(() => {
-        fetch('http://192.168.5.138:5004/api/programs')
+        fetch('https://learnify-api-ohc0.onrender.com/api/programs')
             .then(res => res.json())
             .then(data => {
                 setPrograms(data);

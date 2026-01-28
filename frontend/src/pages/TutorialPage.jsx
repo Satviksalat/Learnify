@@ -11,7 +11,7 @@ const TutorialPage = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://192.168.5.138:5004/api/tutorial/${id}`)
+        fetch(`https://learnify-api-ohc0.onrender.com/api/tutorial/${id}`)
             .then(res => res.json())
             .then(data => {
                 setTutorial(data);

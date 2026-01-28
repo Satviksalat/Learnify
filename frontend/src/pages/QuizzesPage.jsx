@@ -9,7 +9,7 @@ const QuizzesPage = () => {
     const [showResults, setShowResults] = useState(false);
 
     useEffect(() => {
-        fetch('http://192.168.5.138:5004/api/quizzes')
+        fetch('https://learnify-api-ohc0.onrender.com/api/quizzes')
             .then(res => res.json())
             .then(data => {
                 setAllQuizzes(data);

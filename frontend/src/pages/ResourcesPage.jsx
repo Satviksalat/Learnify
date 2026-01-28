@@ -9,7 +9,7 @@ const ResourcesPage = () => {
     // Fetch Exam Questions when tab is active
     React.useEffect(() => {
         if (activeTab === 'questions') {
-            fetch('http://192.168.5.138:5004/api/exam-questions')
+            fetch('https://learnify-api-ohc0.onrender.com/api/exam-questions')
                 .then(res => res.json())
                 .then(data => setExamQuestions(data))
                 .catch(err => console.error(err));
@@ -300,17 +300,17 @@ while x < 10:
                         <div style={downloadCardStyle}>
                             <h3>📥 Python Cheat Sheet</h3>
                             <p>Markdown File</p>
-                            <button onClick={() => window.location.href = 'http://192.168.5.138:5004/downloads/python_cheat_sheet.md'} style={downloadBtnStyle}>Download</button>
+                            <button onClick={() => window.location.href = 'https://learnify-api-ohc0.onrender.com/downloads/python_cheat_sheet.md'} style={downloadBtnStyle}>Download</button>
                         </div>
                         <div style={downloadCardStyle}>
                             <h3>📥 ML Quick Reference</h3>
                             <p>Markdown File</p>
-                            <button onClick={() => window.location.href = 'http://192.168.5.138:5004/downloads/ml_quick_reference.md'} style={downloadBtnStyle}>Download</button>
+                            <button onClick={() => window.location.href = 'https://learnify-api-ohc0.onrender.com/downloads/ml_quick_reference.md'} style={downloadBtnStyle}>Download</button>
                         </div>
                         <div style={downloadCardStyle}>
                             <h3>📦 All Code Examples</h3>
                             <p>JSON Data</p>
-                            <button onClick={() => window.location.href = 'http://192.168.5.138:5004/downloads/all_code_examples.json'} style={downloadBtnStyle}>Download JSON</button>
+                            <button onClick={() => window.location.href = 'https://learnify-api-ohc0.onrender.com/downloads/all_code_examples.json'} style={downloadBtnStyle}>Download JSON</button>
                         </div>
                     </div>
                 </div>

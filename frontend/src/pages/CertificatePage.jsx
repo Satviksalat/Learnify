@@ -12,7 +12,7 @@ const CertificatePage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://192.168.5.138:5004/api/tutorials')
+        fetch('https://learnify-api-ohc0.onrender.com/api/tutorials')
             .then(res => res.json())
             .then(data => {
                 // Filter tutorials for this specific technology

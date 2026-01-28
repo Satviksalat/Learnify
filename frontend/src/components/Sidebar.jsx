@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
 
     useEffect(() => {
         // Fetch Data - Using Network IP
-        fetch('http://192.168.5.138:5004/api/tutorials')
+        fetch('https://learnify-api-ohc0.onrender.com/api/tutorials')
             .then(res => res.json())
             .then(data => setTutorials(data))
             .catch(err => console.error("Failed to fetch tutorials", err));

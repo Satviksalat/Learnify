@@ -59,7 +59,7 @@ const EditorPage = () => {
         if (['python', 'ml_python'].includes(tech)) {
             setSrcDoc(`<html><body>Running...</body></html>`);
             try {
-                const response = await fetch('http://192.168.5.138:5004/api/execute', {
+                const response = await fetch('https://learnify-api-ohc0.onrender.com/api/execute', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ code, language: tech })

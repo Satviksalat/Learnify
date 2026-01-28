@@ -192,7 +192,7 @@ Now that your backend is live, tell your frontend to talk to it.
 ### Step 3: Deploy Frontend to GitHub Pages
 1.  Open `frontend/package.json` and add:
     ```json
-    "homepage": "https://Satviksalat.github.io/TutorialPlatform",
+    "homepage": "https://Satviksalat.github.io/Learnify",
     ```
 2.  Install the deployer tool:
     ```bash
@@ -212,5 +212,5 @@ Now that your backend is live, tell your frontend to talk to it.
     ```
 
 **Result:**
-*   Your Website: `https://Satviksalat.github.io/TutorialPlatform`
+*   Your Website: `https://Satviksalat.github.io/Learnify`
 *   Your API: `https://my-api.onrender.com`

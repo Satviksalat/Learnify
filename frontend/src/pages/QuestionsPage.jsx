@@ -7,7 +7,7 @@ const QuestionsPage = () => {
     const [selectedUnit, setSelectedUnit] = useState('All');
 
     useEffect(() => {
-        fetch('http://192.168.5.138:5004/api/exam-questions')
+        fetch('https://learnify-api-ohc0.onrender.com/api/exam-questions')
             .then(res => res.json())
             .then(data => {
                 setQuestionsData(data);
