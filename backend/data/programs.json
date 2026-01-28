@@ -368,7 +368,7 @@
         "course": "Python",
         "unit": "Unit 4: Network & GUI",
         "question": "Create a UDP server and client.",
-        "code": "# UDP Server\n# import socket\n# s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n# s.bind(('localhost', 12345))\n# while True:\n#     data, addr = s.recvfrom(1024)\n#     print('Message:', data)\n"
+        "code": "import socket\nimport threading\nimport time\n\n# We use threading to run Server and Client together\ndef run_server():\n    try:\n        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n        s.bind(('127.0.0.1', 8888))\n        print('Server: Listening on 8888...')\n        data, addr = s.recvfrom(1024)\n        print(f'Server: Received {data.decode()} from {addr}')\n        s.close()\n    except Exception as e:\n        print(f'Server Error: {e}')\n\ndef run_client():\n    time.sleep(1) # Give server time to start\n    try:\n        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n        msg = 'Hello UDP'\n        print(f'Client: Sending {msg}')\n        s.sendto(msg.encode(), ('127.0.0.1', 8888))\n        s.close()\n    except Exception as e:\n        print(f'Client Error: {e}')\n\nt1 = threading.Thread(target=run_server)\nt2 = threading.Thread(target=run_client)\nt1.start()\nt2.start()\nt1.join()\nt2.join()"
     },
     {
         "id": 54,
