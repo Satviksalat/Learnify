@@ -81,7 +81,7 @@
         "course": "Python",
         "unit": "Unit 1: Python Basics",
         "question": "Write a Python program to copy the contents of a file to another file.",
-        "code": "source = 'test.txt'\\ndest = 'copy.txt'\\n\\nwith open(source, 'r') as f1, open(dest, 'w') as f2:\\n    for line in f1:\\n        f2.write(line)\\n\\nprint('--- Reading copy.txt ---')\\nwith open(dest, 'r') as f:\\n    print(f.read())"
+        "code": "source = 'test.txt'\ndest = 'copy.txt'\n\nwith open(source, 'r') as f1, open(dest, 'w') as f2:\n    for line in f1:\n        f2.write(line)\n\nprint('--- Reading copy.txt ---')\nwith open(dest, 'r') as f:\n    print(f.read())"
     },
     {
         "id": 13,
