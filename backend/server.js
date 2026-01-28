@@ -203,6 +203,9 @@ const executeLocally = (code, language, res) => {
         fs.mkdirSync(runDir, { recursive: true });
     }
 
+    // Create a dummy file for file handling examples
+    fs.writeFileSync(path.join(runDir, 'test.txt'), 'This is a sample text file for file handling demo.');
+
     let cmd = '';
     const outputFilename = 'output.png';
 
