@@ -39,7 +39,7 @@
         "course": "Python",
         "unit": "Unit 1: Python Basics",
         "question": "Write Python programs for input(), print(), \u00e2\u20ac\u02dcsep\u00e2\u20ac\u2122, \u00e2\u20ac\u02dcend\u00e2\u20ac\u2122, and format string {}.",
-        "code": "name = input('Enter Name: ')\nprint('Hello', name, sep='-', end='!')\nprint('\\nWelcome to {} tutorial'.format('Python'))"
+        "code": "name = 'John' # input('Enter Name: ')\\nprint('Hello', name, sep='-', end='!')\\nprint('\\nWelcome to {} tutorial'.format('Python'))"
     },
     {
         "id": 7,
