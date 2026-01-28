@@ -39,7 +39,7 @@
         "course": "Python",
         "unit": "Unit 1: Python Basics",
         "question": "Write Python programs for input(), print(), \u00e2\u20ac\u02dcsep\u00e2\u20ac\u2122, \u00e2\u20ac\u02dcend\u00e2\u20ac\u2122, and format string {}.",
-        "code": "name = 'John' # input('Enter Name: ')\\nprint('Hello', name, sep='-', end='!')\\nprint('\\nWelcome to {} tutorial'.format('Python'))"
+        "code": "name = 'John' # input('Enter Name: ')\nprint('Hello', name, sep='-', end='!')\nprint('\\nWelcome to {} tutorial'.format('Python'))"
     },
     {
         "id": 7,
@@ -389,21 +389,21 @@
         "course": "Python",
         "unit": "Unit 4: Network & GUI",
         "question": "Write a Python program to create GUI with buttons, labels, entry fields.",
-        "code": "# GUI programs require a local desktop environment to show windows.\\n# They cannot run in this cloud terminal (headless).\\n# Copy this code to your local machine to run it!\\n\\nprint('--- GUI Example Code (Copy & Run Locally) ---')\\nprint('''\\nimport tkinter as tk\\nroot = tk.Tk()\\nl = tk.Label(root, text=\"Hello\")\\nl.pack()\\ne = tk.Entry(root)\\ne.pack()\\nb = tk.Button(root, text=\"Click\", command=lambda: print(e.get()))\\nb.pack()\\nroot.mainloop()\\n''')"
+        "code": "# GUI programs require a local desktop environment to show windows.\n# They cannot run in this cloud terminal (headless).\n# Copy this code to your local machine to run it!\n\nprint('--- GUI Example Code (Copy & Run Locally) ---')\nprint('''\nimport tkinter as tk\nroot = tk.Tk()\nl = tk.Label(root, text=\"Hello\")\nl.pack()\ne = tk.Entry(root)\ne.pack()\nb = tk.Button(root, text=\"Click\", command=lambda: print(e.get()))\nb.pack()\nroot.mainloop()\n''')"
     },
     {
         "id": 57,
         "course": "Python",
         "unit": "Unit 4: Network & GUI",
         "question": "Write a Python program to ask confirmation or give alerts using dialogs.",
-        "code": "# GUI programs require a local desktop environment to show windows.\\n# They cannot run in this cloud terminal (headless).\\n# Copy this code to your local machine to run it!\\n\\nprint('--- GUI Example Code (Copy & Run Locally) ---')\\nprint('''\\nimport tkinter.messagebox\\ntkinter.messagebox.showinfo(\"Title\", \"Message\")\\n''')"
+        "code": "# GUI programs require a local desktop environment to show windows.\n# They cannot run in this cloud terminal (headless).\n# Copy this code to your local machine to run it!\n\nprint('--- GUI Example Code (Copy & Run Locally) ---')\nprint('''\nimport tkinter.messagebox\ntkinter.messagebox.showinfo(\"Title\", \"Message\")\n''')"
     },
     {
         "id": 58,
         "course": "Python",
         "unit": "Unit 4: Network & GUI",
         "question": "Write a Python program to create a simple calculator.",
-        "code": "# GUI programs require a local desktop environment to show windows.\\n# They cannot run in this cloud terminal (headless).\\n# Copy this code to your local machine to run it!\\n\\nprint('--- GUI Example Code (Copy & Run Locally) ---')\\nprint('''\\nimport tkinter as tk\\nroot = tk.Tk()\\ndef calc():\\n    res = eval(entry.get())\\n    label.config(text=str(res))\\nentry = tk.Entry(root)\\nentry.pack()\\ntk.Button(root, text=\"Calculate\", command=calc).pack()\\nlabel = tk.Label(root)\\nlabel.pack()\\nroot.mainloop()\\n''')"
+        "code": "# GUI programs require a local desktop environment to show windows.\n# They cannot run in this cloud terminal (headless).\n# Copy this code to your local machine to run it!\n\nprint('--- GUI Example Code (Copy & Run Locally) ---')\nprint('''\nimport tkinter as tk\nroot = tk.Tk()\ndef calc():\n    res = eval(entry.get())\n    label.config(text=str(res))\nentry = tk.Entry(root)\nentry.pack()\ntk.Button(root, text=\"Calculate\", command=calc).pack()\nlabel = tk.Label(root)\nlabel.pack()\nroot.mainloop()\n''')"
     },
     {
         "id": 59,
