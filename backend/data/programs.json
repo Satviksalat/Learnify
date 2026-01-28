@@ -193,14 +193,14 @@
         "course": "Python",
         "unit": "Unit 1: Python Basics",
         "question": "Program: Calculate year user will turn 60 based on name and age input.",
-        "code": "import datetime\nname = input('Name: ')\nage = int(input('Age: '))\ncurrent_year = datetime.datetime.now().year\nturn_60 = current_year + (60 - age)\nprint(f'{name} will turn 60 in {turn_60}')"
+        "code": "import datetime\\n# Replace these values to test with different data\\nname = 'Alice' # was input('Name: ')\\nage = 25     # was int(input('Age: '))\\ncurrent_year = datetime.datetime.now().year\\nturn_60 = current_year + (60 - age)\\nprint(f'{name} will turn 60 in {turn_60}')"
     },
     {
         "id": 29,
         "course": "Python",
         "unit": "Unit 1: Python Basics",
         "question": "Program: Check if a number is even or odd.",
-        "code": "num = int(input('Enter number: '))\nif num % 2 == 0:\n    print('Even')\nelse:\n    print('Odd')"
+        "code": "num = 15 # was int(input('Enter number: '))\\nif num % 2 == 0:\\n    print('Even')\\nelse:\\n    print('Odd')"
     },
     {
         "id": 30,
