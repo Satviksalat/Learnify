@@ -15,6 +15,11 @@ app.use(express.json());
 // Serve static files for downloads
 app.use('/downloads', express.static(path.join(__dirname, 'public', 'downloads')));
 
+// Root Route (Health Check)
+app.get('/', (req, res) => {
+    res.send('<h1>Welcome to Learnify API Services</h1><p>Status: Running 🟢</p>');
+});
+
 // Logging
 const logToFile = (message) => {
     try {
