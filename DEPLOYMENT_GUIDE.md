@@ -214,3 +214,16 @@ Now that your backend is live, tell your frontend to talk to it.
 **Result:**
 *   Your Website: `https://Satviksalat.github.io/Learnify`
 *   Your API: `https://my-api.onrender.com`
+
+### Troubleshooting: Blank Page on GitHub Pages
+If your site loads a blank page:
+1.  **Check `frontend/vite.config.js`:** Ensure you have `base: '/Learnify/',`.
+2.  **Check `frontend/src/main.jsx`:** Ensure you are using `HashRouter` instead of `BrowserRouter`.
+
+```javascript
+import { HashRouter } from 'react-router-dom'
+// ...
+<HashRouter>
+    <App />
+</HashRouter>
+```
