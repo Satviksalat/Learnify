@@ -1,16 +1,31 @@
-# Use lightweight Ubuntu base
-FROM ubuntu:latest
+# Use Node.js 18 as the base image
+FROM node:18
 
-# Prevent interactive prompts during package installation
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Install compilers and runtimes
+# Update system and install Python 3 and Pip
 RUN apt-get update && apt-get install -y \
-    gcc \
-    g++ \
-    default-jdk \
     python3 \
+    python3-pip \
+    python3-dev \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
-WORKDIR /code
+# Create app directory
+WORKDIR /usr/src/app
+
+# EXTENSION: Install Python dependencies globally (using --break-system-packages for newer Debian)
+# Copy requirements first to cache this layer
+COPY requirements.txt ./
+RUN pip3 install --no-cache-dir -r requirements.txt --break-system-packages
+
+# Copy package.json and install Node dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the API port
+EXPOSE 5004
+
+# Start the server
+CMD [ "node", "server.js" ]
