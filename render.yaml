@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: learnify-api-docker
+    env: docker
+    region: ohio # or oregon, etc.
+    plan: free
+    branch: main
+    rootDir: backend # This tells Render to look in the backend folder
+    dockerContext: . # Context is relative to rootDir
+    numInstances: 1
+    autoDeploy: true
