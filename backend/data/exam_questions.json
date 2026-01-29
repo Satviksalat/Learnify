@@ -127,11 +127,11 @@
             "Part D (5-Marks)": [
                 {
                     "question": "Explain Operators in Python in detail.",
-                    "answer": "1. **Arithmetic:** +, -, *, /, %, **.\n2. **Comparison:** ==, !=, >, <, >=.\n3. **Logical:** and, or, not.\n4. **Assignment:** =, +=, -=.\n5. **Membership:** in, not in.\n6. **Identity:** is, is not.\n7. **Bitwise:** &, |, ^."
+                    "answer": "1. **Definition:**\n   Symbols used to perform operations on value and variables.\n\n2. **Goal:**\n   To manipulate data by performing calculations, comparisons, or logical checks.\n\n3. **Core Concept:**\n   Operators act on 'operands'. Python determines precedence to solve expressions correctly.\n\n4. **Technique / Method:**\n   Use Arithmetic (+, -), Comparison (==, >), Logical (and, or), and Assignment (=) operators.\n\n5. **Applications:**\n   Used in mathematical formulas, loop controls, and decision-making logic."
                 },
                 {
                     "question": "Explain Functions in Python.",
-                    "answer": "1. **Definition:** Reusable block of code.\n2. **Syntax:** def name(params):\n3. **Arguments:** Positional, Keyword, Default, Variable-length (*args).\n4. **Return:** Sending value back.\n5. **Lambda:** Small anonymous functions."
+                    "answer": "1. **Definition:**\n   A reuseable block of organized code that generates limits redundancy.\n\n2. **Goal:**\n   To break programs into smaller, modular chunks that are easier to test.\n\n3. **Core Concept:**\n   Input-Process-Output. Functions take arguments, execute logic, and return results.\n\n4. **Technique / Method:**\n   Define using `def`, use indented body for logic, and `return` to send data back.\n\n5. **Applications:**\n   API endpoints, mathematical calculations, and event handling handlers."
                 }
             ]
         }
@@ -260,11 +260,11 @@
             "Part D (5-Marks)": [
                 {
                     "question": "Explain the 4 Pillars of OOPs.",
-                    "answer": "1. **Encapsulation:** Binding data+code. data hiding.\n2. **Abstraction:** Hiding complexity, showing interface.\n3. **Inheritance:** Code reuse, Hierarchy.\n4. **Polymorphism:** Flexibility, Overriding, Overloading."
+                    "answer": "1. **Definition:**\n   The fundamental principles that define Object-Oriented Programming structure.\n\n2. **Goal:**\n   To analyze and design applications as a system of interacting objects vs logic.\n\n3. **Core Concept:**\n   Encapsulation (Security), Abstraction (Simplicity), Inheritance (Reusability), Polymorphism (Flexibility).\n\n4. **Technique / Method:**\n   Implement Classes using public/private data, inheritence hierarchies, and abstract methods.\n\n5. **Applications:**\n   Used in Game Development, Enterprise Software, and Simulation systems."
                 },
                 {
                     "question": "Explain Types of Inheritance in detail.",
-                    "answer": "1. **Single:** A->B\n2. **Multilevel:** A->B->C\n3. **Multiple:** A,B -> C\n4. **Hierarchical:** A->B, A->C\n5. **Hybrid:** Combination."
+                    "answer": "1. **Definition:**\n   Different ways in which a child class can acquire properties from parent classes.\n\n2. **Goal:**\n   To establish relationships between classes without rewriting common logic.\n\n3. **Core Concept:**\n   A child class can extend one or more classes in various hierarchical patterns.\n\n4. **Technique / Method:**\n   Single (A->B), Multiple (A,B->C), Multilevel (A->B->C), Hierarchical (A->B, A->C), Hybrid.\n\n5. **Applications:**\n   UI Frameworks (Widget inherits from Component) and Organizational data modeling."
                 }
             ]
         }
@@ -392,12 +392,12 @@
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Discuss various types of Plots and their uses.",
-                    "answer": "1. **Line:** trends over time.\n2. **Bar:** Comparing categories.\n3. **Scatter:** Relationship between X and Y.\n4. **Pie:** Part-to-whole relationship.\n5. **Hist:** Distribution.\n6. **Box:** Outliers/Summary."
+                    "question": "Discuss various types of Plots.",
+                    "answer": "1. **Definition:**\n   Graphical representations of data to identify patterns or trends.\n\n2. **Goal:**\n   To visualize complex datasets for easier analysis and decision making.\n\n3. **Core Concept:**\n   Different charts suit different data types. Line for trends, Bar for categories, Scatter for correlation.\n\n4. **Technique / Method:**\n   Use `plt.plot()`, `plt.bar()`, `plt.scatter()`, `plt.pie()`, `plt.hist()` depending on need.\n\n5. **Applications:**\n   Stock market analysis, Census data, Scientific experiments, and Sales reports."
                 },
                 {
                     "question": "Detailed customization of a plot.",
-                    "answer": "Explain Titles, Labels, Ticks, Legend, Colors, Markers, Linestyles, Grid, and Saving."
+                    "answer": "1. **Definition:**\n   Modifying the default appearance of a graph to make it readable and professional.\n\n2. **Goal:**\n   To clearly communicate the story inside the data to the viewer.\n\n3. **Core Concept:**\n   Adding context (Text) and Style (Color/Style) reduces ambiguity.\n\n4. **Technique / Method:**\n   Use `xlabel`, `ylabel`, `title`, `legend`, `grid`, and `linestyle` properties.\n\n5. **Applications:**\n   Publication-quality figures for journals, business presentations, and dashboards."
                 }
             ]
         }
@@ -525,12 +525,12 @@
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Explain Widgets in Tkinter (List 5).",
-                    "answer": "1. **Label:** Text.\n2. **Button:** Action.\n3. **Entry:** Input.\n4. **Checkbutton:** Toggle.\n5. **Radiobutton:** Selection.\n6. **Canvas:** Drawing."
+                    "question": "Explain Widgets in Tkinter.",
+                    "answer": "1. **Definition:**\n   Graphical elements like buttons, labels, and boxes that allow user interaction.\n\n2. **Goal:**\n   To build a functional user interface where users can input data and trigger actions.\n\n3. **Core Concept:**\n   Every widget is an object of a class (e.g. `Label()`). They must be added to a parent window.\n\n4. **Technique / Method:**\n   Common widgets: Label (Text), Button (Action), Entry (Input), Canvas (Draw), Checkbutton (Select).\n\n5. **Applications:**\n   Desktop apps like Calculators, Form Fillers, and Management Systems."
                 },
                 {
                     "question": "Explain Connection-Oriented vs Connection-less.",
-                    "answer": "Detailed comparison of TCP (Phone call) vs UDP (Mail). Reliability vs Speed."
+                    "answer": "1. **Definition:**\n   Two distinct modes of data transmission in computer networks (TCP vs UDP).\n\n2. **Goal:**\n   TCP aims for reliability and order. UDP aims for speed and low latency.\n\n3. **Core Concept:**\n   TCP (Connection-Oriented) establishes a handshake. UDP (Connection-less) just sends data.\n\n4. **Technique / Method:**\n   TCP checks errors and resends packets. UDP fires packets and forgets them.\n\n5. **Applications:**\n   TCP: E-mail, Web Browsing. UDP: Video Streaming, Gaming, VoIP."
                 }
             ]
         }
@@ -659,11 +659,11 @@
             "Part D (5-Marks)": [
                 {
                     "question": "Detailed Steps for Database Connectivity.",
-                    "answer": "1. Import `mysql.connector`.\n2. `conn = connect(...)`.\n3. `cur = conn.cursor()`.\n4. `cur.execute(sql)`.\n5. `conn.commit()`.\n6. `conn.close()`."
+                    "answer": "1. **Definition:**\n   The process of establishing a link between a Python application and a backend database.\n\n2. **Goal:**\n   To enable persistent data storage and retrieval in applications.\n\n3. **Core Concept:**\n   Requires a 'connector' (driver) that translates Python calls into SQL commands.\n\n4. **Technique / Method:**\n   1. Import `mysql.connector`. 2. `connect()`. 3. `cursor()`. 4. `execute(sql)`. 5. `commit()`. 6. `close()`.\n\n5. **Applications:**\n   User Login Systems, Inventory Management, and E-commerce product catalogs."
                 },
                 {
-                    "question": "Explain SQL Commands (Insert, Select, Update, Delete).",
-                    "answer": "Detailed syntax and usage of DML commands."
+                    "question": "Explain SQL Commands (DML & DDL).",
+                    "answer": "1. **Definition:**\n   Standardized commands used to communicate with a Relational Database.\n\n2. **Goal:**\n   To define structure (DDL) and manipulate data (DML) within that structure.\n\n3. **Core Concept:**\n   Separation of duties. DDL handles schematic design. DML handles row-level operations.\n\n4. **Technique / Method:**\n   DDL: `CREATE`, `DROP`, `ALTER`. DML: `INSERT`, `UPDATE`, `DELETE`, `SELECT`.\n\n5. **Applications:**\n   Administering databases (DDL) vs Daily application usage (DML)."
                 }
             ]
         }
@@ -823,16 +823,16 @@
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Explain the 7 Steps of Machine Learning in detail.",
-                    "answer": "1. **Data Gathering:** Collecting information from various sources (Files, Databases, APIs).\n2. **Data Preprocessing:** Cleaning data (removing nulls, noise) and formatting it for the machine.\n3. **Choose Model:** Selecting the right algorithm (e.g., Regression for numbers, Decision Tree for rules).\n4. **Train Model:** The learning phase. The model processes data to find patterns.\n5. **Test Model:** Evaluating performance on unseen data to ensure it works.\n6. **Parameter Tuning:** Tweaking settings (Hyperparameters) to improve accuracy.\n7. **Prediction:** Deploying the model to solve the real-world problem."
+                    "question": "Explain the 7 Steps of Machine Learning.",
+                    "answer": "1. **Definition:**\n   The standard lifecycle to create an effective Machine Learning model.\n\n2. **Goal:**\n   To ensure a structured approach from Raw Data to a deployed, working prediction system.\n\n3. **Core Concept:**\n   Iterative process: Gather -> Clean -> Choose -> Train -> Test -> Tune -> Predict.\n\n4. **Technique / Method:**\n   Use tools like Pandas for cleaning, Scikit-Learn for training/testing, and GridSearch for tuning.\n\n5. **Applications:**\n   This workflow is used in every ML project, from simple student projects to enterprise AI."
                 },
                 {
                     "question": "Discuss Real-World Applications of Machine Learning.",
-                    "answer": "1. **Healthcare:** Diagnosing diseases; Cancer detection.\n2. **Finance:** Fraud detection; Algo trading.\n3. **E-commerce:** Recommendations (Netflix/Amazon).\n4. **Social Media:** Face tagging; Feed curation.\n5. **Transport:** Self-Driving cars (Tesla).\n6. **Significance:** Solves complex problems at scale and automates tasks."
+                    "answer": "1. **Definition:**\n   Practical implementations of ML algorithms to solve complex human problems.\n\n2. **Goal:**\n   To automate tasks, find hidden insights, and improve decision-making speed.\n\n3. **Core Concept:**\n   Training models on historical data to predict future outcomes.\n\n4. **Technique / Method:**\n   Examples: Recommendation Systems (Collaborative Filtering), Diagnostics (Image Classification).\n\n5. **Applications:**\n   Healthcare (Tumor detection), Finance (Fraud check), Transport (Self-driving), Marketing (Ads)."
                 },
                 {
-                    "question": "Detailed comparison of Supervised vs Unsupervised Learning.",
-                    "answer": "1. **Labeling:** Supervised uses Labeled data. Unsupervised uses Unlabeled data.\n2. **Goal:** Supervised allows prediction (Output). Unsupervised allows discovery (Structure).\n3. **Knowledge:** Supervised is 'Teacher-based'. Unsupervised is 'Self-learning'.\n4. **Algorithms:** \n   - Supervised: Linear Regression, SVM.\n   - Unsupervised: K-Means, PCA.\n5. **Evaluation:** Supervised is exact (Accuracy). Unsupervised is subjective."
+                    "question": "Comparison: Supervised vs Unsupervised Learning.",
+                    "answer": "1. **Definition:**\n   The two primary categories of Machine Learning based on the nature of input data.\n\n2. **Goal:**\n   Supervised learns specific answers. Unsupervised finds hidden structures.\n\n3. **Core Concept:**\n   Presence of Labels (Supervised) vs Absence of Labels (Unsupervised).\n\n4. **Technique / Method:**\n   Supervised: Regression, SVM (Teacher). Unsupervised: K-Means, PCA (Self-Learning).\n\n5. **Applications:**\n   Supervised: FaceID, Spam Filters. Unsupervised: Customer Grouping, Anomaly Detection."
                 }
             ]
         }
@@ -960,12 +960,12 @@
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Explain Support Vector Machines (SVM) in detail.",
-                    "answer": "1. **Goal:** Find optimal hyperplane.\n2. **Margin:** Gap between classes. SVM maximizes this.\n3. **Support Vectors:** Critical points defining the margin.\n4. **Kernel Trick:** Handling non-linear data.\n5. **Usage:** Classification and Regression."
+                    "question": "Explain Support Vector Machines (SVM).",
+                    "answer": "1. **Definition:**\n   A powerful supervised learning algorithm used for classification and regression.\n\n2. **Goal:**\n   To find the best boundary (hyperplane) that segregates different classes with max margin.\n\n3. **Core Concept:**\n   Maximal Margin Classifier. It focuses on the most difficult points (Support Vectors) to draw the line.\n\n4. **Technique / Method:**\n   Uses Kernel Trick to handle non-linear data and Soft Margin for noisy data.\n\n5. **Applications:**\n   Face detection, Handwriting recognition, and Bioinformatics (Protein structure)."
                 },
                 {
                     "question": "Explain Classification Performance Metrics.",
-                    "answer": "1. **Accuracy:** (TP+TN)/Total.\n2. **Precision:** TP/(TP+FP).\n3. **Recall:** TP/(TP+FN).\n4. **F1:** 2*P*R/(P+R).\n5. **Usage:** Accuracy for balanced, F1 for imbalanced."
+                    "answer": "1. **Definition:**\n   Statistical measures used to evaluate how well a classification model performs.\n\n2. **Goal:**\n   To quantify the quality of predictions beyond simple accuracy (especially for imbalanced data).\n\n3. **Core Concept:**\n   Understanding the types of errors: False Positives vs False Negatives.\n\n4. **Technique / Method:**\n   Use Accuracy (General), Precision (Quality), Recall (Quantity), and F1-Score (Balance).\n\n5. **Applications:**\n   Medical Testing (High Recall needed), Spam Filters (High Precision needed)."
                 }
             ]
         }
@@ -1094,11 +1094,11 @@
             "Part D (5-Marks)": [
                 {
                     "question": "Detailed explanation of K-Means Clustering.",
-                    "answer": "1. **Concept:** Partition N obs into K sets.\n2. **Objective:** Minimize WCSS (With-Cluster Sum of Squares).\n3. **Algorithm:** Init -> Assignment -> Update -> Convergence.\n4. **Pros:** Fast, Simple.\n5. **Cons:** Local global, K selection."
+                    "answer": "1. **Definition:**\n   A centroid-based algorithm that partitions data into K non-overlapping subgroups.\n\n2. **Goal:**\n   To make intra-cluster data similar (low variance) and inter-cluster data different (high variance).\n\n3. **Core Concept:**\n   Iterative optimization. It constantly moves centroids to the 'mean' position of their points.\n\n4. **Technique / Method:**\n   1. Init K centroids. 2. Assign points to nearest centroid. 3. Recalculate mean. 4. Converge.\n\n5. **Applications:**\n   Market segmentation, Document Clustering, and Image Compression."
                 },
                 {
                     "question": "Compare K-Means, Hierarchical, and DBSCAN.",
-                    "answer": "1. **K-Means:** Centroid-based, spherical clusters, fast.\n2. **Hierarchical:** Tree-based, nested clusters, slow, easy viz.\n3. **DBSCAN:** Density-based, arbitrary shapes, handles noise."
+                    "answer": "1. **Definition:**\n   Different approaches to solving the clustering problem (Partitioning vs Tree vs Density).\n\n2. **Goal:**\n   To find the inherent structure in data, but managing shape and noise differently.\n\n3. **Core Concept:**\n   K-Means uses distance (Spherical). Hierarchical uses trees (Nested). DBSCAN uses density (Arbitrary).\n\n4. **Technique / Method:**\n   K-Means requires 'K'. Hierarchical produces a Dendrogram. DBSCAN requires 'Epsilon' (radius).\n\n5. **Applications:**\n   K-Means for general big data. Hierarchical for taxonomy. DBSCAN for spatial data with noise."
                 }
             ]
         }
@@ -1226,12 +1226,12 @@
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Detailed explanation of Vectorization (BoW vs TF-IDF).",
-                    "answer": "1. **BoW:** Simple counting. Problem: Frequent words dominate.\n2. **TF-IDF:** Penalizes frequent words. Enhances rare, distinct words.\n3. **Result:** Better feature set for classification."
+                    "question": "Explain Vectorization (BoW vs TF-IDF).",
+                    "answer": "1. **Definition:**\n   The process of converting unstructured text data into numerical vectors for ML.\n\n2. **Goal:**\n   To make text mathematically computable by models that only understand numbers.\n\n3. **Core Concept:**\n   BoW counts frequency. TF-IDF weighs the 'importance' of a word in the document vs corpus.\n\n4. **Technique / Method:**\n   BoW: Simple histogram. TF-IDF: Formula (TF * log(N/df)). Penalizes common words like 'is'.\n\n5. **Applications:**\n   Document Classification, Search Engines, and Spam Filtering systems."
                 },
                 {
                     "question": "Case Study: Spam Filtering.",
-                    "answer": "1. **Data:** Collection of Emails (Ham/Spam).\n2. **Process:** Clean text, Tokenize, Vectorize (TF-IDF).\n3. **Train:** Naive Bayes Classifier.\n4. **Test:** Check accuracy.\n5. **Predict:** New email -> Spam/Not Spam."
+                    "answer": "1. **Definition:**\n   An NLP application that classifies emails/messages as 'Spam' (Junk) or 'Ham' (Legit).\n\n2. **Goal:**\n   To protect users from unwanted content and security threats automatically.\n\n3. **Core Concept:**\n   Probabilistic Classification. Spam has specific patterns (free, win, click).\n\n4. **Technique / Method:**\n   Preprocess Text -> TF-IDF Vectorization -> Train Naive Bayes Model -> Predict Probability.\n\n5. **Applications:**\n   Gmail Spam Filter, SMS Junk Filter, and Comment moderation."
                 }
             ]
         }
@@ -1360,11 +1360,11 @@
             "Part D (5-Marks)": [
                 {
                     "question": "Explain the Viola-Jones Framework.",
-                    "answer": "1. **Haar Features:** Simple rectangles to define features.\n2. **Integral Image:** Fast calculation of pixel sums.\n3. **Adaboost:** Selecting best features.\n4. **Cascading:** Rejecting negative regions instantly (Fail fast)."
+                    "answer": "1. **Definition:**\n   The first efficient object detection framework to provide competitive real-time rates.\n\n2. **Goal:**\n   To detect faces (or objects) in images extremely fast with high accuracy.\n\n3. **Core Concept:**\n   Uses 'Integral Image' for speed and 'Cascading Classifiers' to reject empty backgrounds quickly.\n\n4. **Technique / Method:**\n   Four Stages: Haar Features -> Integral Image -> Adaboost Training -> Cascade Architecture.\n\n5. **Applications:**\n   Digital Camera Focus (Face Priority), Snapchat Filters, and Surveillance Systems."
                 },
                 {
                     "question": "Real-time Object Tracking.",
-                    "answer": "Discussion of using Webcam, capturing frames, applying detection/tracking logic, and displaying output in real-time."
+                    "answer": "1. **Definition:**\n   The task of estimating the trajectory of an object in the image plane as it moves.\n\n2. **Goal:**\n   To maintain the identity and location of an object across video frames.\n\n3. **Core Concept:**\n   Prediction (where it should be) vs Correction (where it actually is).\n\n4. **Technique / Method:**\n   Common algorithms: Meanshift, Camshift, and Optical Flow.\n\n5. **Applications:**\n   Traffic Monitoring, Human-Computer Interaction, and Sports Analytics."
                 }
             ]
         }
