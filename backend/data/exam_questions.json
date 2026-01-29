@@ -1,856 +1,73 @@
 [
     {
-        "unit": "Unit 1: Python Basics",
-        "sections": {
-            "Part A (1-Mark)": [
-                {
-                    "question": "Define 'Module'.",
-                    "answer": "A module is a file containing Python definitions and statements."
-                },
-                {
-                    "question": "Define 'Dictionary'.",
-                    "answer": "A dictionary is an unordered collection of unique key-value pairs."
-                },
-                {
-                    "question": "Define 'Tuple'.",
-                    "answer": "A tuple is an immutable, ordered sequence of elements."
-                },
-                {
-                    "question": "Define 'Comment'.",
-                    "answer": "A comment is a non-executable line of text in code."
-                },
-                {
-                    "question": "Define 'Set'.",
-                    "answer": "A set is an unordered collection of unique elements."
-                },
-                {
-                    "question": "Define 'String'.",
-                    "answer": "A string is an immutable sequence of characters used to store text."
-                },
-                {
-                    "question": "Define 'Variable'.",
-                    "answer": "A variable is a symbolic name associated with a value in memory."
-                },
-                {
-                    "question": "Define 'Integer'.",
-                    "answer": "An integer is a whole number without a fractional part."
-                },
-                {
-                    "question": "Define 'List'.",
-                    "answer": "A list is a mutable, ordered sequence of elements."
-                },
-                {
-                    "question": "Define 'Loop'.",
-                    "answer": "A loop is a control structure that repeats a block of code."
-                },
-                {
-                    "question": "Define 'Operator'.",
-                    "answer": "An operator is a symbol that performs computations on values."
-                },
-                {
-                    "question": "Define 'Function'.",
-                    "answer": "A function is a reusable block of code designed to perform a specific task."
-                }
-            ],
-            "Part B (2-Mark)": [
-                {
-                    "question": "State two distinct features or uses of 'Tuple'.",
-                    "answer": "1. It stores fixed collections of items that cannot be changed.\n2. It can be used as a key in dictionaries due to immutability."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Operator'.",
-                    "answer": "1. It includes arithmetic, comparison, and logical types.\n2. It returns a result based on the operands provided."
-                },
-                {
-                    "question": "State two distinct features or uses of 'String'.",
-                    "answer": "1. It works as an array of characters that can be indexed.\n2. It provides methods for text manipulation like split and upper."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Variable'.",
-                    "answer": "1. It allows you to store data values for later processing.\n2. It improves code readability by giving meaningful names."
-                },
-                {
-                    "question": "State two distinct features or uses of 'List'.",
-                    "answer": "1. It is used to store multiple items in a single variable.\n2. It provides built-in methods to sort, search, and modify the collection."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Comment'.",
-                    "answer": "1. It is ignored by the interpreter during execution.\n2. It explains the logic to humans reading the code."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Dictionary'.",
-                    "answer": "1. It allows for very fast data lookup using unique keys.\n2. It matches real-world data structures well, like JSON."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Set'.",
-                    "answer": "1. It automatically removes duplicate values from a collection.\n2. It supports mathematical operations like union and intersection."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Module'.",
-                    "answer": "1. It allows you to organize code into separate, manageable files.\n2. It enables code sharing across different projects via imports."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Function'.",
-                    "answer": "1. It promotes code reuse by avoiding repetition.\n2. It makes complex programs modular and easier to debug."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Loop'.",
-                    "answer": "1. It automates repetitive tasks efficiently.\n2. It can iterate over sequences like lists or strings."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Integer'.",
-                    "answer": "1. It supports standard arithmetic operations.\n2. It has unlimited precision in Python 3."
-                }
-            ],
-            "Part C (3-Mark)": [
-                {
-                    "question": "Explain 'Module' with an example.",
-                    "answer": "1. Definition:\nA module is a file containing Python definitions and statements.\n\n2. Explanation:\nThink of a module like a tool chest. It works by collecting related tools/functions in one file (Input), organizing them into a namespace (Processing), and letting you 'import' specific tools when needed (Output). This keeps your main workspace clean and organized. It is primarily used for organizing code.\n\n3. Example:\nimport math\nprint(math.sqrt(16)) # Output: 4.0"
-                },
-                {
-                    "question": "Explain 'List' with an example.",
-                    "answer": "1. Definition:\nA list is a mutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a list like a music playlist. It works by taking multiple items (Input), organizing them in a specific order with index numbers (Processing), and letting you access or change any item instantly (Output). This makes it perfect for managing collections of things that need to stay in order. It is primarily used for storing multiple items in one place.\n\n3. Example:\nfruits = ['apple', 'banana']\nprint(fruits[0]) # Output: apple"
-                },
-                {
-                    "question": "Explain 'Comment' with an example.",
-                    "answer": "1. Definition:\nA comment is a non-executable line of text in code.\n\n2. Explanation:\nThink of a comment like a sticky note on a document. It works by allowing you to write notes (Input) that the computer ignores completely (Processing) but helps the next person understand what's going on (Output). It is primarily used for explaining code.\n\n3. Example:\n# This adds two numbers\nx = 1 + 1"
-                },
-                {
-                    "question": "Explain 'Loop' with an example.",
-                    "answer": "1. Definition:\nA loop is a control structure that repeats a block of code.\n\n2. Explanation:\nThink of a loop like a music track on repeat. It works by taking a set of instructions (Input), running them over and over until a stop condition is met (Processing), and finishing when the task is done (Output). It saves you from writing the same code 100 times. It is primarily used for repeating tasks.\n\n3. Example:\nfor i in range(3):\n    print(i)"
-                },
-                {
-                    "question": "Explain 'Dictionary' with an example.",
-                    "answer": "1. Definition:\nA dictionary is an unordered collection of unique key-value pairs.\n\n2. Explanation:\nThink of a dictionary like a real phone book. It works by taking a unique key, like a name (Input), hashing it to find its location (Processing), and instantly returning the associated value, like a number (Output). This structure allows for lightning-fast lookups without searching through everything. It is primarily used for fast data retrieval via keys.\n\n3. Example:\nuser = {'name': 'Alice', 'age': 20}\nprint(user['name']) # Output: Alice"
-                },
-                {
-                    "question": "Explain 'Variable' with an example.",
-                    "answer": "1. Definition:\nA variable is a symbolic name associated with a value in memory.\n\n2. Explanation:\nThink of a variable like a labeled box. It works by taking a value (Input), storing it in a specific memory location (Processing), and allowing you to retrieve it by name later (Output). This is crucial because it lets programs remember information like scores or names while they run. It is primarily used for storing data for later use.\n\n3. Example:\nscore = 100\nprint(score) # Output: 100"
-                },
-                {
-                    "question": "Explain 'Integer' with an example.",
-                    "answer": "1. Definition:\nAn integer is a whole number without a fractional part.\n\n2. Explanation:\nThink of an integer like a counting tally. It works by taking a whole number inputs (Input), performing exact math operations (Processing), and returning a precise result (Output). It's used for things you can count, like people or apples. It is primarily used for counting and math.\n\n3. Example:\ncount = 5 + 3\nprint(count) # Output: 8"
-                },
-                {
-                    "question": "Explain 'Set' with an example.",
-                    "answer": "1. Definition:\nA set is an unordered collection of unique elements.\n\n2. Explanation:\nThink of a set like a specific club membership list. It works by taking a group of items (Input), filtering out any duplicates automatically (Processing), and storing only unique members (Output). It is perfect for when you need to ensure no item appears twice. It is primarily used for storing unique items.\n\n3. Example:\nids = {101, 102, 101}\nprint(ids) # Output: {101, 102}"
-                },
-                {
-                    "question": "Explain 'Operator' with an example.",
-                    "answer": "1. Definition:\nAn operator is a symbol that performs computations on values.\n\n2. Explanation:\nThink of an operator like a math verb. It works by taking two values (Input), applying an action like addition or comparison (Processing), and giving you the result (Output). Example: '+' adds things, '==' compares them. It is primarily used for performing calculations.\n\n3. Example:\nresult = 10 + 5\nprint(result) # Output: 15"
-                },
-                {
-                    "question": "Explain 'String' with an example.",
-                    "answer": "1. Definition:\nA string is an immutable sequence of characters used to store text.\n\n2. Explanation:\nThink of a string like a charm bracelet. It works by taking individual characters (Input), linking them together in a specific order (Processing), and presenting them as a single text entity (Output). You can't change a bead once it's on (immutable), but you can make a new bracelet. It is primarily used for storing text data.\n\n3. Example:\nname = 'Python'\nprint(name[0]) # Output: P"
-                },
-                {
-                    "question": "Explain 'Tuple' with an example.",
-                    "answer": "1. Definition:\nA tuple is an immutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a tuple like a sealed envelope. It works by accepting data once (Input), locking it permanently in memory (Processing), and allowing read-only access thereafter (Output). It is essential for data that should never change during the program. It is primarily used for storing fixed data.\n\n3. Example:\ncoords = (10, 20)\nprint(coords[0]) # Output: 10"
-                },
-                {
-                    "question": "Explain 'Function' with an example.",
-                    "answer": "1. Definition:\nA function is a reusable block of code designed to perform a specific task.\n\n2. Explanation:\nThink of a function like a kitchen blender. It works by taking raw ingredients as arguments (Input), following a set of internal instructions to process them (Processing), and delivering a finished result (Output). You can use this machine over and over without rebuilding it every time. It is primarily used for reusable code logic.\n\n3. Example:\ndef add(a, b):\n    return a + b\nprint(add(5, 3)) # Output: 8"
-                }
-            ],
-            "Part D (5-Mark)": [
-                {
-                    "question": "Discuss 'Integer' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nAn integer is a whole number without a fractional part.\n\n2. Explanation:\nThink of an integer like a counting tally. It works by taking a whole number inputs (Input), performing exact math operations (Processing), and returning a precise result (Output). It's used for things you can count, like people or apples.\n\n3. Example:\ncount = 5 + 3\nprint(count) # Output: 8\n\n4. Applications:\n1. Loop Counters (Technical).\n2. Inventory Stock (Business).\n3. Age Calculation (Real-life).\n\n5. Advantages:\n1. Exact precision.\n2. Fast arithmetic.\n3. Simple memory usage."
-                },
-                {
-                    "question": "Discuss 'Module' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA module is a file containing Python definitions and statements.\n\n2. Explanation:\nThink of a module like a tool chest. It works by collecting related tools/functions in one file (Input), organizing them into a namespace (Processing), and letting you 'import' specific tools when needed (Output). This keeps your main workspace clean and organized.\n\n3. Example:\nimport math\nprint(math.sqrt(16)) # Output: 4.0\n\n4. Applications:\n1. Using Math Formulas (Academic).\n2. Importing Game Assets (Technical).\n3. Separating Configuration (Business).\n\n5. Advantages:\n1. Organizes code logically.\n2. Prevents name conflicts.\n3. Promotes reusability."
-                },
-                {
-                    "question": "Discuss 'Comment' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA comment is a non-executable line of text in code.\n\n2. Explanation:\nThink of a comment like a sticky note on a document. It works by allowing you to write notes (Input) that the computer ignores completely (Processing) but helps the next person understand what's going on (Output).\n\n3. Example:\n# This adds two numbers\nx = 1 + 1\n\n4. Applications:\n1. Documentation (Business).\n2. Debugging Notes (Technical).\n3. Teaching Code (Academic).\n\n5. Advantages:\n1. Improves maintainability.\n2. Helps others understand logic.\n3. Can carry TODOs."
-                },
-                {
-                    "question": "Discuss 'String' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA string is an immutable sequence of characters used to store text.\n\n2. Explanation:\nThink of a string like a charm bracelet. It works by taking individual characters (Input), linking them together in a specific order (Processing), and presenting them as a single text entity (Output). You can't change a bead once it's on (immutable), but you can make a new bracelet.\n\n3. Example:\nname = 'Python'\nprint(name[0]) # Output: P\n\n4. Applications:\n1. Displaying Usernames (Real-life).\n2. Parsing File Content (Technical).\n3. Printing Console Messages (Business).\n\n5. Advantages:\n1. Human-readable format.\n2. Wide range of built-in methods.\n3. Immutable and hashable."
-                },
-                {
-                    "question": "Discuss 'List' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA list is a mutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a list like a music playlist. It works by taking multiple items (Input), organizing them in a specific order with index numbers (Processing), and letting you access or change any item instantly (Output). This makes it perfect for managing collections of things that need to stay in order.\n\n3. Example:\nfruits = ['apple', 'banana']\nprint(fruits[0]) # Output: apple\n\n4. Applications:\n1. Managing a Music Playlist (Real-life).\n2. Storing a Class Roster (Academic).\n3. Processing Sensor Data Logs (Technical).\n\n5. Advantages:\n1. Can store mixed data types.\n2. Easy to add/remove items (Dynamic).\n3. Built-in sorting and searching."
-                },
-                {
-                    "question": "Discuss 'Set' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA set is an unordered collection of unique elements.\n\n2. Explanation:\nThink of a set like a specific club membership list. It works by taking a group of items (Input), filtering out any duplicates automatically (Processing), and storing only unique members (Output). It is perfect for when you need to ensure no item appears twice.\n\n3. Example:\nids = {101, 102, 101}\nprint(ids) # Output: {101, 102}\n\n4. Applications:\n1. Removing Duplicate Emails (Real-life).\n2. Venn Diagram Logic (Academic).\n3. Unique Visitor Tracking (Technical).\n\n5. Advantages:\n1. Guarantees uniqueness.\n2. Fast membership testing.\n3. Example of mathematical sets."
-                },
-                {
-                    "question": "Discuss 'Function' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA function is a reusable block of code designed to perform a specific task.\n\n2. Explanation:\nThink of a function like a kitchen blender. It works by taking raw ingredients as arguments (Input), following a set of internal instructions to process them (Processing), and delivering a finished result (Output). You can use this machine over and over without rebuilding it every time.\n\n3. Example:\ndef add(a, b):\n    return a + b\nprint(add(5, 3)) # Output: 8\n\n4. Applications:\n1. Automating Daily Tasks (Real-life).\n2. Game Character Actions like Jump (Technical).\n3. Calculators/Math Operations (Academic).\n\n5. Advantages:\n1. Reduces Code Repetition.\n2. Makes Debugging Easier.\n3. Improves Readability."
-                },
-                {
-                    "question": "Discuss 'Variable' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA variable is a symbolic name associated with a value in memory.\n\n2. Explanation:\nThink of a variable like a labeled box. It works by taking a value (Input), storing it in a specific memory location (Processing), and allowing you to retrieve it by name later (Output). This is crucial because it lets programs remember information like scores or names while they run.\n\n3. Example:\nscore = 100\nprint(score) # Output: 100\n\n4. Applications:\n1. Tracking Game Scores (Real-life).\n2. Storing User Input (Technical).\n3. Scientific Calculations (Academic).\n\n5. Advantages:\n1. Easy to name and use.\n2. Allows data to be reused.\n3. Makes code readable."
-                },
-                {
-                    "question": "Discuss 'Loop' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA loop is a control structure that repeats a block of code.\n\n2. Explanation:\nThink of a loop like a music track on repeat. It works by taking a set of instructions (Input), running them over and over until a stop condition is met (Processing), and finishing when the task is done (Output). It saves you from writing the same code 100 times.\n\n3. Example:\nfor i in range(3):\n    print(i)\n\n4. Applications:\n1. Sending Bulk Emails (Business).\n2. Processing Image Pixels (Technical).\n3. Game Main Loop (Real-life).\n\n5. Advantages:\n1. Reduces code redundancy.\n2. Automates heavy tasks.\n3. Handles dynamic data sizes."
-                },
-                {
-                    "question": "Discuss 'Operator' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nAn operator is a symbol that performs computations on values.\n\n2. Explanation:\nThink of an operator like a math verb. It works by taking two values (Input), applying an action like addition or comparison (Processing), and giving you the result (Output). Example: '+' adds things, '==' compares them.\n\n3. Example:\nresult = 10 + 5\nprint(result) # Output: 15\n\n4. Applications:\n1. Calculating Prices (Business).\n2. Checking Conditions (Technical).\n3. Physics Simulations (Academic).\n\n5. Advantages:\n1. Simple syntax.\n2. Essential for logic.\n3. Highly optimized."
-                },
-                {
-                    "question": "Discuss 'Dictionary' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA dictionary is an unordered collection of unique key-value pairs.\n\n2. Explanation:\nThink of a dictionary like a real phone book. It works by taking a unique key, like a name (Input), hashing it to find its location (Processing), and instantly returning the associated value, like a number (Output). This structure allows for lightning-fast lookups without searching through everything.\n\n3. Example:\nuser = {'name': 'Alice', 'age': 20}\nprint(user['name']) # Output: Alice\n\n4. Applications:\n1. Phone Contacts App (Real-life).\n2. User Profiles Database (Technical).\n3. Product Catalog SKU lookup (Business).\n\n5. Advantages:\n1. Extremely fast lookups.\n2. Flexible key-value structure.\n3. Easy to read and manage."
-                },
-                {
-                    "question": "Discuss 'Tuple' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA tuple is an immutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a tuple like a sealed envelope. It works by accepting data once (Input), locking it permanently in memory (Processing), and allowing read-only access thereafter (Output). It is essential for data that should never change during the program.\n\n3. Example:\ncoords = (10, 20)\nprint(coords[0]) # Output: 10\n\n4. Applications:\n1. Storing Map Coordinates (Real-life).\n2. Configuration Settings (Technical).\n3. Returning Multiple Values (Academic).\n\n5. Advantages:\n1. Faster than lists.\n2. Data remains safe from changes.\n3. Can be used as dictionary keys."
-                }
-            ]
-        }
-    },
-    {
-        "unit": "Unit 2: OOP Using Python",
-        "sections": {
-            "Part A (1-Mark)": [
-                {
-                    "question": "Define 'Class'.",
-                    "answer": "A class is a user-defined blueprint for creating objects."
-                },
-                {
-                    "question": "Define 'Polymorphism'.",
-                    "answer": "Polymorphism allows different classes to be treated as instances of the same general class."
-                },
-                {
-                    "question": "Define 'Attribute'.",
-                    "answer": "An attribute is a variable that belongs to an object or class."
-                },
-                {
-                    "question": "Define 'Method'.",
-                    "answer": "A method is a function associated with an object."
-                },
-                {
-                    "question": "Define 'Object'.",
-                    "answer": "An object is a specific instance of a class."
-                },
-                {
-                    "question": "Define 'Encapsulation'.",
-                    "answer": "Encapsulation is the bundling of data and methods into a single unit."
-                },
-                {
-                    "question": "Define 'Inheritance'.",
-                    "answer": "Inheritance is a mechanism where a child class derives attributes from a parent class."
-                },
-                {
-                    "question": "Define 'Constructor'.",
-                    "answer": "A constructor is a special method used to initialize objects."
-                },
-                {
-                    "question": "Define 'Abstraction'.",
-                    "answer": "Abstraction is the concept of hiding complex implementation details and showing only essentials."
-                }
-            ],
-            "Part B (2-Mark)": [
-                {
-                    "question": "State two distinct features or uses of 'Attribute'.",
-                    "answer": "1. It stores data specific to the object.\n2. It can be accessed using dot notation."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Inheritance'.",
-                    "answer": "1. It promotes code reusability by letting children use parent code.\n2. It establishes a logical hierarchy (e.g., Dog is a type of Animal)."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Method'.",
-                    "answer": "1. It defines the behavior of the object.\n2. It can modify the object's internal state."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Object'.",
-                    "answer": "1. It represents a concrete entity with its own unique data.\n2. It interact with other objects through methods."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Constructor'.",
-                    "answer": "1. It is automatically called when an object is created.\n2. It sets up the initial state of the object."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Polymorphism'.",
-                    "answer": "1. It allows a single interface to control diverse objects.\n2. It simplifies code by treating different types uniformly."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Class'.",
-                    "answer": "1. It serves as a template to define the structure and behavior of objects.\n2. It encapsulates data (attributes) and actions (methods)."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Abstraction'.",
-                    "answer": "1. It reduces complexity by enforcing a clean interface.\n2. It allows users to use a system without knowing how it works internally."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Encapsulation'.",
-                    "answer": "1. It restricts direct access to some of an object's components.\n2. It protects the internal state of an object from unintended changes."
-                }
-            ],
-            "Part C (3-Mark)": [
-                {
-                    "question": "Explain 'Inheritance' with an example.",
-                    "answer": "1. Definition:\nInheritance is a mechanism where a child class derives attributes from a parent class.\n\n2. Explanation:\nThink of inheritance like genetic DNA. It works by taking the traits of a Parent class (Input), passing them down automatically (Processing), so the Child class starts with all those features ready to use (Output). This saves you from re-typing the same code for shared behaviors. It is primarily used for sharing features between classes.\n\n3. Example:\nclass Animal:\n    def speak(self): print('Hi')\nclass Dog(Animal):\n    pass\nd = Dog()\nd.speak()"
-                },
-                {
-                    "question": "Explain 'Abstraction' with an example.",
-                    "answer": "1. Definition:\nAbstraction is the concept of hiding complex implementation details and showing only essentials.\n\n2. Explanation:\nThink of Abstraction like driving a car. It works by giving you a pedal and wheel (Input), hiding the complex engine combustion logic (Processing), and just making the car move (Output). You don't need to be a mechanic to drive. It is primarily used for hiding complexity.\n\n3. Example:\nfrom abc import ABC, abstractmethod\nclass Shape(ABC):\n    @abstractmethod\n    def area(self): pass"
-                },
-                {
-                    "question": "Explain 'Polymorphism' with an example.",
-                    "answer": "1. Definition:\nPolymorphism allows different classes to be treated as instances of the same general class.\n\n2. Explanation:\nThink of Polymorphism like a universal remote control. It works by sending a standard 'Power On' signal (Input), which different devices like TV or DVD player interpret in their own way (Processing), to turn on (Output). You don't need a different button for every single device. It is primarily used for unified interface.\n\n3. Example:\nfor shape in [Circle(), Square()]:\n    shape.draw()"
-                },
-                {
-                    "question": "Explain 'Object' with an example.",
-                    "answer": "1. Definition:\nAn object is a specific instance of a class.\n\n2. Explanation:\nThink of an object like an actual car built from a factory blueprint. It works by taking the Class definition (Input), allocating memory for specific data like 'Red Color' (Processing), and existing as a usable entity that can drive (Output). While the class is the idea, the object is the reality. It is primarily used for representing real entities.\n\n3. Example:\nmy_dog = Dog()\nmy_dog.bark()"
-                },
-                {
-                    "question": "Explain 'Attribute' with an example.",
-                    "answer": "1. Definition:\nAn attribute is a variable that belongs to an object or class.\n\n2. Explanation:\nThink of an attribute like the color of your eyes. It works by being a property attached to you (Input), stored as part of your identity (Processing), and visible when someone describes you (Output). It is primarily used for storing object data.\n\n3. Example:\np = Point()\np.x = 10"
-                },
-                {
-                    "question": "Explain 'Method' with an example.",
-                    "answer": "1. Definition:\nA method is a function associated with an object.\n\n2. Explanation:\nThink of a method like a verb for a noun. It works by being called on an object (Input), using the object's internal data (Processing), and performing an action like 'bark' or 'drive' (Output). It brings the static data of an object to life. It is primarily used for object actions.\n\n3. Example:\ns = 'hello'\nprint(s.upper()) # Output: HELLO"
-                },
-                {
-                    "question": "Explain 'Constructor' with an example.",
-                    "answer": "1. Definition:\nA constructor is a special method used to initialize objects.\n\n2. Explanation:\nThink of a constructor like the setup wizard on a new phone. It works by running the moment you turn the phone on (Input), installing default apps and settings (Processing), and handing you a ready-to-use device (Output). It is primarily used for initializing objects.\n\n3. Example:\nclass Dog:\n    def __init__(self, name):\n        self.name = name"
-                },
-                {
-                    "question": "Explain 'Class' with an example.",
-                    "answer": "1. Definition:\nA class is a user-defined blueprint for creating objects.\n\n2. Explanation:\nThink of a class like a cookie cutter. It works by defining a specific shape and size (Input/Design), which is then pressed into dough (Processing) to create multiple identical cookies or 'objects' (Output). The class itself is just the tool; the objects are what you actually use. It is primarily used for defining object structure.\n\n3. Example:\nclass Car:\n    brand = 'Toyota'\nmy_car = Car()\nprint(my_car.brand)"
-                },
-                {
-                    "question": "Explain 'Encapsulation' with an example.",
-                    "answer": "1. Definition:\nEncapsulation is the bundling of data and methods into a single unit.\n\n2. Explanation:\nThink of Encapsulation like a capsule pill. It works by wrapping the bitter medicine/data (Input) inside a protective shell (Processing), ensuring it travels safely without being tampered with until needed (Output). It keeps the dangerous or sensitive parts hidden from the outside world. It is primarily used for protecting data.\n\n3. Example:\nclass Bank:\n    __balance = 0 # Private"
-                }
-            ],
-            "Part D (5-Mark)": [
-                {
-                    "question": "Discuss 'Constructor' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA constructor is a special method used to initialize objects.\n\n2. Explanation:\nThink of a constructor like the setup wizard on a new phone. It works by running the moment you turn the phone on (Input), installing default apps and settings (Processing), and handing you a ready-to-use device (Output).\n\n3. Example:\nclass Dog:\n    def __init__(self, name):\n        self.name = name\n\n4. Applications:\n1. Setting Default Configs (Technical).\n2. New User Registration (Business).\n3. Opening a File (Real-life).\n\n5. Advantages:\n1. Ensures valid state.\n2. Automates setup.\n3. Standardizes object creation."
-                },
-                {
-                    "question": "Discuss 'Attribute' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nAn attribute is a variable that belongs to an object or class.\n\n2. Explanation:\nThink of an attribute like the color of your eyes. It works by being a property attached to you (Input), stored as part of your identity (Processing), and visible when someone describes you (Output).\n\n3. Example:\np = Point()\np.x = 10\n\n4. Applications:\n1. User Settings (Real-life).\n2. Game Health Points (Technical).\n3. Product Prices (Business).\n\n5. Advantages:\n1. Persists data.\n2. Specific to instance.\n3. Easily accessible."
-                },
-                {
-                    "question": "Discuss 'Inheritance' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nInheritance is a mechanism where a child class derives attributes from a parent class.\n\n2. Explanation:\nThink of inheritance like genetic DNA. It works by taking the traits of a Parent class (Input), passing them down automatically (Processing), so the Child class starts with all those features ready to use (Output). This saves you from re-typing the same code for shared behaviors.\n\n3. Example:\nclass Animal:\n    def speak(self): print('Hi')\nclass Dog(Animal):\n    pass\nd = Dog()\nd.speak()\n\n4. Applications:\n1. Game Unit Types: Soldier -> Hero (Technical).\n2. User Roles: Guest -> Admin (Business).\n3. UI Widgets: Box -> Checkbox (Technical).\n\n5. Advantages:\n1. Saves Typing (Reusability).\n2. Logical Hierarchy.\n3. Easy to Update Common Logic."
-                },
-                {
-                    "question": "Discuss 'Polymorphism' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nPolymorphism allows different classes to be treated as instances of the same general class.\n\n2. Explanation:\nThink of Polymorphism like a universal remote control. It works by sending a standard 'Power On' signal (Input), which different devices like TV or DVD player interpret in their own way (Processing), to turn on (Output). You don't need a different button for every single device.\n\n3. Example:\nfor shape in [Circle(), Square()]:\n    shape.draw()\n\n4. Applications:\n1. Universal Plugin Systems (Technical).\n2. Media Player Play Button (Real-life).\n3. Drawing distinct shapes (Academic).\n\n5. Advantages:\n1. Flexible coding.\n2. Unified interface.\n3. Extensible systems."
-                },
-                {
-                    "question": "Discuss 'Encapsulation' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nEncapsulation is the bundling of data and methods into a single unit.\n\n2. Explanation:\nThink of Encapsulation like a capsule pill. It works by wrapping the bitter medicine/data (Input) inside a protective shell (Processing), ensuring it travels safely without being tampered with until needed (Output). It keeps the dangerous or sensitive parts hidden from the outside world.\n\n3. Example:\nclass Bank:\n    __balance = 0 # Private\n\n4. Applications:\n1. Secure Banking Systems (Business).\n2. Medical Records Privacy (Real-life).\n3. OS Kernel Protection (Technical).\n\n5. Advantages:\n1. Data Security.\n2. Controlled Access.\n3. Modularity."
-                },
-                {
-                    "question": "Discuss 'Object' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nAn object is a specific instance of a class.\n\n2. Explanation:\nThink of an object like an actual car built from a factory blueprint. It works by taking the Class definition (Input), allocating memory for specific data like 'Red Color' (Processing), and existing as a usable entity that can drive (Output). While the class is the idea, the object is the reality.\n\n3. Example:\nmy_dog = Dog()\nmy_dog.bark()\n\n4. Applications:\n1. A Specific User in a Game (Real-life).\n2. A Button on a Website (Technical).\n3. An Individual Bank Account (Business).\n\n5. Advantages:\n1. Intuitive representation.\n2. Holds specific state.\n3. Modular interaction."
-                },
-                {
-                    "question": "Discuss 'Abstraction' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nAbstraction is the concept of hiding complex implementation details and showing only essentials.\n\n2. Explanation:\nThink of Abstraction like driving a car. It works by giving you a pedal and wheel (Input), hiding the complex engine combustion logic (Processing), and just making the car move (Output). You don't need to be a mechanic to drive.\n\n3. Example:\nfrom abc import ABC, abstractmethod\nclass Shape(ABC):\n    @abstractmethod\n    def area(self): pass\n\n4. Applications:\n1. API Design (Technical).\n2. Car Dashboard (Real-life).\n3. Remote Controls (Business).\n\n5. Advantages:\n1. Simplifies interface.\n2. Reduces impact of changes.\n3. Focuses on 'What' not 'How'."
-                },
-                {
-                    "question": "Discuss 'Class' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA class is a user-defined blueprint for creating objects.\n\n2. Explanation:\nThink of a class like a cookie cutter. It works by defining a specific shape and size (Input/Design), which is then pressed into dough (Processing) to create multiple identical cookies or 'objects' (Output). The class itself is just the tool; the objects are what you actually use.\n\n3. Example:\nclass Car:\n    brand = 'Toyota'\nmy_car = Car()\nprint(my_car.brand)\n\n4. Applications:\n1. Creating Enemies/NPCs in Video Games (Technical).\n2. Modeling Bank Accounts (Business).\n3. Designing GUI Buttons (Technical).\n\n5. Advantages:\n1. Organizes Code Logically.\n2. Encapsulates Data.\n3. Enables Reuse via Objects."
-                },
-                {
-                    "question": "Discuss 'Method' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA method is a function associated with an object.\n\n2. Explanation:\nThink of a method like a verb for a noun. It works by being called on an object (Input), using the object's internal data (Processing), and performing an action like 'bark' or 'drive' (Output). It brings the static data of an object to life.\n\n3. Example:\ns = 'hello'\nprint(s.upper()) # Output: HELLO\n\n4. Applications:\n1. String Manipulation (Technical).\n2. Game Character Attacks (Real-life).\n3. Bank Transactions (Business).\n\n5. Advantages:\n1. Encapsulated behavior.\n2. Access to object state.\n3. Clear syntax."
-                }
-            ]
-        }
-    },
-    {
-        "unit": "Unit 3: Plotting & Algorithms",
-        "sections": {
-            "Part A (1-Mark)": [
-                {
-                    "question": "Define 'Array'.",
-                    "answer": "An array is a collection of items stored at contiguous memory locations."
-                },
-                {
-                    "question": "Define 'Function'.",
-                    "answer": "A function is a reusable block of code designed to perform a specific task."
-                },
-                {
-                    "question": "Define 'Bar Chart'.",
-                    "answer": "A bar chart presents categorical data with rectangular bars."
-                },
-                {
-                    "question": "Define 'Histogram'.",
-                    "answer": "A histogram is a graph showing the frequency distribution of data."
-                },
-                {
-                    "question": "Define 'List'.",
-                    "answer": "A list is a mutable, ordered sequence of elements."
-                },
-                {
-                    "question": "Define 'Scatter Plot'.",
-                    "answer": "A scatter plot acts as a graph of points to show relationship between two variables."
-                },
-                {
-                    "question": "Define 'Dictionary'.",
-                    "answer": "A dictionary is an unordered collection of unique key-value pairs."
-                },
-                {
-                    "question": "Define 'Legend'.",
-                    "answer": "A legend is an area describing the elements of the graph."
-                }
-            ],
-            "Part B (2-Mark)": [
-                {
-                    "question": "State two distinct features or uses of 'Dictionary'.",
-                    "answer": "1. It allows for very fast data lookup using unique keys.\n2. It matches real-world data structures well, like JSON."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Scatter Plot'.",
-                    "answer": "1. It uses dots to represent values for two different numeric variables.\n2. It is used to observe relationships or correlations."
-                },
-                {
-                    "question": "State two distinct features or uses of 'List'.",
-                    "answer": "1. It is used to store multiple items in a single variable.\n2. It provides built-in methods to sort, search, and modify the collection."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Histogram'.",
-                    "answer": "1. It groups data into bins.\n2. It helps visualize how data is spread out."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Array'.",
-                    "answer": "1. It is optimized for numerical computations.\n2. All elements must be of the same data type."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Bar Chart'.",
-                    "answer": "1. The height of the bar corresponds to the value.\n2. It is used for comparing different groups."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Function'.",
-                    "answer": "1. It promotes code reuse by avoiding repetition.\n2. It makes complex programs modular and easier to debug."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Legend'.",
-                    "answer": "1. It maps colors or symbols to their meaning.\n2. It helps the viewer interpret the plot."
-                }
-            ],
-            "Part C (3-Mark)": [
-                {
-                    "question": "Explain 'Histogram' with an example.",
-                    "answer": "1. Definition:\nA histogram is a graph showing the frequency distribution of data.\n\n2. Explanation:\nThink of a histogram like sorting mail into slots by zip code. It works by taking many items (Input), grouping them into ranges or bins (Processing), and showing which bin has the biggest pile (Output). It is primarily used for visualizing distribution.\n\n3. Example:\nplt.hist(data, bins=5)"
-                },
-                {
-                    "question": "Explain 'Array' with an example.",
-                    "answer": "1. Definition:\nAn array is a collection of items stored at contiguous memory locations.\n\n2. Explanation:\nThink of an array like a row of identical lockers. It works by taking data items (Input), storing them fast side-by-side (Processing), and allowing instant access by locker number (Output). It is primarily used for numerical data storage.\n\n3. Example:\nimport numpy as np\narr = np.array([1, 2, 3])"
-                },
-                {
-                    "question": "Explain 'Legend' with an example.",
-                    "answer": "1. Definition:\nA legend is an area describing the elements of the graph.\n\n2. Explanation:\nThink of a legend like a map key. It works by taking the colors used in a chart (Input), listing what each color represents (Processing), and telling the user 'Blue means Water' (Output). It is primarily used for explaining plot colors.\n\n3. Example:\nplt.legend(['Sales', 'Profit'])"
-                },
-                {
-                    "question": "Explain 'Scatter Plot' with an example.",
-                    "answer": "1. Definition:\nA scatter plot acts as a graph of points to show relationship between two variables.\n\n2. Explanation:\nThink of a scatter plot like a map of star systems. It works by taking X and Y coordinates (Input), plotting a dot for each pair (Processing), and revealing if they form a line or cluster (Output). It is primarily used for checking correlation.\n\n3. Example:\nplt.scatter(x, y)"
-                },
-                {
-                    "question": "Explain 'Bar Chart' with an example.",
-                    "answer": "1. Definition:\nA bar chart presents categorical data with rectangular bars.\n\n2. Explanation:\nThink of a bar chart like a lineup of people by height. It works by taking category totals (Input), drawing a bar for each (Processing), and letting you easily see who is tallest (Output). It is primarily used for comparing categories.\n\n3. Example:\nplt.bar(categories, values)"
-                },
-                {
-                    "question": "Explain 'Dictionary' with an example.",
-                    "answer": "1. Definition:\nA dictionary is an unordered collection of unique key-value pairs.\n\n2. Explanation:\nThink of a dictionary like a real phone book. It works by taking a unique key, like a name (Input), hashing it to find its location (Processing), and instantly returning the associated value, like a number (Output). This structure allows for lightning-fast lookups without searching through everything. It is primarily used for fast data retrieval via keys.\n\n3. Example:\nuser = {'name': 'Alice', 'age': 20}\nprint(user['name']) # Output: Alice"
-                },
-                {
-                    "question": "Explain 'Function' with an example.",
-                    "answer": "1. Definition:\nA function is a reusable block of code designed to perform a specific task.\n\n2. Explanation:\nThink of a function like a kitchen blender. It works by taking raw ingredients as arguments (Input), following a set of internal instructions to process them (Processing), and delivering a finished result (Output). You can use this machine over and over without rebuilding it every time. It is primarily used for reusable code logic.\n\n3. Example:\ndef add(a, b):\n    return a + b\nprint(add(5, 3)) # Output: 8"
-                },
-                {
-                    "question": "Explain 'List' with an example.",
-                    "answer": "1. Definition:\nA list is a mutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a list like a music playlist. It works by taking multiple items (Input), organizing them in a specific order with index numbers (Processing), and letting you access or change any item instantly (Output). This makes it perfect for managing collections of things that need to stay in order. It is primarily used for storing multiple items in one place.\n\n3. Example:\nfruits = ['apple', 'banana']\nprint(fruits[0]) # Output: apple"
-                }
-            ],
-            "Part D (5-Mark)": [
-                {
-                    "question": "Discuss 'Dictionary' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA dictionary is an unordered collection of unique key-value pairs.\n\n2. Explanation:\nThink of a dictionary like a real phone book. It works by taking a unique key, like a name (Input), hashing it to find its location (Processing), and instantly returning the associated value, like a number (Output). This structure allows for lightning-fast lookups without searching through everything.\n\n3. Example:\nuser = {'name': 'Alice', 'age': 20}\nprint(user['name']) # Output: Alice\n\n4. Applications:\n1. Phone Contacts App (Real-life).\n2. User Profiles Database (Technical).\n3. Product Catalog SKU lookup (Business).\n\n5. Advantages:\n1. Extremely fast lookups.\n2. Flexible key-value structure.\n3. Easy to read and manage."
-                },
-                {
-                    "question": "Discuss 'List' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA list is a mutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a list like a music playlist. It works by taking multiple items (Input), organizing them in a specific order with index numbers (Processing), and letting you access or change any item instantly (Output). This makes it perfect for managing collections of things that need to stay in order.\n\n3. Example:\nfruits = ['apple', 'banana']\nprint(fruits[0]) # Output: apple\n\n4. Applications:\n1. Managing a Music Playlist (Real-life).\n2. Storing a Class Roster (Academic).\n3. Processing Sensor Data Logs (Technical).\n\n5. Advantages:\n1. Can store mixed data types.\n2. Easy to add/remove items (Dynamic).\n3. Built-in sorting and searching."
-                },
-                {
-                    "question": "Discuss 'Array' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nAn array is a collection of items stored at contiguous memory locations.\n\n2. Explanation:\nThink of an array like a row of identical lockers. It works by taking data items (Input), storing them fast side-by-side (Processing), and allowing instant access by locker number (Output).\n\n3. Example:\nimport numpy as np\narr = np.array([1, 2, 3])\n\n4. Applications:\n1. Scientific Computing (Academic).\n2. Image Processing (Technical).\n3. Financial Modeling (Business).\n\n5. Advantages:\n1. Memory efficient.\n2. Fast math operations.\n3. Compact storage."
-                },
-                {
-                    "question": "Discuss 'Scatter Plot' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA scatter plot acts as a graph of points to show relationship between two variables.\n\n2. Explanation:\nThink of a scatter plot like a map of star systems. It works by taking X and Y coordinates (Input), plotting a dot for each pair (Processing), and revealing if they form a line or cluster (Output).\n\n3. Example:\nplt.scatter(x, y)\n\n4. Applications:\n1. Height vs Weight (Real-life).\n2. Price vs Demand (Business).\n3. Study Time vs Grade (Academic).\n\n5. Advantages:\n1. Shows correlations.\n2. Identifies clusters.\n3. Detects outliers."
-                },
-                {
-                    "question": "Discuss 'Function' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA function is a reusable block of code designed to perform a specific task.\n\n2. Explanation:\nThink of a function like a kitchen blender. It works by taking raw ingredients as arguments (Input), following a set of internal instructions to process them (Processing), and delivering a finished result (Output). You can use this machine over and over without rebuilding it every time.\n\n3. Example:\ndef add(a, b):\n    return a + b\nprint(add(5, 3)) # Output: 8\n\n4. Applications:\n1. Automating Daily Tasks (Real-life).\n2. Game Character Actions like Jump (Technical).\n3. Calculators/Math Operations (Academic).\n\n5. Advantages:\n1. Reduces Code Repetition.\n2. Makes Debugging Easier.\n3. Improves Readability."
-                },
-                {
-                    "question": "Discuss 'Legend' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA legend is an area describing the elements of the graph.\n\n2. Explanation:\nThink of a legend like a map key. It works by taking the colors used in a chart (Input), listing what each color represents (Processing), and telling the user 'Blue means Water' (Output).\n\n3. Example:\nplt.legend(['Sales', 'Profit'])\n\n4. Applications:\n1. Complex Maps (Real-life).\n2. Multi-line Graphs (Technical).\n3. Pie Charts (Business).\n\n5. Advantages:\n1. Clarifies context.\n2. Essential for multi-series.\n3. Professional look."
-                },
-                {
-                    "question": "Discuss 'Bar Chart' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA bar chart presents categorical data with rectangular bars.\n\n2. Explanation:\nThink of a bar chart like a lineup of people by height. It works by taking category totals (Input), drawing a bar for each (Processing), and letting you easily see who is tallest (Output).\n\n3. Example:\nplt.bar(categories, values)\n\n4. Applications:\n1. Sales per Month (Business).\n2. Votes per Candidate (Real-life).\n3. Browser Market Share (Technical).\n\n5. Advantages:\n1. Easy comparison.\n2. Clear categories.\n3. Visual impact."
-                },
-                {
-                    "question": "Discuss 'Histogram' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA histogram is a graph showing the frequency distribution of data.\n\n2. Explanation:\nThink of a histogram like sorting mail into slots by zip code. It works by taking many items (Input), grouping them into ranges or bins (Processing), and showing which bin has the biggest pile (Output).\n\n3. Example:\nplt.hist(data, bins=5)\n\n4. Applications:\n1. Grade Distribution (Academic).\n2. Age Demographics (Business).\n3. Pixel Intensity (Technical).\n\n5. Advantages:\n1. Shows skewness.\n2. Identifies outliers.\n3. Summarizes large data."
-                }
-            ]
-        }
-    },
-    {
-        "unit": "Unit 4: Network & GUI",
-        "sections": {
-            "Part A (1-Mark)": [
-                {
-                    "question": "Define 'Class'.",
-                    "answer": "A class is a user-defined blueprint for creating objects."
-                },
-                {
-                    "question": "Define 'Label'.",
-                    "answer": "A label is a widget used to display text or images."
-                },
-                {
-                    "question": "Define 'Function'.",
-                    "answer": "A function is a reusable block of code designed to perform a specific task."
-                },
-                {
-                    "question": "Define 'Widget'.",
-                    "answer": "A widget is a standard component of a graphical user interface (GUI)."
-                },
-                {
-                    "question": "Define 'Socket'.",
-                    "answer": "A socket is an endpoint for sending or receiving data across a network."
-                },
-                {
-                    "question": "Define 'Module'.",
-                    "answer": "A module is a file containing Python definitions and statements."
-                },
-                {
-                    "question": "Define 'Event'.",
-                    "answer": "An event is an action detected by the program, like a mouse click."
-                },
-                {
-                    "question": "Define 'Port'.",
-                    "answer": "A port is a number that identifies a specific process on a computer."
-                }
-            ],
-            "Part B (2-Mark)": [
-                {
-                    "question": "State two distinct features or uses of 'Label'.",
-                    "answer": "1. It provides instructions or information to the user.\n2. It is usually read-only for the user."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Function'.",
-                    "answer": "1. It promotes code reuse by avoiding repetition.\n2. It makes complex programs modular and easier to debug."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Event'.",
-                    "answer": "1. It triggers a specific callback function.\n2. It drives the logic of GUI applications."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Class'.",
-                    "answer": "1. It serves as a template to define the structure and behavior of objects.\n2. It encapsulates data (attributes) and actions (methods)."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Socket'.",
-                    "answer": "1. It allows processes on different machines to communicate.\n2. It uses IP address and Port number."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Widget'.",
-                    "answer": "1. Examples include buttons, labels, and text boxes.\n2. It allows users to interact with the program."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Port'.",
-                    "answer": "1. It helps the OS send network data to the right application.\n2. Common ports include 80 for Web and 25 for Email."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Module'.",
-                    "answer": "1. It allows you to organize code into separate, manageable files.\n2. It enables code sharing across different projects via imports."
-                }
-            ],
-            "Part C (3-Mark)": [
-                {
-                    "question": "Explain 'Label' with an example.",
-                    "answer": "1. Definition:\nA label is a widget used to display text or images.\n\n2. Explanation:\nThink of a label like a sign on a door. It works by taking text (Input), painting it on the window background (Processing), and showing 'Enter Here' to the user (Output). It is primarily used for displaying text.\n\n3. Example:\nl = Label(root, text='Name:')"
-                },
-                {
-                    "question": "Explain 'Module' with an example.",
-                    "answer": "1. Definition:\nA module is a file containing Python definitions and statements.\n\n2. Explanation:\nThink of a module like a tool chest. It works by collecting related tools/functions in one file (Input), organizing them into a namespace (Processing), and letting you 'import' specific tools when needed (Output). This keeps your main workspace clean and organized. It is primarily used for organizing code.\n\n3. Example:\nimport math\nprint(math.sqrt(16)) # Output: 4.0"
-                },
-                {
-                    "question": "Explain 'Widget' with an example.",
-                    "answer": "1. Definition:\nA widget is a standard component of a graphical user interface (GUI).\n\n2. Explanation:\nThink of a widget like a lego brick for app windows. It works by being placed on a window (Input), displaying itself as a button or box (Processing), and waiting for user clicks (Output). It is primarily used for building ui.\n\n3. Example:\nb = Button(root, text='Click')"
-                },
-                {
-                    "question": "Explain 'Function' with an example.",
-                    "answer": "1. Definition:\nA function is a reusable block of code designed to perform a specific task.\n\n2. Explanation:\nThink of a function like a kitchen blender. It works by taking raw ingredients as arguments (Input), following a set of internal instructions to process them (Processing), and delivering a finished result (Output). You can use this machine over and over without rebuilding it every time. It is primarily used for reusable code logic.\n\n3. Example:\ndef add(a, b):\n    return a + b\nprint(add(5, 3)) # Output: 8"
-                },
-                {
-                    "question": "Explain 'Event' with an example.",
-                    "answer": "1. Definition:\nAn event is an action detected by the program, like a mouse click.\n\n2. Explanation:\nThink of an event like a doorbell ringing. It works by waiting for a user action (Input), triggering a specific 'answering' function (Processing), and executing the code defined for that trigger (Output). It is primarily used for handling interaction.\n\n3. Example:\nbtn.bind('<Button-1>', on_click)"
-                },
-                {
-                    "question": "Explain 'Class' with an example.",
-                    "answer": "1. Definition:\nA class is a user-defined blueprint for creating objects.\n\n2. Explanation:\nThink of a class like a cookie cutter. It works by defining a specific shape and size (Input/Design), which is then pressed into dough (Processing) to create multiple identical cookies or 'objects' (Output). The class itself is just the tool; the objects are what you actually use. It is primarily used for defining object structure.\n\n3. Example:\nclass Car:\n    brand = 'Toyota'\nmy_car = Car()\nprint(my_car.brand)"
-                },
-                {
-                    "question": "Explain 'Port' with an example.",
-                    "answer": "1. Definition:\nA port is a number that identifies a specific process on a computer.\n\n2. Explanation:\nThink of a port like an apartment number. It works by taking incoming mail for the building (Input), checking the unit number (Processing), and delivering it to the specific family inside (Output). IP is the building, Port is the unit. It is primarily used for identifying apps.\n\n3. Example:\ns.bind(('localhost', 8080))"
-                },
-                {
-                    "question": "Explain 'Socket' with an example.",
-                    "answer": "1. Definition:\nA socket is an endpoint for sending or receiving data across a network.\n\n2. Explanation:\nThink of a socket like a telephone jack. It works by plugging into the network wall (Input), establishing a line to another phone (Processing), and letting voice data flow back and forth (Output). It is primarily used for network communication.\n\n3. Example:\ns = socket.socket()"
-                }
-            ],
-            "Part D (5-Mark)": [
-                {
-                    "question": "Discuss 'Socket' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA socket is an endpoint for sending or receiving data across a network.\n\n2. Explanation:\nThink of a socket like a telephone jack. It works by plugging into the network wall (Input), establishing a line to another phone (Processing), and letting voice data flow back and forth (Output).\n\n3. Example:\ns = socket.socket()\n\n4. Applications:\n1. Chat Applications (Real-life).\n2. Web Browsers (Technical).\n3. Online Gaming (Business).\n\n5. Advantages:\n1. Low-level control.\n2. Universal standard.\n3. Bidirectional."
-                },
-                {
-                    "question": "Discuss 'Class' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA class is a user-defined blueprint for creating objects.\n\n2. Explanation:\nThink of a class like a cookie cutter. It works by defining a specific shape and size (Input/Design), which is then pressed into dough (Processing) to create multiple identical cookies or 'objects' (Output). The class itself is just the tool; the objects are what you actually use.\n\n3. Example:\nclass Car:\n    brand = 'Toyota'\nmy_car = Car()\nprint(my_car.brand)\n\n4. Applications:\n1. Creating Enemies/NPCs in Video Games (Technical).\n2. Modeling Bank Accounts (Business).\n3. Designing GUI Buttons (Technical).\n\n5. Advantages:\n1. Organizes Code Logically.\n2. Encapsulates Data.\n3. Enables Reuse via Objects."
-                },
-                {
-                    "question": "Discuss 'Label' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA label is a widget used to display text or images.\n\n2. Explanation:\nThink of a label like a sign on a door. It works by taking text (Input), painting it on the window background (Processing), and showing 'Enter Here' to the user (Output).\n\n3. Example:\nl = Label(root, text='Name:')\n\n4. Applications:\n1. Form Headings (Business).\n2. Status Messages (Technical).\n3. Image Captions (Real-life).\n\n5. Advantages:\n1. Simple to use.\n2. Informative.\n3. Lightweight."
-                },
-                {
-                    "question": "Discuss 'Event' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nAn event is an action detected by the program, like a mouse click.\n\n2. Explanation:\nThink of an event like a doorbell ringing. It works by waiting for a user action (Input), triggering a specific 'answering' function (Processing), and executing the code defined for that trigger (Output).\n\n3. Example:\nbtn.bind('<Button-1>', on_click)\n\n4. Applications:\n1. Button Clicks (Real-life).\n2. Key Presses (Technical).\n3. Mouse Movement (Business).\n\n5. Advantages:\n1. Responsive apps.\n2. Interactive.\n3. Asynchronous."
-                },
-                {
-                    "question": "Discuss 'Widget' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA widget is a standard component of a graphical user interface (GUI).\n\n2. Explanation:\nThink of a widget like a lego brick for app windows. It works by being placed on a window (Input), displaying itself as a button or box (Processing), and waiting for user clicks (Output).\n\n3. Example:\nb = Button(root, text='Click')\n\n4. Applications:\n1. Desktop Apps (Technical).\n2. Form Submission (Business).\n3. Calculators (Real-life).\n\n5. Advantages:\n1. Reusable UI elements.\n2. Standard look and feel.\n3. Event driven."
-                },
-                {
-                    "question": "Discuss 'Port' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA port is a number that identifies a specific process on a computer.\n\n2. Explanation:\nThink of a port like an apartment number. It works by taking incoming mail for the building (Input), checking the unit number (Processing), and delivering it to the specific family inside (Output). IP is the building, Port is the unit.\n\n3. Example:\ns.bind(('localhost', 8080))\n\n4. Applications:\n1. Web Servers (Technical).\n2. Email Services (Business).\n3. Database Access (Real-life).\n\n5. Advantages:\n1. Multiplexing.\n2. Organization.\n3. Security control."
-                },
-                {
-                    "question": "Discuss 'Module' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA module is a file containing Python definitions and statements.\n\n2. Explanation:\nThink of a module like a tool chest. It works by collecting related tools/functions in one file (Input), organizing them into a namespace (Processing), and letting you 'import' specific tools when needed (Output). This keeps your main workspace clean and organized.\n\n3. Example:\nimport math\nprint(math.sqrt(16)) # Output: 4.0\n\n4. Applications:\n1. Using Math Formulas (Academic).\n2. Importing Game Assets (Technical).\n3. Separating Configuration (Business).\n\n5. Advantages:\n1. Organizes code logically.\n2. Prevents name conflicts.\n3. Promotes reusability."
-                },
-                {
-                    "question": "Discuss 'Function' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA function is a reusable block of code designed to perform a specific task.\n\n2. Explanation:\nThink of a function like a kitchen blender. It works by taking raw ingredients as arguments (Input), following a set of internal instructions to process them (Processing), and delivering a finished result (Output). You can use this machine over and over without rebuilding it every time.\n\n3. Example:\ndef add(a, b):\n    return a + b\nprint(add(5, 3)) # Output: 8\n\n4. Applications:\n1. Automating Daily Tasks (Real-life).\n2. Game Character Actions like Jump (Technical).\n3. Calculators/Math Operations (Academic).\n\n5. Advantages:\n1. Reduces Code Repetition.\n2. Makes Debugging Easier.\n3. Improves Readability."
-                }
-            ]
-        }
-    },
-    {
-        "unit": "Unit 5: Database Connectivity",
-        "sections": {
-            "Part A (1-Mark)": [
-                {
-                    "question": "Define 'Row'.",
-                    "answer": "A row represents a single, implicit structured data item in a table."
-                },
-                {
-                    "question": "Define 'Cursor'.",
-                    "answer": "A cursor is a database object used to traverse and manipulate result sets."
-                },
-                {
-                    "question": "Define 'SQL'.",
-                    "answer": "SQL (Structured Query Language) is the standard language for relational databases."
-                },
-                {
-                    "question": "Define 'Variable'.",
-                    "answer": "A variable is a symbolic name associated with a value in memory."
-                },
-                {
-                    "question": "Define 'Tuple'.",
-                    "answer": "A tuple is an immutable, ordered sequence of elements."
-                },
-                {
-                    "question": "Define 'Query'.",
-                    "answer": "A query is a request for data or action from a database."
-                },
-                {
-                    "question": "Define 'Table'.",
-                    "answer": "A table is a collection of related data held in a structured format."
-                },
-                {
-                    "question": "Define 'Dictionary'.",
-                    "answer": "A dictionary is an unordered collection of unique key-value pairs."
-                }
-            ],
-            "Part B (2-Mark)": [
-                {
-                    "question": "State two distinct features or uses of 'Cursor'.",
-                    "answer": "1. It acts as a pointer to the current row in a query result.\n2. It allows row-by-row processing."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Query'.",
-                    "answer": "1. It is usually written in SQL.\n2. It can select, insert, update, or delete data."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Tuple'.",
-                    "answer": "1. It stores fixed collections of items that cannot be changed.\n2. It can be used as a key in dictionaries due to immutability."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Dictionary'.",
-                    "answer": "1. It allows for very fast data lookup using unique keys.\n2. It matches real-world data structures well, like JSON."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Table'.",
-                    "answer": "1. It consists of rows and columns.\n2. It represents an entity like 'Users' or 'Orders'."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Row'.",
-                    "answer": "1. It is also called a record or tuple.\n2. It contains data for one specific entity."
-                },
-                {
-                    "question": "State two distinct features or uses of 'SQL'.",
-                    "answer": "1. It is used to define and manipulate data.\n2. It works across different DB systems like MySQL and SQLite."
-                },
-                {
-                    "question": "State two distinct features or uses of 'Variable'.",
-                    "answer": "1. It allows you to store data values for later processing.\n2. It improves code readability by giving meaningful names."
-                }
-            ],
-            "Part C (3-Mark)": [
-                {
-                    "question": "Explain 'Table' with an example.",
-                    "answer": "1. Definition:\nA table is a collection of related data held in a structured format.\n\n2. Explanation:\nThink of a table like a spreadsheet page. It works by defining columns for data types (Input), creating rows for each entry (Processing), and storing everything in a grid (Output). It is primarily used for structuring data.\n\n3. Example:\nCREATE TABLE users (id INT, name TEXT)"
-                },
-                {
-                    "question": "Explain 'Variable' with an example.",
-                    "answer": "1. Definition:\nA variable is a symbolic name associated with a value in memory.\n\n2. Explanation:\nThink of a variable like a labeled box. It works by taking a value (Input), storing it in a specific memory location (Processing), and allowing you to retrieve it by name later (Output). This is crucial because it lets programs remember information like scores or names while they run. It is primarily used for storing data for later use.\n\n3. Example:\nscore = 100\nprint(score) # Output: 100"
-                },
-                {
-                    "question": "Explain 'Dictionary' with an example.",
-                    "answer": "1. Definition:\nA dictionary is an unordered collection of unique key-value pairs.\n\n2. Explanation:\nThink of a dictionary like a real phone book. It works by taking a unique key, like a name (Input), hashing it to find its location (Processing), and instantly returning the associated value, like a number (Output). This structure allows for lightning-fast lookups without searching through everything. It is primarily used for fast data retrieval via keys.\n\n3. Example:\nuser = {'name': 'Alice', 'age': 20}\nprint(user['name']) # Output: Alice"
-                },
-                {
-                    "question": "Explain 'Row' with an example.",
-                    "answer": "1. Definition:\nA row represents a single, implicit structured data item in a table.\n\n2. Explanation:\nThink of a row like a single card in a rolodex. It works by holding all the details for one specific person (Input), keeping them grouped together (Processing), and letting you pull that one card out (Output). It is primarily used for single record storage.\n\n3. Example:\nINSERT INTO users VALUES (1, 'John')"
-                },
-                {
-                    "question": "Explain 'Query' with an example.",
-                    "answer": "1. Definition:\nA query is a request for data or action from a database.\n\n2. Explanation:\nThink of a query like an order at a restaurant. It works by taking your specification 'Burger, no onions' (Input), sending it to the kitchen/DB (Processing), and bringing back the exact food you asked for (Output). It is primarily used for requesting data.\n\n3. Example:\nSELECT * FROM users"
-                },
-                {
-                    "question": "Explain 'Tuple' with an example.",
-                    "answer": "1. Definition:\nA tuple is an immutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a tuple like a sealed envelope. It works by accepting data once (Input), locking it permanently in memory (Processing), and allowing read-only access thereafter (Output). It is essential for data that should never change during the program. It is primarily used for storing fixed data.\n\n3. Example:\ncoords = (10, 20)\nprint(coords[0]) # Output: 10"
-                },
-                {
-                    "question": "Explain 'Cursor' with an example.",
-                    "answer": "1. Definition:\nA cursor is a database object used to traverse and manipulate result sets.\n\n2. Explanation:\nThink of a cursor like your finger on a list. It works by pointing to one item at a time (Input), letting you read or change it (Processing), and then moving down to the next item (Output). It is primarily used for navigating results.\n\n3. Example:\ncur = conn.cursor()"
-                },
-                {
-                    "question": "Explain 'SQL' with an example.",
-                    "answer": "1. Definition:\nSQL (Structured Query Language) is the standard language for relational databases.\n\n2. Explanation:\nThink of SQL like a universal language for filing cabinets. It works by taking English-like commands (Input), converting them into database actions (Processing), and organizing data perfectly (Output). It is primarily used for talking to databases.\n\n3. Example:\nCREATE TABLE customers ..."
-                }
-            ],
-            "Part D (5-Mark)": [
-                {
-                    "question": "Discuss 'Dictionary' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA dictionary is an unordered collection of unique key-value pairs.\n\n2. Explanation:\nThink of a dictionary like a real phone book. It works by taking a unique key, like a name (Input), hashing it to find its location (Processing), and instantly returning the associated value, like a number (Output). This structure allows for lightning-fast lookups without searching through everything.\n\n3. Example:\nuser = {'name': 'Alice', 'age': 20}\nprint(user['name']) # Output: Alice\n\n4. Applications:\n1. Phone Contacts App (Real-life).\n2. User Profiles Database (Technical).\n3. Product Catalog SKU lookup (Business).\n\n5. Advantages:\n1. Extremely fast lookups.\n2. Flexible key-value structure.\n3. Easy to read and manage."
-                },
-                {
-                    "question": "Discuss 'Variable' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA variable is a symbolic name associated with a value in memory.\n\n2. Explanation:\nThink of a variable like a labeled box. It works by taking a value (Input), storing it in a specific memory location (Processing), and allowing you to retrieve it by name later (Output). This is crucial because it lets programs remember information like scores or names while they run.\n\n3. Example:\nscore = 100\nprint(score) # Output: 100\n\n4. Applications:\n1. Tracking Game Scores (Real-life).\n2. Storing User Input (Technical).\n3. Scientific Calculations (Academic).\n\n5. Advantages:\n1. Easy to name and use.\n2. Allows data to be reused.\n3. Makes code readable."
-                },
-                {
-                    "question": "Discuss 'SQL' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nSQL (Structured Query Language) is the standard language for relational databases.\n\n2. Explanation:\nThink of SQL like a universal language for filing cabinets. It works by taking English-like commands (Input), converting them into database actions (Processing), and organizing data perfectly (Output).\n\n3. Example:\nCREATE TABLE customers ...\n\n4. Applications:\n1. Data Analysis (Business).\n2. Backend Web Dev (Technical).\n3. Banking Systems (Real-life).\n\n5. Advantages:\n1. Declarative.\n2. Widely adopted.\n3. Powerful."
-                },
-                {
-                    "question": "Discuss 'Table' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA table is a collection of related data held in a structured format.\n\n2. Explanation:\nThink of a table like a spreadsheet page. It works by defining columns for data types (Input), creating rows for each entry (Processing), and storing everything in a grid (Output).\n\n3. Example:\nCREATE TABLE users (id INT, name TEXT)\n\n4. Applications:\n1. Excel Sheets (Real-life).\n2. User Directories (Business).\n3. Log Records (Technical).\n\n5. Advantages:\n1. Structured.\n2. Readable.\n3. Efficient indexing."
-                },
-                {
-                    "question": "Discuss 'Query' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA query is a request for data or action from a database.\n\n2. Explanation:\nThink of a query like an order at a restaurant. It works by taking your specification 'Burger, no onions' (Input), sending it to the kitchen/DB (Processing), and bringing back the exact food you asked for (Output).\n\n3. Example:\nSELECT * FROM users\n\n4. Applications:\n1. Searching Products (Real-life).\n2. Generating Reports (Business).\n3. Login Checks (Technical).\n\n5. Advantages:\n1. Powerful filtering.\n2. Standardized language.\n3. Flexible."
-                },
-                {
-                    "question": "Discuss 'Cursor' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA cursor is a database object used to traverse and manipulate result sets.\n\n2. Explanation:\nThink of a cursor like your finger on a list. It works by pointing to one item at a time (Input), letting you read or change it (Processing), and then moving down to the next item (Output).\n\n3. Example:\ncur = conn.cursor()\n\n4. Applications:\n1. Processing Query Results (Technical).\n2. Updating Records (Business).\n3. Data Migration (Real-life).\n\n5. Advantages:\n1. Row control.\n2. Memory efficient.\n3. Traverses output."
-                },
-                {
-                    "question": "Discuss 'Row' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA row represents a single, implicit structured data item in a table.\n\n2. Explanation:\nThink of a row like a single card in a rolodex. It works by holding all the details for one specific person (Input), keeping them grouped together (Processing), and letting you pull that one card out (Output).\n\n3. Example:\nINSERT INTO users VALUES (1, 'John')\n\n4. Applications:\n1. A Contact (Real-life).\n2. An Order (Business).\n3. A Student (Academic).\n\n5. Advantages:\n1. Atomic unit.\n2. Self-contained.\n3. Easy update."
-                },
-                {
-                    "question": "Discuss 'Tuple' in detail. Include its advantages and applications.",
-                    "answer": "1. Definition:\nA tuple is an immutable, ordered sequence of elements.\n\n2. Explanation:\nThink of a tuple like a sealed envelope. It works by accepting data once (Input), locking it permanently in memory (Processing), and allowing read-only access thereafter (Output). It is essential for data that should never change during the program.\n\n3. Example:\ncoords = (10, 20)\nprint(coords[0]) # Output: 10\n\n4. Applications:\n1. Storing Map Coordinates (Real-life).\n2. Configuration Settings (Technical).\n3. Returning Multiple Values (Academic).\n\n5. Advantages:\n1. Faster than lists.\n2. Data remains safe from changes.\n3. Can be used as dictionary keys."
-                }
-            ]
-        }
-    },
-    {
         "unit": "Unit 1: Introduction to ML",
         "sections": {
             "Part A (1-Mark)": [
                 {
                     "question": "Define Machine Learning.",
-                    "answer": "ML is the science of getting computers to act without being explicitly programmed."
+                    "answer": "Learning from data without explicit programming."
                 },
                 {
-                    "question": "Who defined ML formally?",
-                    "answer": "Tom Mitchell provided the formal E (Experience), T (Task), P (Performance) definition."
+                    "question": "What is Supervised Learning?",
+                    "answer": "Learning with labeled data."
                 },
                 {
                     "question": "What is AI?",
-                    "answer": "Artificial Intelligence is the broad concept of machines being able to carry out tasks in a way that we would consider 'smart'."
+                    "answer": "Simulation of human intelligence by machines."
+                },
+                {
+                    "question": "What is a Label?",
+                    "answer": "The target output variable."
+                },
+                {
+                    "question": "Define Data.",
+                    "answer": "Raw facts and figures used for learning."
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "AI vs ML.",
+                    "answer": "AI is the broad science; ML is a subset that learns from data."
+                },
+                {
+                    "question": "What is Reinforcement Learning?",
+                    "answer": "Learning via rewards and penalties."
+                },
+                {
+                    "question": "Define Training Set.",
+                    "answer": "The subset of data used to train the model."
+                },
+                {
+                    "question": "Define Testing Set.",
+                    "answer": "The subset of data used to evaluate performance."
+                },
+                {
+                    "question": "What is a Feature?",
+                    "answer": "An input variable used for making predictions."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Explain the 3 types of Learning.",
+                    "answer": "1. Supervised (Labeled)\n2. Unsupervised (Unlabeled)\n3. Reinforcement (Reward-based)"
                 },
                 {
                     "question": "What is Deep Learning?",
-                    "answer": "A subset of ML based on artificial neural networks with representation learning."
+                    "answer": "A subset of ML using neural networks to mimic the human brain."
                 },
                 {
-                    "question": "Define Supervised Learning.",
-                    "answer": "Learning where the model performs a task under the guidance of labels (Teacher)."
-                },
-                {
-                    "question": "Define Unsupervised Learning.",
-                    "answer": "Learning where the model finds patterns in unlabeled data (No Teacher)."
-                },
-                {
-                    "question": "Define Reinforcement Learning.",
-                    "answer": "Learning by interacting with an environment and receiving rewards or punishments."
-                },
-                {
-                    "question": "What is Training Data?",
-                    "answer": "The subset of data used to train the model (usually 70-80%)."
-                },
-                {
-                    "question": "What is Testing Data?",
-                    "answer": "The subset of data used to evaluate the model's performance (usually 20-30%)."
-                },
-                {
-                    "question": "Differentiate AI vs ML.",
-                    "answer": "AI is the umbrella term for smart machines; ML is the specific subset of algorithms that learn from data."
+                    "question": "Difference between Label and Feature.",
+                    "answer": "Features are Inputs (Questions). Labels are Outputs (Answers)."
                 }
             ],
-            "Part B (5-Marks)": [
+            "Part D (5-Marks)": [
                 {
-                    "question": "Explain the 7 steps of Machine Learning.",
-                    "answer": "1. Data Collection\n2. Data Preprocessing\n3. Choose Model\n4. Training\n5. Evaluation\n6. Hyperparameter Tuning\n7. Prediction"
+                    "question": "Explain the 7 Steps of Machine Learning.",
+                    "answer": "1. Gathering Data\n2. Preprocessing\n3. Choosing Model\n4. Training\n5. Testing\n6. Tuning\n7. Prediction"
                 },
                 {
-                    "question": "Difference between Traditional Programming and Machine Learning.",
-                    "answer": "Traditional: Rules + Data = Answers.\nML: Data + Answers = Rules.\nIn Traditional, you code the logic. In ML, the machine learns the logic from examples."
-                },
-                {
-                    "question": "Explain Tom Mitchell's definition of ML.",
-                    "answer": "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
-                },
-                {
-                    "question": "Compare Supervised and Unsupervised Learning.",
-                    "answer": "Supervised:\n- Labeled Data\n- Prediction/Classification\n- Example: Spam Filter\n\nUnsupervised:\n- Unlabeled Data\n- Clustering/association\n- Example: Customer Segmentation"
-                }
-            ],
-            "Part C (10-Marks)": [
-                {
-                    "question": "Discuss the Hierarchy of AI, ML, and DL with a diagram description.",
-                    "answer": "1. Artificial Intelligence (AI): The broadest circle. Any technique that enables, mimics human intelligence.\n2. Machine Learning (ML): A circle inside AI. Statistical techniques that give computers the ability to learn without explicit programming.\n3. Deep Learning (DL): A circle inside ML. Algorithms inspired by the structure and function of the brain called artificial neural networks.\nFrom Outer to Inner: AI -> ML -> DL."
+                    "question": "Detailed comparison of AI, ML, and DL.",
+                    "answer": "AI is the umbrella term for smart machines. ML is the subset regarding statistical learning. DL is the specialized subset using multi-layered Neural Networks."
                 }
             ]
         }
@@ -861,67 +78,69 @@
             "Part A (1-Mark)": [
                 {
                     "question": "What is Regression?",
-                    "answer": "Predicting a continuous numerical value (e.g., Price)."
+                    "answer": "Predicting continuous values."
                 },
                 {
                     "question": "What is Classification?",
-                    "answer": "Predicting a discrete label or category (e.g., Yes/No)."
+                    "answer": "Predicting discrete categories."
                 },
                 {
-                    "question": "What is a Feature?",
-                    "answer": "An individual measurable property or characteristic of a phenomenon being observed (Input)."
+                    "question": "Define Confusion Matrix.",
+                    "answer": "Table describing classifier performance."
                 },
                 {
-                    "question": "What is a Label?",
-                    "answer": "The result or output variable we are trying to predict."
+                    "question": "What is SVM?",
+                    "answer": "Support Vector Machine."
                 },
                 {
-                    "question": "Define Overfitting.",
-                    "answer": "When a model learns the training data too well, including noise, and fails on new data."
-                },
-                {
-                    "question": "Define Underfitting.",
-                    "answer": "When a model is too simple to capture the underlying structure of the data."
-                },
-                {
-                    "question": "What is Scikit-Learn?",
-                    "answer": "A popular Python library for machine learning providing simple and efficient tools."
-                },
-                {
-                    "question": "Equation of Linear Regression?",
-                    "answer": "y = mx + c (Slope-Intercept form)."
-                },
-                {
-                    "question": "What is a Confusion Matrix?",
-                    "answer": "A table used to describe the performance of a classification model (TP, FP, TN, FN)."
-                },
-                {
-                    "question": "What is Cross-Validation?",
-                    "answer": "A technique to test the model's ability to predict new data by splitting data into K folds."
+                    "question": "What is a Hyperplane?",
+                    "answer": "The decision boundary separating classes."
                 }
             ],
-            "Part B (5-Marks)": [
+            "Part B (2-Marks)": [
                 {
-                    "question": "Explain Linear Regression Assumptions.",
-                    "answer": "1. Linearity: The relationship between X and Y is linear.\n2. Homoscedasticity: The variance of residual is the same for any value of X.\n3. Independence: Observations are independent of each other.\n4. Normality: The data (errors) follows a normal distribution."
+                    "question": "Linear vs Logistic Regression.",
+                    "answer": "Linear predicts values (Price). Logistic predicts probability/classes (Yes/No)."
                 },
                 {
-                    "question": "Differentiate between Regression and Classification.",
-                    "answer": "Regression:\n- Output: Continuous quantity (Numbers)\n- Algorithms: Linear Regression, SVR\n- Metrics: RMSE, MAE\n\nClassification:\n- Output: Discrete Class (Labels)\n- Algorithms: Logistic Regression, KNN, SVM\n- Metrics: Accuracy, Precision, Recall"
+                    "question": "What are Support Vectors?",
+                    "answer": "Data points closest to the hyperplane."
                 },
                 {
-                    "question": "What is the purpose of Splitting Data into Train and Test sets?",
-                    "answer": "To evaluate the model's performance on unseen data. If we test on the training data, the model might just memorize it (Overfitting). The Test set acts as a proxy for 'Real World' data to measure generalization."
+                    "question": "Define Naive Bayes.",
+                    "answer": "Probabilistic classifier assuming feature independence."
                 },
+                {
+                    "question": "What is Overfitting?",
+                    "answer": "Model learns noise/details too well, failing on new data."
+                },
+                {
+                    "question": "What is Accuracy?",
+                    "answer": "Ratio of correct predictions to total predictions."
+                }
+            ],
+            "Part C (3-Marks)": [
                 {
                     "question": "Explain Precision and Recall.",
-                    "answer": "Precision: Of all positive predictions, how many were actually positive? (Quality).\nRecall: Of all actual positives, how many did we find? (Quantity)."
+                    "answer": "Precision: Accuracy of positive predictions.\nRecall: Ability to find all actual positives."
+                },
+                {
+                    "question": "Explain the Kernel Trick in SVM.",
+                    "answer": "Mapping non-linear data to a higher dimension to make it linearly separable."
+                },
+                {
+                    "question": "Steps in Data Preprocessing.",
+                    "answer": "1. Cleaning (Missing values)\n2. Encoding (Text to Numbers)\n3. Scaling (Normalization)"
                 }
             ],
-            "Part C (10-Marks)": [
+            "Part D (5-Marks)": [
                 {
-                    "question": "Explain Support Vector Machine (SVM) and the concept of Hyperplane and Margin.",
-                    "answer": "1. SVM:\nA supervised learning algorithm used for classification and regression.\n2. Goal:\nTo find a hyperplane in an N-dimensional space that distinctly classifies the data points.\n3. Hyperplane:\nDecision boundaries that help classify the data points. Data points falling on either side of the hyperplane can be attributed to different classes.\n4. Margin:\nThe distance between the hyperplane and the nearest data point from either class. A 'Good' margin is one where this separation is larger. SVM maximizes this margin.\n5. Support Vectors:\nData points that are closer to the hyperplane and influence the position and orientation of the hyperplane."
+                    "question": "Explain SVM Algorithm.",
+                    "answer": "Goal: Find hyperplane with Max Margin.\nSupport Vectors: Points defining the margin.\nKernel: Handles non-linear data."
+                },
+                {
+                    "question": "Classification Performance Metrics.",
+                    "answer": "1. Accuracy (Overall correctness)\n2. Precision (Exactness)\n3. Recall (Completeness)\n4. F1-Score (Balance)\n5. ROC Curve."
                 }
             ]
         }
@@ -931,220 +150,80 @@
         "sections": {
             "Part A (1-Mark)": [
                 {
-                    "question": "What is Clustering?",
-                    "answer": "The task of grouping a set of objects in such a way that objects in the same group are more similar."
+                    "question": "Define Clustering.",
+                    "answer": "Grouping similar objects."
                 },
                 {
                     "question": "What is K-Means?",
-                    "answer": "A centroid-based clustering algorithm that partitions data into K clusters."
+                    "answer": "Centroid-based clustering."
+                },
+                {
+                    "question": "What is Unlabeled Data?",
+                    "answer": "Data with no target answers."
                 },
                 {
                     "question": "What is a Centroid?",
                     "answer": "The center point of a cluster."
                 },
                 {
-                    "question": "Define Dimensionality Reduction.",
-                    "answer": "Reducing the number of random variables under consideration (Features)."
-                },
+                    "question": "Define Vector Quantization.",
+                    "answer": "Image compression using clustering."
+                }
+            ],
+            "Part B (2-Marks)": [
                 {
-                    "question": "What is the Elbow Method?",
-                    "answer": "A heuristic used to determine the optimal number of clusters K."
-                },
-                {
-                    "question": "What is Euclidean Distance?",
-                    "answer": "The straight-line distance between two points in a space."
-                },
-                {
-                    "question": "What is Mean Shift?",
-                    "answer": "A non-parametric clustering algorithm that does not require defining the number of clusters."
-                },
-                {
-                    "question": "What is Agglomerative Clustering?",
-                    "answer": "A bottom-up hierarchical clustering method."
+                    "question": "K-Means vs Hierarchical.",
+                    "answer": "K-Means: Fast, needs K. Hierarchical: Tree-based, slow, no K needed."
                 },
                 {
                     "question": "What is a Dendrogram?",
-                    "answer": "A diagram that shows the hierarchical relationship between objects."
+                    "answer": "Tree diagram showing hierarchical clusters."
                 },
                 {
-                    "question": "What is K-Modes?",
-                    "answer": "A variation of K-Means used for categorical data."
+                    "question": "What is Mean Shift?",
+                    "answer": "Clustering by shifting window to high density."
                 },
                 {
-                    "question": "Define Semi-Supervised Learning.",
-                    "answer": "A machine learning approach that combines a small amount of labeled data with a large amount of unlabeled data during training."
+                    "question": "Applications of Clustering.",
+                    "answer": "Customer Segmentation, Image Compression."
                 },
                 {
-                    "question": "Give one example of Semi-Supervised Learning.",
-                    "answer": "Self-Training, where a model trains on labeled data, labels the unlabeled data, and retrains itself."
+                    "question": "What is Euclidean Distance?",
+                    "answer": "Straight-line distance between two points."
                 }
             ],
-            "Part B (5-Marks)": [
+            "Part C (3-Marks)": [
                 {
-                    "question": "Explain the K-Means Algorithm steps.",
-                    "answer": "1. Choose the number of clusters K.\n2. Select K random points as centroids.\n3. Assign each data point to the closest centroid.\n4. Compute the new centroid of each cluster.\n5. Reassign each data point to the new closest centroid.\n6. Repeat steps 4-5 until centroids do not change (Convergence)."
+                    "question": "Explain Semi-Supervised Learning.",
+                    "answer": "Train model on small labeled set -> Pseudo-label the unlabeled set -> Train on combined data."
                 },
                 {
-                    "question": "Compare K-Means vs Hierarchical Clustering.",
-                    "answer": "K-Means:\n- Need to specify K.\n- Faster (O(n)).\n- Good for large datasets.\n\nHierarchical:\n- No need to specify K (Dendrogram).\n- Slower (O(n^3)).\n- Calculating the tree structure is heavy."
+                    "question": "Steps in K-Means.",
+                    "answer": "1. Initialize K centroids\n2. Assign points to nearest centroid\n3. Update centroids\n4. Repeat until convergence."
                 },
                 {
-                    "question": "What is Image Compression using Clustering?",
-                    "answer": "Using K-Means (Vector Quantization) to reduce the number of colors in an image. If an image has 16 million colors, we can cluster them into K=16 buckets and replace every pixel with its cluster center, drastically reducing size."
-                },
-                {
-                    "question": "Explain the Mean Shift algorithm.",
-                    "answer": "It involves shifting a data point iteratively to the average (mean) of data points in its neighborhood. It climbs the density gradient to find the 'peak' (mode) of the data distribution. No K required."
-                },
-                {
-                    "question": "Why is Semi-Supervised Learning useful? Explain with an analogy.",
-                    "answer": "1. Cost Efficiency: Labeling data is expensive (time/money). Unlabeled data is cheap.\n2. Accuracy: It performs better than Unsupervised learning and cheaper than Supervised.\n3. Analogy: A teacher solves 5 difficult logic puzzles (Labeled) for the class. The students then use that logic to solve 95 similar unsolved puzzles (Unlabeled) on their own."
+                    "question": "Agglomerative vs Divisive.",
+                    "answer": "Agglomerative: Bottom-up (Merge).\nDivisive: Top-down (Split)."
                 }
             ],
-            "Part C (10-Marks)": [
+            "Part D (5-Marks)": [
                 {
-                    "question": "Explain the difference between Supervised and Unsupervised Learning with detailed examples.",
-                    "answer": "Supervised Learning:\n- 'Learning with a Teacher'.\n- Input labels are provided.\n- Goal: Predict outcome.\n- Example: Weather Prediction (Regression). We have historical data (Temp, Humidity) AND the result (Rain/No Rain). The model learns the mapping.\n\nUnsupervised Learning:\n- 'Learning without a Teacher'.\n- No explicit labels.\n- Goal: Find hidden structure.\n- Example: Market Basket Analysis. We have transaction data, but no target. We want to find patterns like 'People who buy Bread also buy Butter' (Association/Clustering)."
+                    "question": "Detailed explanation of K-Means.",
+                    "answer": "Algorithm that partitions N observations into K clusters. Minimizes inertia. Efficient but sensitive to initialization (K-Means++ fixes this)."
                 },
                 {
-                    "question": "Compare Supervised, Unsupervised, and Semi-Supervised Learning.",
-                    "answer": "1. Supervised:\n- Input: Fully Labeled Data.\n- Goal: Predict outcomes/classify.\n- Cost: High (labeling).\n\n2. Unsupervised:\n- Input: No Labels.\n- Goal: Find hidden structure/patterns.\n- Cost: Low (data is raw).\n\n3. Semi-Supervised:\n- Input: Mix of Labeled (Small) + Unlabeled (Large).\n- Goal: Improve accuracy using cheap data.\n- Cost: Medium (Best of both worlds).\n- Use Case: Medical Imaging where doctors (labelers) are expensive."
+                    "question": "Different Types of Clustering.",
+                    "answer": "1. Partitioning (K-Means)\n2. Hierarchical (Agglomerative)\n3. Density-Based (DBSCAN)\n4. Grid-Based."
                 }
             ]
         }
     },
     {
         "unit": "Unit 4: Natural Language Processing",
-        "sections": {
-            "Part A (1-Mark)": [
-                {
-                    "question": "Define NLP.",
-                    "answer": "A field of AI that gives machines the ability to read, understand and derive meaning from human languages."
-                },
-                {
-                    "question": "What is Tokenization?",
-                    "answer": "The process of breaking a stream of text up into words, phrases, symbols, or other meaningful elements (tokens)."
-                },
-                {
-                    "question": "What are Stopwords?",
-                    "answer": "Common words (is, the, at) which are filtered out before processing natural language data."
-                },
-                {
-                    "question": "What is Stemming?",
-                    "answer": "The process of reducing inflected words to their word stem (base or root form)."
-                },
-                {
-                    "question": "What is Lemmatization?",
-                    "answer": "Grouping continuous forms of a word so they can be analyzed as a single item, based on dictionary definition."
-                },
-                {
-                    "question": "What is Corpus?",
-                    "answer": "A large and structured set of texts used for statistical analysis."
-                },
-                {
-                    "question": "What is Bag of Words?",
-                    "answer": "A representation of text that describes the occurrence of words within a document."
-                },
-                {
-                    "question": "What is TF-IDF?",
-                    "answer": "Term Frequency-Inverse Document Frequency. A statistic to evaluate how important a word is to a document."
-                },
-                {
-                    "question": "What is NLTK?",
-                    "answer": "Natural Language Toolkit. A leading platform for building Python programs to work with human language data."
-                },
-                {
-                    "question": "What is Sentiment Analysis?",
-                    "answer": "Identifying and categorizing opinions expressed in text (Positive/Negative/Neutral)."
-                }
-            ],
-            "Part B (5-Marks)": [
-                {
-                    "question": "Stemming vs Lemmatization. Which is better?",
-                    "answer": "Stemming:\n- Just chops off the end of the word.\n- Fast.\n- Result might not be a real word (e.g., 'Caring' -> 'Car').\n\nLemmatization:\n- Uses a dictionary/morphological analysis.\n- Slower.\n- Result is always a real word (e.g., 'Caring' -> 'Care').\n\nLemmatization is generally 'better' for accuracy; Stemming is better for speed."
-                },
-                {
-                    "question": "Explain the Bag of Words model.",
-                    "answer": "BoW is a simplifying representation used in NLP. In this model, a text (sentence or document) is represented as the bag (multiset) of its words, disregarding grammar and even word order but keeping multiplicity. It converts text into a fixed-length vector of counts."
-                },
-                {
-                    "question": "What are the steps in Text Preprocessing?",
-                    "answer": "1. Cleaning (HTML tags, URLs removal)\n2. Lowercasing\n3. Tokenization\n4. Stopword Removal\n5. Stemming/Lemmatization\n6. Vectorization (BoW/TF-IDF)"
-                }
-            ],
-            "Part C (10-Marks)": [
-                {
-                    "question": "Explain TF-IDF in detail.",
-                    "answer": "1. Term Frequency (TF):\nMeasures how frequently a term occurs in a document. TF(t) = (Number of times term t appears in a document) / (Total number of terms in the document).\n\n2. Inverse Document Frequency (IDF):\nMeasures how important a term is. While computing TF, all terms are considered equally important. However, certain terms, such as \"is\", \"of\", and \"that\", may appear a lot but have little importance. IDF(t) = log_e(Total number of documents / Number of documents with term t in it).\n\n3. TF-IDF Score:\nTF-IDF = TF * IDF.\nA high weight in TF-IDF is reached by a high term frequency (in the given document) and a low document frequency of the term in the whole collection of documents."
-                }
-            ]
-        }
+        "sections": {}
     },
     {
         "unit": "Unit 5: Computer Vision with OpenCV",
-        "sections": {
-            "Part A (1-Mark)": [
-                {
-                    "question": "What is Computer Vision?",
-                    "answer": "A field of AI that trains computers to interpret and understand the visual world."
-                },
-                {
-                    "question": "What is OpenCV?",
-                    "answer": "Open Source Computer Vision Library. A huge open-source library for computer vision, ML, and image processing."
-                },
-                {
-                    "question": "What are Pixels?",
-                    "answer": "The smallest unit of a digital image or graphic that can be displayed."
-                },
-                {
-                    "question": "What is Grayscale?",
-                    "answer": "An image in which the value of each pixel is a single sample, representing only an amount of light (Intensity)."
-                },
-                {
-                    "question": "What is Haar Cascade?",
-                    "answer": "A machine learning object detection method used to identify objects in images or video."
-                },
-                {
-                    "question": "What is the Viola-Jones Algorithm?",
-                    "answer": "An object detection framework which provides competitive object detection rates in real-time (basis of Haar Cascades)."
-                },
-                {
-                    "question": "What is ROI?",
-                    "answer": "Region of Interest. A selected subset of samples within a dataset identified for a particular purpose."
-                },
-                {
-                    "question": "What is a Bounding Box?",
-                    "answer": "A rectangular box that encloses an object in an image."
-                },
-                {
-                    "question": "Function to read an image in OpenCV?",
-                    "answer": "cv2.imread()"
-                },
-                {
-                    "question": "Function to show an image in OpenCV?",
-                    "answer": "cv2.imshow()"
-                }
-            ],
-            "Part B (5-Marks)": [
-                {
-                    "question": "Explain how Face Detection works using Haar Cascades.",
-                    "answer": "1. Haar Feature Selection: Features like edge features, line features, four-rectangle features.\n2. Inegral Image: Creates an integral image for rapid computation of Haar features.\n3. Adaboost Training: Selects the best features and trains the classifiers.\n4. Cascading Classifiers: Features are grouped into stages. If a region fails the first stage, it is discarded (Fast). If it passes, it goes to the second stage."
-                },
-                {
-                    "question": "How do you capture video from a webcam in OpenCV?",
-                    "answer": "1. Create a VideoCapture object: cap = cv2.VideoCapture(0).\n2. Loop indefinitely: while(True).\n3. Read frame: ret, frame = cap.read().\n4. Show frame: cv2.imshow('frame', frame).\n5. Check for exit key: if cv2.waitKey(1) == ord('q'): break.\n6. Release: cap.release()."
-                },
-                {
-                    "question": "Why do we convert images to Grayscale for detection?",
-                    "answer": "1. Reduces Complexity: Color (3 channels) vs Gray (1 channel). 3x less data.\n2. Computational Speed: Detection algorithms work MUCH faster.\n3. Robustness: Luminance is more important than color for detecting shapes/features."
-                }
-            ],
-            "Part C (10-Marks)": [
-                {
-                    "question": "Explain the concept of Object Tracking.",
-                    "answer": "Object tracking is the process of locating a moving object (or multiple objects) over time using a camera. It has two main components:\n1. Detection: Identifying the object in the frame (e.g., using Haar Cascades or YOLO).\n2. Tracking: Following the object across frames.\n\nTechniques:\n- Meanshift/Camshift: Density-based tracking.\n- Optical Flow: calculating the motion vectors of pixels.\n\nCase Study - Drowsiness Detection:\n1. Detect Face.\n2. Detect Eyes within Face.\n3. Track Eyes.\n4. If Eyes remain closed (missing pupil) for N frames, Sound Alarm."
-                }
-            ]
-        }
+        "sections": {}
     }
 ]
