@@ -217,7 +217,12 @@ const executeLocally = (code, language, res) => {
         // For now, let's assume valid code writes to file, or we can suggest it.
         // Actually, to make it W3Schools-like, we can append a block that tries to save current figure.
 
-        const patchCode = `
+        let finalCode = code;
+
+        // Only inject Matplotlib patch if the user is actually using it
+        // This prevents unnecessary imports/crashes for non-plotting scripts (like Scikit-Learn)
+        if (code.includes('matplotlib') || code.includes('plt')) {
+            const patchCode = `
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -227,11 +232,10 @@ def __auto_save_plot():
 import atexit
 atexit.register(__auto_save_plot)
 `;
-        // Prepend patch so it registers exit hook, but user imports might override plt. 
-        // Better: Append it. But if user script crashes, it won't run.
-        // Let's just trust the user or the patch. Append seems safer for imports.
+            finalCode = code + patchCode;
+        }
 
-        fs.writeFileSync(filePath, code + patchCode);
+        fs.writeFileSync(filePath, finalCode);
 
         const pythonCmd = process.platform === "win32" ? "python" : "python3";
         cmd = `${pythonCmd} "main.py"`;
