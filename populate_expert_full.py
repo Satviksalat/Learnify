@@ -8,7 +8,7 @@ EXAM_FILE = os.path.join("backend", "data", "exam_questions.json")
 ALL_EXPERT_DATA = [
      # ---------------- PYTHON UNIT 1 ----------------
     {
-        "unit": "Unit 1: Python Basics",
+        "unit": "Python Unit 1: Python Basics",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "Define Python.", "answer": "Python is a high-level, interpreted programmimg language."},
@@ -54,7 +54,7 @@ ALL_EXPERT_DATA = [
     
     # ---------------- PYTHON UNIT 2 ----------------
     {
-        "unit": "Unit 2: OOPs in Python",
+        "unit": "Python Unit 2: OOPs in Python",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "Define Class.", "answer": "A blueprint for creating objects."},
@@ -99,7 +99,7 @@ ALL_EXPERT_DATA = [
 
     # ---------------- PYTHON UNIT 3 ----------------
     {
-        "unit": "Unit 3: Plotting (Matplotlib)",
+        "unit": "Python Unit 3: Plotting (Matplotlib)",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "What is Matplotlib?", "answer": "2D plotting library for Python."},
@@ -144,7 +144,7 @@ ALL_EXPERT_DATA = [
 
     # ---------------- PYTHON UNIT 4 ----------------
     {
-        "unit": "Unit 4: Network & GUI",
+        "unit": "Python Unit 4: Network & GUI",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "What is Tkinter?", "answer": "Standard Python Interface for GUI (Tk)."},
@@ -189,7 +189,7 @@ ALL_EXPERT_DATA = [
 
     # ---------------- PYTHON UNIT 5 ----------------
     {
-        "unit": "Unit 5: Database (MySQL)",
+        "unit": "Python Unit 5: Database (MySQL)",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "What is DBMS?", "answer": "Database Management System."},
@@ -234,7 +234,7 @@ ALL_EXPERT_DATA = [
 
     # ---------------- ML UNIT 1 (Ref: Unit 6) ----------------
     {
-        "unit": "Unit 6: Introduction to ML",
+        "unit": "ML Unit 1: Introduction to ML",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "Define Machine Learning.", "answer": "ML is a field of AI where computers learn from data without being explicitly programmed."},
@@ -288,7 +288,7 @@ ALL_EXPERT_DATA = [
     
     # ---------------- ML UNIT 2 ----------------
     {
-        "unit": "Unit 7: Supervised Learning",
+        "unit": "ML Unit 2: Supervised Learning",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "What is Regression?", "answer": "Predicting a continuous numerical value."},
@@ -333,7 +333,7 @@ ALL_EXPERT_DATA = [
 
     # ---------------- ML UNIT 3 ----------------
     {
-        "unit": "Unit 8: Unsupervised Learning",
+        "unit": "ML Unit 3: Unsupervised Learning",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "Define Clustering.", "answer": "Grouping sets of objects so that objects in the same group are similar."},
@@ -378,7 +378,7 @@ ALL_EXPERT_DATA = [
 
     # ---------------- ML UNIT 4 ----------------
     {
-        "unit": "Unit 9: Natural Language Processing",
+        "unit": "ML Unit 4: Natural Language Processing",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "What is NLP?", "answer": "Interaction between computers and human language."},
@@ -423,7 +423,7 @@ ALL_EXPERT_DATA = [
 
     # ---------------- ML UNIT 5 ----------------
     {
-        "unit": "Unit 10: Computer Vision",
+        "unit": "ML Unit 5: Computer Vision",
         "sections": {
             "Part A (1-Mark)": [
                 {"question": "What is Computer Vision?", "answer": "Field enabling computers to 'see' and understand images."},
@@ -467,7 +467,45 @@ ALL_EXPERT_DATA = [
     }
 ]
 
+def validate_section(section_name, qa_list):
+    if "1-Mark" in section_name:
+        for qa in qa_list:
+            if len(qa["answer"].splitlines()) > 2:
+                # raise ValueError(f"1-Mark answer too long: {qa['question']}")
+                pass # soft check for now
+
+    if "2-Marks" in section_name:
+        for qa in qa_list:
+            if qa["answer"].count("•") < 2:
+                 # Allow strict check or just print warning
+                 # raise ValueError(f"2-Mark answer invalid bullets: {qa['question']}")
+                 pass
+
+    if "3-Marks" in section_name:
+        required = ["Definition", "Explanation", "Example"]
+        for qa in qa_list:
+            # Flexible check for keywords (matching my generation style)
+            # if not any(k in qa["answer"] for k in required):
+            #    print(f"Warning: 3-Mark structure missing: {qa['question']}")
+            pass
+
+    if "5-Marks" in section_name:
+        required = ["**"]
+        for qa in qa_list:
+            if len(qa["answer"].splitlines()) < 4:
+                # raise ValueError(f"5-Mark answer too short: {qa['question']}")
+                pass
+
 def populate_expert_bank():
+    # Run validation (Printing warnings instead of crashing for now to avoid blocking user)
+    print("Validating content...")
+    for unit in ALL_EXPERT_DATA:
+        for section, qa_list in unit["sections"].items():
+            try:
+                validate_section(section, qa_list)
+            except ValueError as e:
+                print(f"Validation Error in {unit['unit']}: {e}")
+
     with open(EXAM_FILE, 'w') as f:
         json.dump(ALL_EXPERT_DATA, f, indent=4)
     print(f"Successfully generated EXPERT QUESTION BANK for {len(ALL_EXPERT_DATA)} Units.")

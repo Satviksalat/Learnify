@@ -1,6 +1,6 @@
 [
     {
-        "unit": "Unit 1: Python Basics",
+        "unit": "Python Unit 1: Python Basics",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -137,7 +137,7 @@
         }
     },
     {
-        "unit": "Unit 2: OOPs in Python",
+        "unit": "Python Unit 2: OOPs in Python",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -270,7 +270,7 @@
         }
     },
     {
-        "unit": "Unit 3: Plotting (Matplotlib)",
+        "unit": "Python Unit 3: Plotting (Matplotlib)",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -403,7 +403,7 @@
         }
     },
     {
-        "unit": "Unit 4: Network & GUI",
+        "unit": "Python Unit 4: Network & GUI",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -536,7 +536,7 @@
         }
     },
     {
-        "unit": "Unit 5: Database (MySQL)",
+        "unit": "Python Unit 5: Database (MySQL)",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -669,7 +669,7 @@
         }
     },
     {
-        "unit": "Unit 6: Introduction to ML",
+        "unit": "ML Unit 1: Introduction to ML",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -838,7 +838,7 @@
         }
     },
     {
-        "unit": "Unit 7: Supervised Learning",
+        "unit": "ML Unit 2: Supervised Learning",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -971,7 +971,7 @@
         }
     },
     {
-        "unit": "Unit 8: Unsupervised Learning",
+        "unit": "ML Unit 3: Unsupervised Learning",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -1104,7 +1104,7 @@
         }
     },
     {
-        "unit": "Unit 9: Natural Language Processing",
+        "unit": "ML Unit 4: Natural Language Processing",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -1237,7 +1237,7 @@
         }
     },
     {
-        "unit": "Unit 10: Computer Vision",
+        "unit": "ML Unit 5: Computer Vision",
         "sections": {
             "Part A (1-Mark)": [
                 {
