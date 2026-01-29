@@ -1,0 +1,281 @@
+import json
+import os
+
+# 1. PYTHON UNITS (Restoring these)
+PYTHON_QUESTION_BANK = {
+    "Unit 1: Python Basics": {
+        "Part A (1-Mark)": [
+            {"question": "What is Python?", "answer": "Interpreted, high-level programming language."},
+            {"question": "Define Variable.", "answer": "Container for storing data values."},
+            {"question": "What is a Keyword?", "answer": "Reserved words in Python (e.g., if, else)."},
+            {"question": "Define List.", "answer": "Ordered, mutable collection of items."},
+            {"question": "What is Tuple?", "answer": "Ordered, immutable collection."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "List vs Tuple.", "answer": "List is mutable (can change). Tuple is immutable (cannot change)."},
+            {"question": "Explain Indentation.", "answer": "Python uses whitespace to define code blocks instead of brackets."},
+            {"question": "What is Type Casting?", "answer": "Converting one data type into another (int to float)."},
+            {"question": "Explain Dictionary.", "answer": "Collection of Key-Value pairs. Unordered and mutable."},
+            {"question": "What is a Comment?", "answer": "Text ignored by compiler. Used for documentation (#)."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "Explain Python Data Types.", "answer": "1. Numeric (int, float)\n2. Sequence (list, tuple)\n3. Mapping (dict)\n4. Boolean."},
+            {"question": "Explain Break and Continue.", "answer": "Break: Exits loop.\nContinue: Skips current iteration and moves to next."},
+            {"question": "Local vs Global Variables.", "answer": "Local: Inside function. Global: Outside function."}
+        ],
+        "Part D (5-Marks)": [
+            {"question": "Explain Operators in Python.", "answer": "Arithmetic (+, -), Comparison (==, >), Logical (and, or), Assignment (=), Membership (in)."},
+            {"question": "Discuss Control Flow Statements.", "answer": "Conditional (if-elif-else) and Looping (for, while). Explain syntax and usage."}
+        ]
+    },
+    "Unit 2: OOPs in Python": {
+        "Part A (1-Mark)": [
+            {"question": "What is Class?", "answer": "Blueprint for creating objects."},
+            {"question": "What is Object?", "answer": "Instance of a class."},
+            {"question": "Define Inheritance.", "answer": "Child class acquiring properties of Parent class."},
+            {"question": "What is self?", "answer": "Reference to current instance of class."},
+            {"question": "Define Init.", "answer": "Constructor method to initialize object."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "Class vs Object.", "answer": "Class is the template. Object is the real-world entity created from it."},
+            {"question": "What is Polymorphism?", "answer": "Same function name performing different tasks."},
+            {"question": "Explain Encapsulation.", "answer": "Wrapping data and methods into a single unit (Class)."},
+            {"question": "What is abstraction?", "answer": "Hiding implementation details and showing only functionality."},
+            {"question": "Types of Inheritance.", "answer": "Single, Multiple, Multilevel, Hierarchical."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "Explain Constructor.", "answer": "Special method __init__ called automatically when object is created. Used to set initial values."},
+            {"question": "Explain Method Overriding.", "answer": "Child class provides specific implementation of a method already defined in Parent class."},
+            {"question": "Access Specifiers in Python.", "answer": "Public (name), Protected (_name), Private (__name)."}
+        ],
+        "Part D (5-Marks)": [
+            {"question": "Explain 4 Pillars of OOPs.", "answer": "1. Encapsulation\n2. Abstraction\n3. Inheritance\n4. Polymorphism. Give examples."},
+            {"question": "Detailed note on Inheritance types.", "answer": "Explain Single, Multiple, Multilevel with diagrams/examples."}
+        ]
+    },
+    "Unit 3: Plotting (Matplotlib)": {
+         "Part A (1-Mark)": [
+            {"question": "What is Matplotlib?", "answer": "Plotting library for Python."},
+            {"question": "Function to show plot?", "answer": "plt.show()"},
+            {"question": "What is Pyplot?", "answer": "Submodule providing MATLAB-like interface."},
+            {"question": "What is Legend?", "answer": "Label describing plot elements."},
+            {"question": "Define Scatter Plot.", "answer": "Plot using dots to represent values."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "Line Plot vs Bar Plot.", "answer": "Line: Trends over time. Bar: Comparing categories."},
+            {"question": "How to add title?", "answer": "plt.title('My Title')"},
+            {"question": "What is Subplot?", "answer": "Drawing multiple plots in one figure."},
+            {"question": "How to save plot?", "answer": "plt.savefig('filename.png')"},
+            {"question": "Explain Pie Chart.", "answer": "Circular chart divided into sectors illustrating proportion."}
+        ],
+        "Part C (3-Marks)": [
+             {"question": "Explain Histogram.", "answer": "Representation of frequency distribution. Bins data into ranges."},
+             {"question": "Steps to create a plot.", "answer": "1. Import pyplot\n2. Define Data\n3. Call plot function\n4. Add labels/title\n5. Show."},
+             {"question": "Customizing Line Styles.", "answer": "Color (c='r'), Style (ls='--'), Marker (marker='o')."}
+        ],
+        "Part D (5-Marks)": [
+             {"question": "Explain different types of Plots.", "answer": "Line, Bar, Scatter, Pie, Histogram. When to use each."},
+             {"question": "Matplotlib Architecture.", "answer": "Backend Layer -> Artist Layer -> Scripting Layer (Pyplot)."}
+        ]
+    },
+    "Unit 4: Network & GUI": {
+        "Part A (1-Mark)": [
+            {"question": "What is Tkinter?", "answer": "Standard GUI library for Python."},
+            {"question": "What is a Widget?", "answer": "GUI element (Button, Label)."},
+            {"question": "What is Socket?", "answer": "Endpoint for communication."},
+            {"question": "Define TCP.", "answer": "Transmission Control Protocol (Reliable)."},
+            {"question": "Define UDP.", "answer": "User Datagram Protocol (Fast, Unreliable)."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "Client vs Server.", "answer": "Server provides resource. Client requests resource."},
+            {"question": "What is Geometry Manager?", "answer": "Controls layout of widgets (Pack, Grid, Place)."},
+            {"question": "Explain Bind.", "answer": "Linking an event (Click) to a function."},
+            {"question": "What is Entry widget?", "answer": "Single line text input field."},
+            {"question": "Explain Label.", "answer": "Widget to display text or image."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "Explain Pack vs Grid.", "answer": "Pack: Blocks (Top/Bottom). Grid: Rows and Columns (Excel-like)."},
+            {"question": "Steps in Socket Programming.", "answer": "Server: Bind -> Listen -> Accept. Client: Connect."},
+            {"question": "Tkinter Event Loop.", "answer": "root.mainloop(). Keeps window open and listens for clicks."}
+        ],
+        "Part D (5-Marks)": [
+            {"question": "Explain GUI programming with Tkinter.", "answer": "Import tkinter, Create main window, Add widgets, Layout management, Main loop."},
+            {"question": "Explain client-server architecture with Sockets.", "answer": "Diagram of Request/Response. Socket inputs (IP, Port). Connection establishment."}
+        ]
+    },
+    "Unit 5: Database (MySQL)": {
+         "Part A (1-Mark)": [
+            {"question": "What is MySQL?", "answer": "Relational Database Management System."},
+            {"question": "What is a Connector?", "answer": "Driver enabling Python to talk to DB."},
+            {"question": "Define Curse.", "answer": "Object used to execute queries."},
+            {"question": "What is COMMIT?", "answer": "Saving changes permanently."},
+            {"question": "SQL command to fetch data?", "answer": "SELECT"}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "Fetchone vs Fetchall.", "answer": "Fetchone: Gets 1 row. Fetchall: Gets all rows."},
+            {"question": "Steps to connect DB.", "answer": "Import connector -> Connect(host, user, pass) -> Get Cursor."},
+            {"question": "What relies commit?", "answer": "INSERT, UPDATE, DELETE queries require commit to save."},
+            {"question": "Handling DB Errors.", "answer": "Using try-except block to catch connection failures."},
+            {"question": "What is execute()?", "answer": "Method to run SQL query."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "Explain CRUD operations.", "answer": "Create (Insert), Read (Select), Update, Delete."},
+            {"question": "Preventing SQL Injection.", "answer": "Using parameterized queries (%s) instead of string formatting."},
+            {"question": "Closing Connection.", "answer": "Always close cursor and connection to free resources."}
+        ],
+        "Part D (5-Marks)": [
+             {"question": "Example of Python MySQL Connection.", "answer": "Code snippet showing connection, cursor creation, query execution, and cleanup."},
+             {"question": "Explain Transaction Management.", "answer": "Commit (Save) and Rollback (Undo). Ensuring data integrity."}
+        ]
+    }
+}
+
+# 2. ML UNITS (Already Refined)
+ML_QUESTION_BANK = {
+    "Unit 6: Introduction to ML": {
+        "Part A (1-Mark)": [
+            {"question": "Define Machine Learning.", "answer": "Learning from data without explicit programming."},
+            {"question": "What is Supervised Learning?", "answer": "Learning with labeled data."},
+            {"question": "What is AI?", "answer": "Simulation of human intelligence by machines."},
+            {"question": "What is a Label?", "answer": "The target output variable."},
+            {"question": "Define Data.", "answer": "Raw facts and figures used for learning."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "AI vs ML.", "answer": "AI is the broad science; ML is a subset that learns from data."},
+            {"question": "Reinforcement Learning.", "answer": "Learning via rewards and penalties."},
+            {"question": "Define Training Set.", "answer": "Subset used to train model."},
+            {"question": "Define Testing Set.", "answer": "Subset used to evaluate model."},
+            {"question": "What is a Feature?", "answer": "Input variable used for prediction."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "3 types of Learning.", "answer": "1. Supervised\n2. Unsupervised\n3. Reinforcement"},
+            {"question": "What is Deep Learning?", "answer": "Subset of ML using neural networks."},
+            {"question": "Label vs Feature.", "answer": "Features are Inputs. Labels are Outputs."}
+        ],
+        "Part D (5-Marks)": [
+            {"question": "7 Steps of ML.", "answer": "Gathering, Preprocessing, Model Choice, Training, Testing, Tuning, Prediction."},
+            {"question": "Compare AI, ML, DL.", "answer": "Detailed comparison of the hierarchy."}
+        ]
+    },
+    "Unit 7: Supervised Learning": {
+        "Part A (1-Mark)": [
+            {"question": "What is Regression?", "answer": "Predicting continuous values."},
+            {"question": "What is Classification?", "answer": "Predicting discrete categories."},
+            {"question": "Confusion Matrix.", "answer": "Table describing classifier performance."},
+            {"question": "Feature Scaling.", "answer": "Normalizing range of variables."},
+            {"question": "SVM.", "answer": "Support Vector Machine."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "Linear vs Logistic.", "answer": "Linear: Values. Logistic: Probability/Classes."},
+            {"question": "Support Vectors.", "answer": "Points closest to hyperplane."},
+            {"question": "Naive Bayes.", "answer": "Probabilistic classifier assuming independence."},
+            {"question": "Overfitting.", "answer": "Model learns noise, fails on new data."},
+            {"question": "Accuracy.", "answer": "Correct predictions / Total."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "Precision vs Recall.", "answer": "Precision: Accuracy of positive preds. Recall: Finding all positives."},
+            {"question": "Kernel Trick.", "answer": "Mapping non-linear data to higher dimension."},
+            {"question": "Preprocessing Steps.", "answer": "Cleaning, Encoding, Scaling."}
+        ],
+        "Part D (5-Marks)": [
+            {"question": "SVM Algorithm.", "answer": "Maximal Margin, Hyperplane, Support Vectors."},
+            {"question": "Metrics.", "answer": "Accuracy, Precision, Recall, F1-Score."}
+        ]
+    },
+    "Unit 8: Unsupervised Learning": {
+         "Part A (1-Mark)": [
+            {"question": "Define Clustering.", "answer": "Grouping similar objects."},
+            {"question": "K-Means.", "answer": "Centroid-based clustering."},
+            {"question": "Unlabeled Data.", "answer": "Data without answers."},
+            {"question": "Centroid.", "answer": "Center of a cluster."},
+            {"question": "Vector Quantization.", "answer": "Image compression via clustering."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "K-Means vs Hierarchical.", "answer": "K-Means: Fast. Hierarchical: Tree-based."},
+            {"question": "Dendrogram.", "answer": "Tree diagram of clusters."},
+            {"question": "Mean Shift.", "answer": "Density-based sliding window."},
+            {"question": "Applications.", "answer": "Segmentation, Compression."},
+            {"question": "Euclidean Distance.", "answer": "Straight line distance."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "Semi-Supervised.", "answer": "Small labeled + Large unlabeled data."},
+            {"question": "K-Means Steps.", "answer": "Init K -> Assign -> Update -> Repeat."},
+            {"question": "Agglomerative.", "answer": "Bottom-up merging."}
+        ],
+        "Part D (5-Marks)": [
+            {"question": "Explain K-Means.", "answer": "Partitioning N items into K clusters minimizing distance."},
+            {"question": "Types of Clustering.", "answer": "Partitioning, Hierarchical, Density, Grid."}
+        ]
+    },
+    "Unit 9: Natural Language Processing": {
+        "Part A (1-Mark)": [
+            {"question": "NLP.", "answer": "Natural Language Processing."},
+            {"question": "Tokenization.", "answer": "Splitting text into words."},
+            {"question": "Stopword.", "answer": "Common word removed."},
+            {"question": "Corpus.", "answer": "Collection of text."},
+            {"question": "Stemming.", "answer": "Chopping suffixes."}
+        ],
+        "Part B (2-Marks)": [
+             {"question": "Stemming vs Lemmatization.", "answer": "Stemming: Chop (Crude). Lemmatization: Root (Dictionary)."},
+             {"question": "BoW.", "answer": "Bag of Words (Counts)."},
+             {"question": "TF-IDF.", "answer": "Term Frequency Inverse Doc Frequency."},
+             {"question": "Chunking.", "answer": "Grouping tokens."},
+             {"question": "Sentiment Analysis.", "answer": "Emotion detection."}
+        ],
+        "Part C (3-Marks)": [
+            {"question": "Pipeline.", "answer": "Clean -> Tokenize -> Vectorize -> Model."},
+            {"question": "Vectorization.", "answer": "Text to Numbers."},
+            {"question": "Applications.", "answer": "Chatbots, Spam Filters."}
+        ],
+        "Part D (5-Marks)": [
+            {"question": "Explain TF-IDF.", "answer": "Weighs unique/important words higher than common ones."},
+            {"question": "Rule vs ML NLP.", "answer": "Rule: Manual/Rigid. ML: Learned/Flexible."}
+        ]
+    },
+    "Unit 10: Computer Vision": {
+        "Part A (1-Mark)": [
+            {"question": "OpenCV.", "answer": "Computer Vision Library."},
+            {"question": "Pixel.", "answer": "Smallest image unit."},
+            {"question": "Imshow.", "answer": "Show image."},
+            {"question": "Grayscale.", "answer": "Black and white channel."},
+            {"question": "FPS.", "answer": "Frames Per Second."}
+        ],
+        "Part B (2-Marks)": [
+            {"question": "Face Detection Factors.", "answer": "Light, scale, occlusion."},
+            {"question": "Haar Features.", "answer": "Edges, Lines rectangles."},
+            {"question": "Tracking vs Detection.", "answer": "Tracking is faster, follows object."},
+            {"question": "Grayscale Benefit.", "answer": "Faster processing."},
+            {"question": "Thresholding.", "answer": "Binarizing image."}
+        ],
+        "Part C (3-Marks)": [
+             {"question": "Object Detection Steps.", "answer": "Input -> Preprocess -> Haar -> Classify."},
+             {"question": "Viola-Jones.", "answer": "Haar + Integral Image + Adaboost + Cascade."},
+             {"question": "Applications.", "answer": "Face Unlock, Surveillance."}
+        ],
+        "Part D (5-Marks)": [
+             {"question": "Driver Drowsiness.", "answer": "Face -> Eye -> Aspect Ratio -> Alert."},
+             {"question": "Haar Cascades.", "answer": "Cascading classifiers rejecting negative regions quickly."}
+        ]
+    }
+}
+
+def generate_combined_exam_json():
+    output_path = os.path.join("backend", "data", "exam_questions.json")
+    
+    final_data = []
+    
+    # Add Python Units First
+    for unit, sections in PYTHON_QUESTION_BANK.items():
+        final_data.append({"unit": unit, "sections": sections})
+        
+    # Add ML Units Second
+    for unit, sections in ML_QUESTION_BANK.items():
+        final_data.append({"unit": unit, "sections": sections})
+        
+    with open(output_path, 'w') as f:
+        json.dump(final_data, f, indent=4)
+        
+    print(f"Successfully generated Combined Question Bank (Python + ML): {len(final_data)} units.")
+
+if __name__ == "__main__":
+    generate_combined_exam_json()

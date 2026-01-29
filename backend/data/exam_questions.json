@@ -1,6 +1,371 @@
 [
     {
-        "unit": "Unit 1: Introduction to ML",
+        "unit": "Unit 1: Python Basics",
+        "sections": {
+            "Part A (1-Mark)": [
+                {
+                    "question": "What is Python?",
+                    "answer": "Interpreted, high-level programming language."
+                },
+                {
+                    "question": "Define Variable.",
+                    "answer": "Container for storing data values."
+                },
+                {
+                    "question": "What is a Keyword?",
+                    "answer": "Reserved words in Python (e.g., if, else)."
+                },
+                {
+                    "question": "Define List.",
+                    "answer": "Ordered, mutable collection of items."
+                },
+                {
+                    "question": "What is Tuple?",
+                    "answer": "Ordered, immutable collection."
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "List vs Tuple.",
+                    "answer": "List is mutable (can change). Tuple is immutable (cannot change)."
+                },
+                {
+                    "question": "Explain Indentation.",
+                    "answer": "Python uses whitespace to define code blocks instead of brackets."
+                },
+                {
+                    "question": "What is Type Casting?",
+                    "answer": "Converting one data type into another (int to float)."
+                },
+                {
+                    "question": "Explain Dictionary.",
+                    "answer": "Collection of Key-Value pairs. Unordered and mutable."
+                },
+                {
+                    "question": "What is a Comment?",
+                    "answer": "Text ignored by compiler. Used for documentation (#)."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Explain Python Data Types.",
+                    "answer": "1. Numeric (int, float)\n2. Sequence (list, tuple)\n3. Mapping (dict)\n4. Boolean."
+                },
+                {
+                    "question": "Explain Break and Continue.",
+                    "answer": "Break: Exits loop.\nContinue: Skips current iteration and moves to next."
+                },
+                {
+                    "question": "Local vs Global Variables.",
+                    "answer": "Local: Inside function. Global: Outside function."
+                }
+            ],
+            "Part D (5-Marks)": [
+                {
+                    "question": "Explain Operators in Python.",
+                    "answer": "Arithmetic (+, -), Comparison (==, >), Logical (and, or), Assignment (=), Membership (in)."
+                },
+                {
+                    "question": "Discuss Control Flow Statements.",
+                    "answer": "Conditional (if-elif-else) and Looping (for, while). Explain syntax and usage."
+                }
+            ]
+        }
+    },
+    {
+        "unit": "Unit 2: OOPs in Python",
+        "sections": {
+            "Part A (1-Mark)": [
+                {
+                    "question": "What is Class?",
+                    "answer": "Blueprint for creating objects."
+                },
+                {
+                    "question": "What is Object?",
+                    "answer": "Instance of a class."
+                },
+                {
+                    "question": "Define Inheritance.",
+                    "answer": "Child class acquiring properties of Parent class."
+                },
+                {
+                    "question": "What is self?",
+                    "answer": "Reference to current instance of class."
+                },
+                {
+                    "question": "Define Init.",
+                    "answer": "Constructor method to initialize object."
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "Class vs Object.",
+                    "answer": "Class is the template. Object is the real-world entity created from it."
+                },
+                {
+                    "question": "What is Polymorphism?",
+                    "answer": "Same function name performing different tasks."
+                },
+                {
+                    "question": "Explain Encapsulation.",
+                    "answer": "Wrapping data and methods into a single unit (Class)."
+                },
+                {
+                    "question": "What is abstraction?",
+                    "answer": "Hiding implementation details and showing only functionality."
+                },
+                {
+                    "question": "Types of Inheritance.",
+                    "answer": "Single, Multiple, Multilevel, Hierarchical."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Explain Constructor.",
+                    "answer": "Special method __init__ called automatically when object is created. Used to set initial values."
+                },
+                {
+                    "question": "Explain Method Overriding.",
+                    "answer": "Child class provides specific implementation of a method already defined in Parent class."
+                },
+                {
+                    "question": "Access Specifiers in Python.",
+                    "answer": "Public (name), Protected (_name), Private (__name)."
+                }
+            ],
+            "Part D (5-Marks)": [
+                {
+                    "question": "Explain 4 Pillars of OOPs.",
+                    "answer": "1. Encapsulation\n2. Abstraction\n3. Inheritance\n4. Polymorphism. Give examples."
+                },
+                {
+                    "question": "Detailed note on Inheritance types.",
+                    "answer": "Explain Single, Multiple, Multilevel with diagrams/examples."
+                }
+            ]
+        }
+    },
+    {
+        "unit": "Unit 3: Plotting (Matplotlib)",
+        "sections": {
+            "Part A (1-Mark)": [
+                {
+                    "question": "What is Matplotlib?",
+                    "answer": "Plotting library for Python."
+                },
+                {
+                    "question": "Function to show plot?",
+                    "answer": "plt.show()"
+                },
+                {
+                    "question": "What is Pyplot?",
+                    "answer": "Submodule providing MATLAB-like interface."
+                },
+                {
+                    "question": "What is Legend?",
+                    "answer": "Label describing plot elements."
+                },
+                {
+                    "question": "Define Scatter Plot.",
+                    "answer": "Plot using dots to represent values."
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "Line Plot vs Bar Plot.",
+                    "answer": "Line: Trends over time. Bar: Comparing categories."
+                },
+                {
+                    "question": "How to add title?",
+                    "answer": "plt.title('My Title')"
+                },
+                {
+                    "question": "What is Subplot?",
+                    "answer": "Drawing multiple plots in one figure."
+                },
+                {
+                    "question": "How to save plot?",
+                    "answer": "plt.savefig('filename.png')"
+                },
+                {
+                    "question": "Explain Pie Chart.",
+                    "answer": "Circular chart divided into sectors illustrating proportion."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Explain Histogram.",
+                    "answer": "Representation of frequency distribution. Bins data into ranges."
+                },
+                {
+                    "question": "Steps to create a plot.",
+                    "answer": "1. Import pyplot\n2. Define Data\n3. Call plot function\n4. Add labels/title\n5. Show."
+                },
+                {
+                    "question": "Customizing Line Styles.",
+                    "answer": "Color (c='r'), Style (ls='--'), Marker (marker='o')."
+                }
+            ],
+            "Part D (5-Marks)": [
+                {
+                    "question": "Explain different types of Plots.",
+                    "answer": "Line, Bar, Scatter, Pie, Histogram. When to use each."
+                },
+                {
+                    "question": "Matplotlib Architecture.",
+                    "answer": "Backend Layer -> Artist Layer -> Scripting Layer (Pyplot)."
+                }
+            ]
+        }
+    },
+    {
+        "unit": "Unit 4: Network & GUI",
+        "sections": {
+            "Part A (1-Mark)": [
+                {
+                    "question": "What is Tkinter?",
+                    "answer": "Standard GUI library for Python."
+                },
+                {
+                    "question": "What is a Widget?",
+                    "answer": "GUI element (Button, Label)."
+                },
+                {
+                    "question": "What is Socket?",
+                    "answer": "Endpoint for communication."
+                },
+                {
+                    "question": "Define TCP.",
+                    "answer": "Transmission Control Protocol (Reliable)."
+                },
+                {
+                    "question": "Define UDP.",
+                    "answer": "User Datagram Protocol (Fast, Unreliable)."
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "Client vs Server.",
+                    "answer": "Server provides resource. Client requests resource."
+                },
+                {
+                    "question": "What is Geometry Manager?",
+                    "answer": "Controls layout of widgets (Pack, Grid, Place)."
+                },
+                {
+                    "question": "Explain Bind.",
+                    "answer": "Linking an event (Click) to a function."
+                },
+                {
+                    "question": "What is Entry widget?",
+                    "answer": "Single line text input field."
+                },
+                {
+                    "question": "Explain Label.",
+                    "answer": "Widget to display text or image."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Explain Pack vs Grid.",
+                    "answer": "Pack: Blocks (Top/Bottom). Grid: Rows and Columns (Excel-like)."
+                },
+                {
+                    "question": "Steps in Socket Programming.",
+                    "answer": "Server: Bind -> Listen -> Accept. Client: Connect."
+                },
+                {
+                    "question": "Tkinter Event Loop.",
+                    "answer": "root.mainloop(). Keeps window open and listens for clicks."
+                }
+            ],
+            "Part D (5-Marks)": [
+                {
+                    "question": "Explain GUI programming with Tkinter.",
+                    "answer": "Import tkinter, Create main window, Add widgets, Layout management, Main loop."
+                },
+                {
+                    "question": "Explain client-server architecture with Sockets.",
+                    "answer": "Diagram of Request/Response. Socket inputs (IP, Port). Connection establishment."
+                }
+            ]
+        }
+    },
+    {
+        "unit": "Unit 5: Database (MySQL)",
+        "sections": {
+            "Part A (1-Mark)": [
+                {
+                    "question": "What is MySQL?",
+                    "answer": "Relational Database Management System."
+                },
+                {
+                    "question": "What is a Connector?",
+                    "answer": "Driver enabling Python to talk to DB."
+                },
+                {
+                    "question": "Define Curse.",
+                    "answer": "Object used to execute queries."
+                },
+                {
+                    "question": "What is COMMIT?",
+                    "answer": "Saving changes permanently."
+                },
+                {
+                    "question": "SQL command to fetch data?",
+                    "answer": "SELECT"
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "Fetchone vs Fetchall.",
+                    "answer": "Fetchone: Gets 1 row. Fetchall: Gets all rows."
+                },
+                {
+                    "question": "Steps to connect DB.",
+                    "answer": "Import connector -> Connect(host, user, pass) -> Get Cursor."
+                },
+                {
+                    "question": "What relies commit?",
+                    "answer": "INSERT, UPDATE, DELETE queries require commit to save."
+                },
+                {
+                    "question": "Handling DB Errors.",
+                    "answer": "Using try-except block to catch connection failures."
+                },
+                {
+                    "question": "What is execute()?",
+                    "answer": "Method to run SQL query."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Explain CRUD operations.",
+                    "answer": "Create (Insert), Read (Select), Update, Delete."
+                },
+                {
+                    "question": "Preventing SQL Injection.",
+                    "answer": "Using parameterized queries (%s) instead of string formatting."
+                },
+                {
+                    "question": "Closing Connection.",
+                    "answer": "Always close cursor and connection to free resources."
+                }
+            ],
+            "Part D (5-Marks)": [
+                {
+                    "question": "Example of Python MySQL Connection.",
+                    "answer": "Code snippet showing connection, cursor creation, query execution, and cleanup."
+                },
+                {
+                    "question": "Explain Transaction Management.",
+                    "answer": "Commit (Save) and Rollback (Undo). Ensuring data integrity."
+                }
+            ]
+        }
+    },
+    {
+        "unit": "Unit 6: Introduction to ML",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -30,50 +395,50 @@
                     "answer": "AI is the broad science; ML is a subset that learns from data."
                 },
                 {
-                    "question": "What is Reinforcement Learning?",
+                    "question": "Reinforcement Learning.",
                     "answer": "Learning via rewards and penalties."
                 },
                 {
                     "question": "Define Training Set.",
-                    "answer": "The subset of data used to train the model."
+                    "answer": "Subset used to train model."
                 },
                 {
                     "question": "Define Testing Set.",
-                    "answer": "The subset of data used to evaluate performance."
+                    "answer": "Subset used to evaluate model."
                 },
                 {
                     "question": "What is a Feature?",
-                    "answer": "An input variable used for making predictions."
+                    "answer": "Input variable used for prediction."
                 }
             ],
             "Part C (3-Marks)": [
                 {
-                    "question": "Explain the 3 types of Learning.",
-                    "answer": "1. Supervised (Labeled)\n2. Unsupervised (Unlabeled)\n3. Reinforcement (Reward-based)"
+                    "question": "3 types of Learning.",
+                    "answer": "1. Supervised\n2. Unsupervised\n3. Reinforcement"
                 },
                 {
                     "question": "What is Deep Learning?",
-                    "answer": "A subset of ML using neural networks to mimic the human brain."
+                    "answer": "Subset of ML using neural networks."
                 },
                 {
-                    "question": "Difference between Label and Feature.",
-                    "answer": "Features are Inputs (Questions). Labels are Outputs (Answers)."
+                    "question": "Label vs Feature.",
+                    "answer": "Features are Inputs. Labels are Outputs."
                 }
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Explain the 7 Steps of Machine Learning.",
-                    "answer": "1. Gathering Data\n2. Preprocessing\n3. Choosing Model\n4. Training\n5. Testing\n6. Tuning\n7. Prediction"
+                    "question": "7 Steps of ML.",
+                    "answer": "Gathering, Preprocessing, Model Choice, Training, Testing, Tuning, Prediction."
                 },
                 {
-                    "question": "Detailed comparison of AI, ML, and DL.",
-                    "answer": "AI is the umbrella term for smart machines. ML is the subset regarding statistical learning. DL is the specialized subset using multi-layered Neural Networks."
+                    "question": "Compare AI, ML, DL.",
+                    "answer": "Detailed comparison of the hierarchy."
                 }
             ]
         }
     },
     {
-        "unit": "Unit 2: Supervised Learning",
+        "unit": "Unit 7: Supervised Learning",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -85,68 +450,68 @@
                     "answer": "Predicting discrete categories."
                 },
                 {
-                    "question": "Define Confusion Matrix.",
+                    "question": "Confusion Matrix.",
                     "answer": "Table describing classifier performance."
                 },
                 {
-                    "question": "What is SVM?",
-                    "answer": "Support Vector Machine."
+                    "question": "Feature Scaling.",
+                    "answer": "Normalizing range of variables."
                 },
                 {
-                    "question": "What is a Hyperplane?",
-                    "answer": "The decision boundary separating classes."
+                    "question": "SVM.",
+                    "answer": "Support Vector Machine."
                 }
             ],
             "Part B (2-Marks)": [
                 {
-                    "question": "Linear vs Logistic Regression.",
-                    "answer": "Linear predicts values (Price). Logistic predicts probability/classes (Yes/No)."
+                    "question": "Linear vs Logistic.",
+                    "answer": "Linear: Values. Logistic: Probability/Classes."
                 },
                 {
-                    "question": "What are Support Vectors?",
-                    "answer": "Data points closest to the hyperplane."
+                    "question": "Support Vectors.",
+                    "answer": "Points closest to hyperplane."
                 },
                 {
-                    "question": "Define Naive Bayes.",
-                    "answer": "Probabilistic classifier assuming feature independence."
+                    "question": "Naive Bayes.",
+                    "answer": "Probabilistic classifier assuming independence."
                 },
                 {
-                    "question": "What is Overfitting?",
-                    "answer": "Model learns noise/details too well, failing on new data."
+                    "question": "Overfitting.",
+                    "answer": "Model learns noise, fails on new data."
                 },
                 {
-                    "question": "What is Accuracy?",
-                    "answer": "Ratio of correct predictions to total predictions."
+                    "question": "Accuracy.",
+                    "answer": "Correct predictions / Total."
                 }
             ],
             "Part C (3-Marks)": [
                 {
-                    "question": "Explain Precision and Recall.",
-                    "answer": "Precision: Accuracy of positive predictions.\nRecall: Ability to find all actual positives."
+                    "question": "Precision vs Recall.",
+                    "answer": "Precision: Accuracy of positive preds. Recall: Finding all positives."
                 },
                 {
-                    "question": "Explain the Kernel Trick in SVM.",
-                    "answer": "Mapping non-linear data to a higher dimension to make it linearly separable."
+                    "question": "Kernel Trick.",
+                    "answer": "Mapping non-linear data to higher dimension."
                 },
                 {
-                    "question": "Steps in Data Preprocessing.",
-                    "answer": "1. Cleaning (Missing values)\n2. Encoding (Text to Numbers)\n3. Scaling (Normalization)"
+                    "question": "Preprocessing Steps.",
+                    "answer": "Cleaning, Encoding, Scaling."
                 }
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Explain SVM Algorithm.",
-                    "answer": "Goal: Find hyperplane with Max Margin.\nSupport Vectors: Points defining the margin.\nKernel: Handles non-linear data."
+                    "question": "SVM Algorithm.",
+                    "answer": "Maximal Margin, Hyperplane, Support Vectors."
                 },
                 {
-                    "question": "Classification Performance Metrics.",
-                    "answer": "1. Accuracy (Overall correctness)\n2. Precision (Exactness)\n3. Recall (Completeness)\n4. F1-Score (Balance)\n5. ROC Curve."
+                    "question": "Metrics.",
+                    "answer": "Accuracy, Precision, Recall, F1-Score."
                 }
             ]
         }
     },
     {
-        "unit": "Unit 3: Unsupervised Learning",
+        "unit": "Unit 8: Unsupervised Learning",
         "sections": {
             "Part A (1-Mark)": [
                 {
@@ -154,76 +519,214 @@
                     "answer": "Grouping similar objects."
                 },
                 {
-                    "question": "What is K-Means?",
+                    "question": "K-Means.",
                     "answer": "Centroid-based clustering."
                 },
                 {
-                    "question": "What is Unlabeled Data?",
-                    "answer": "Data with no target answers."
+                    "question": "Unlabeled Data.",
+                    "answer": "Data without answers."
                 },
                 {
-                    "question": "What is a Centroid?",
-                    "answer": "The center point of a cluster."
+                    "question": "Centroid.",
+                    "answer": "Center of a cluster."
                 },
                 {
-                    "question": "Define Vector Quantization.",
-                    "answer": "Image compression using clustering."
+                    "question": "Vector Quantization.",
+                    "answer": "Image compression via clustering."
                 }
             ],
             "Part B (2-Marks)": [
                 {
                     "question": "K-Means vs Hierarchical.",
-                    "answer": "K-Means: Fast, needs K. Hierarchical: Tree-based, slow, no K needed."
+                    "answer": "K-Means: Fast. Hierarchical: Tree-based."
                 },
                 {
-                    "question": "What is a Dendrogram?",
-                    "answer": "Tree diagram showing hierarchical clusters."
+                    "question": "Dendrogram.",
+                    "answer": "Tree diagram of clusters."
                 },
                 {
-                    "question": "What is Mean Shift?",
-                    "answer": "Clustering by shifting window to high density."
+                    "question": "Mean Shift.",
+                    "answer": "Density-based sliding window."
                 },
                 {
-                    "question": "Applications of Clustering.",
-                    "answer": "Customer Segmentation, Image Compression."
+                    "question": "Applications.",
+                    "answer": "Segmentation, Compression."
                 },
                 {
-                    "question": "What is Euclidean Distance?",
-                    "answer": "Straight-line distance between two points."
+                    "question": "Euclidean Distance.",
+                    "answer": "Straight line distance."
                 }
             ],
             "Part C (3-Marks)": [
                 {
-                    "question": "Explain Semi-Supervised Learning.",
-                    "answer": "Train model on small labeled set -> Pseudo-label the unlabeled set -> Train on combined data."
+                    "question": "Semi-Supervised.",
+                    "answer": "Small labeled + Large unlabeled data."
                 },
                 {
-                    "question": "Steps in K-Means.",
-                    "answer": "1. Initialize K centroids\n2. Assign points to nearest centroid\n3. Update centroids\n4. Repeat until convergence."
+                    "question": "K-Means Steps.",
+                    "answer": "Init K -> Assign -> Update -> Repeat."
                 },
                 {
-                    "question": "Agglomerative vs Divisive.",
-                    "answer": "Agglomerative: Bottom-up (Merge).\nDivisive: Top-down (Split)."
+                    "question": "Agglomerative.",
+                    "answer": "Bottom-up merging."
                 }
             ],
             "Part D (5-Marks)": [
                 {
-                    "question": "Detailed explanation of K-Means.",
-                    "answer": "Algorithm that partitions N observations into K clusters. Minimizes inertia. Efficient but sensitive to initialization (K-Means++ fixes this)."
+                    "question": "Explain K-Means.",
+                    "answer": "Partitioning N items into K clusters minimizing distance."
                 },
                 {
-                    "question": "Different Types of Clustering.",
-                    "answer": "1. Partitioning (K-Means)\n2. Hierarchical (Agglomerative)\n3. Density-Based (DBSCAN)\n4. Grid-Based."
+                    "question": "Types of Clustering.",
+                    "answer": "Partitioning, Hierarchical, Density, Grid."
                 }
             ]
         }
     },
     {
-        "unit": "Unit 4: Natural Language Processing",
-        "sections": {}
+        "unit": "Unit 9: Natural Language Processing",
+        "sections": {
+            "Part A (1-Mark)": [
+                {
+                    "question": "NLP.",
+                    "answer": "Natural Language Processing."
+                },
+                {
+                    "question": "Tokenization.",
+                    "answer": "Splitting text into words."
+                },
+                {
+                    "question": "Stopword.",
+                    "answer": "Common word removed."
+                },
+                {
+                    "question": "Corpus.",
+                    "answer": "Collection of text."
+                },
+                {
+                    "question": "Stemming.",
+                    "answer": "Chopping suffixes."
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "Stemming vs Lemmatization.",
+                    "answer": "Stemming: Chop (Crude). Lemmatization: Root (Dictionary)."
+                },
+                {
+                    "question": "BoW.",
+                    "answer": "Bag of Words (Counts)."
+                },
+                {
+                    "question": "TF-IDF.",
+                    "answer": "Term Frequency Inverse Doc Frequency."
+                },
+                {
+                    "question": "Chunking.",
+                    "answer": "Grouping tokens."
+                },
+                {
+                    "question": "Sentiment Analysis.",
+                    "answer": "Emotion detection."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Pipeline.",
+                    "answer": "Clean -> Tokenize -> Vectorize -> Model."
+                },
+                {
+                    "question": "Vectorization.",
+                    "answer": "Text to Numbers."
+                },
+                {
+                    "question": "Applications.",
+                    "answer": "Chatbots, Spam Filters."
+                }
+            ],
+            "Part D (5-Marks)": [
+                {
+                    "question": "Explain TF-IDF.",
+                    "answer": "Weighs unique/important words higher than common ones."
+                },
+                {
+                    "question": "Rule vs ML NLP.",
+                    "answer": "Rule: Manual/Rigid. ML: Learned/Flexible."
+                }
+            ]
+        }
     },
     {
-        "unit": "Unit 5: Computer Vision with OpenCV",
-        "sections": {}
+        "unit": "Unit 10: Computer Vision",
+        "sections": {
+            "Part A (1-Mark)": [
+                {
+                    "question": "OpenCV.",
+                    "answer": "Computer Vision Library."
+                },
+                {
+                    "question": "Pixel.",
+                    "answer": "Smallest image unit."
+                },
+                {
+                    "question": "Imshow.",
+                    "answer": "Show image."
+                },
+                {
+                    "question": "Grayscale.",
+                    "answer": "Black and white channel."
+                },
+                {
+                    "question": "FPS.",
+                    "answer": "Frames Per Second."
+                }
+            ],
+            "Part B (2-Marks)": [
+                {
+                    "question": "Face Detection Factors.",
+                    "answer": "Light, scale, occlusion."
+                },
+                {
+                    "question": "Haar Features.",
+                    "answer": "Edges, Lines rectangles."
+                },
+                {
+                    "question": "Tracking vs Detection.",
+                    "answer": "Tracking is faster, follows object."
+                },
+                {
+                    "question": "Grayscale Benefit.",
+                    "answer": "Faster processing."
+                },
+                {
+                    "question": "Thresholding.",
+                    "answer": "Binarizing image."
+                }
+            ],
+            "Part C (3-Marks)": [
+                {
+                    "question": "Object Detection Steps.",
+                    "answer": "Input -> Preprocess -> Haar -> Classify."
+                },
+                {
+                    "question": "Viola-Jones.",
+                    "answer": "Haar + Integral Image + Adaboost + Cascade."
+                },
+                {
+                    "question": "Applications.",
+                    "answer": "Face Unlock, Surveillance."
+                }
+            ],
+            "Part D (5-Marks)": [
+                {
+                    "question": "Driver Drowsiness.",
+                    "answer": "Face -> Eye -> Aspect Ratio -> Alert."
+                },
+                {
+                    "question": "Haar Cascades.",
+                    "answer": "Cascading classifiers rejecting negative regions quickly."
+                }
+            ]
+        }
     }
 ]
