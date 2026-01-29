@@ -233,7 +233,8 @@ atexit.register(__auto_save_plot)
 
         fs.writeFileSync(filePath, code + patchCode);
 
-        cmd = `python "main.py"`;
+        const pythonCmd = process.platform === "win32" ? "python" : "python3";
+        cmd = `${pythonCmd} "main.py"`;
 
         exec(cmd, { cwd: runDir, timeout: 10000 }, (error, stdout, stderr) => {
             const result = { output: stdout || "" };
