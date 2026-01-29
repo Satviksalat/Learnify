@@ -9,8 +9,9 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
     const location = useLocation();
 
     useEffect(() => {
-        // Fetch Data - Using Network IP
-        fetch('https://learnify-api-ohc0.onrender.com/api/tutorials')
+        // Fetch Data - Using Environment Variable with Fallback
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
+        fetch(`${apiUrl}/api/tutorials`)
             .then(res => res.json())
             .then(data => setTutorials(data))
             .catch(err => console.error("Failed to fetch tutorials", err));

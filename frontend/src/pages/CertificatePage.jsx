@@ -12,7 +12,8 @@ const CertificatePage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://learnify-api-ohc0.onrender.com/api/tutorials')
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
+        fetch(`${apiUrl}/api/tutorials`)
             .then(res => res.json())
             .then(data => {
                 // Filter tutorials for this specific technology

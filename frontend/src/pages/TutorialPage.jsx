@@ -11,7 +11,8 @@ const TutorialPage = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://learnify-api-ohc0.onrender.com/api/tutorial/${id}`)
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
+        fetch(`${apiUrl}/api/tutorial/${id}`)
             .then(res => res.json())
             .then(data => {
                 setTutorial(data);

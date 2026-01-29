@@ -9,7 +9,8 @@ const QuizzesPage = () => {
     const [showResults, setShowResults] = useState(false);
 
     useEffect(() => {
-        fetch('https://learnify-api-ohc0.onrender.com/api/quizzes')
+        const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
+        fetch(`${apiUrl}/api/quizzes`)
             .then(res => res.json())
             .then(data => {
                 setAllQuizzes(data);
