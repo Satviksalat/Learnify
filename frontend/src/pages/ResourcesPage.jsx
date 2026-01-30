@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import API_URL from '../config';
+
 const ResourcesPage = () => {
     const [activeTab, setActiveTab] = useState('python');
     const [examQuestions, setExamQuestions] = useState([]);
@@ -9,8 +11,7 @@ const ResourcesPage = () => {
     // Fetch Exam Questions when tab is active
     React.useEffect(() => {
         if (activeTab === 'questions') {
-            const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
-            fetch(`${apiUrl}/api/exam-questions`)
+            fetch(`${API_URL}/api/exam-questions`)
                 .then(res => res.json())
                 .then(data => setExamQuestions(data))
                 .catch(err => console.error(err));
@@ -301,17 +302,17 @@ while x < 10:
                         <div style={downloadCardStyle}>
                             <h3>📥 Python Cheat Sheet</h3>
                             <p>Markdown File</p>
-                            <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com'}/downloads/python_cheat_sheet.md`} style={downloadBtnStyle}>Download</button>
+                            <button onClick={() => window.location.href = `${API_URL}/downloads/python_cheat_sheet.md`} style={downloadBtnStyle}>Download</button>
                         </div>
                         <div style={downloadCardStyle}>
                             <h3>📥 ML Quick Reference</h3>
                             <p>Markdown File</p>
-                            <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com'}/downloads/ml_quick_reference.md`} style={downloadBtnStyle}>Download</button>
+                            <button onClick={() => window.location.href = `${API_URL}/downloads/ml_quick_reference.md`} style={downloadBtnStyle}>Download</button>
                         </div>
                         <div style={downloadCardStyle}>
                             <h3>📦 All Code Examples</h3>
                             <p>JSON Data</p>
-                            <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com'}/downloads/all_code_examples.json`} style={downloadBtnStyle}>Download JSON</button>
+                            <button onClick={() => window.location.href = `${API_URL}/downloads/all_code_examples.json`} style={downloadBtnStyle}>Download JSON</button>
                         </div>
                     </div>
                 </div>

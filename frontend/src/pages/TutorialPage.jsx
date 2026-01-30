@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import AdBanner from '../components/AdBanner';
 import { isTutorialCompleted, toggleTutorialCompletion } from '../utils/progress';
 
+import API_URL from '../config';
+
 const TutorialPage = () => {
     const { id } = useParams();
     const [tutorial, setTutorial] = useState(null);
@@ -11,8 +13,7 @@ const TutorialPage = () => {
 
     useEffect(() => {
         setLoading(true);
-        const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
-        fetch(`${apiUrl}/api/tutorial/${id}`)
+        fetch(`${API_URL}/api/tutorial/${id}`)
             .then(res => res.json())
             .then(data => {
                 setTutorial(data);

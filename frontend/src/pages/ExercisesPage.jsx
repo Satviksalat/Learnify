@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import API_URL from '../config';
+
 const ExercisesPage = () => {
     const [programs, setPrograms] = useState([]);
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState('Python'); // 'Python' or 'Machine Learning'
 
     useEffect(() => {
-        const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
-        fetch(`${apiUrl}/api/programs`)
+        fetch(`${API_URL}/api/programs`)
             .then(res => res.json())
             .then(data => {
                 setPrograms(data);

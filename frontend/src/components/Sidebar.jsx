@@ -3,15 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 import AdBanner from './AdBanner';
 import { getCompletedTutorials } from '../utils/progress';
 
+import API_URL from '../config';
+
 const Sidebar = ({ isOpen, closeSidebar }) => {
     const [tutorials, setTutorials] = useState([]);
     const [completedIds, setCompletedIds] = useState([]);
     const location = useLocation();
 
     useEffect(() => {
-        // Fetch Data - Using Environment Variable with Fallback
-        const apiUrl = import.meta.env.VITE_API_URL || 'https://learnify-api-ohc0.onrender.com';
-        fetch(`${apiUrl}/api/tutorials`)
+        // Fetch Data - Using Central Config
+        fetch(`${API_URL}/api/tutorials`)
             .then(res => res.json())
             .then(data => setTutorials(data))
             .catch(err => console.error("Failed to fetch tutorials", err));
